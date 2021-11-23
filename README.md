@@ -1,19 +1,23 @@
 # Effect Network Hackathon Devpost ⚡
 
-Effect Network Hackathon 
 In collaboration with Devpost, we are excited to announce the Effect Network Hackathon! 
-To celebrate the launch of our new sdk.
+To celebrate the launch of our new SDK, we are rewarding up to 55K in prizes to the top developers.
 
-## Hackathon Tracks: 
-
+More information can be found here at [Devpost](https://effect-network-hackathon.devpost.com/)
 
 ## Timeline
 
- - Hackathon Kick off - 23 October 2021
+ - Presentation: Hackathon Kick off - 23 November 2021
+ - Presentation: Effect SDK Workshop - 24 November 2021
+ - Presentation: Building on Effect Network - 25 November 2021
+ - Presentation: How to perfect your pitch - 26 November 2021
+ - Presentation: Curating your workforce - 26 November 2021
  - Submissions Due - 11 January 2022
- - Evaluations - 12 - 15 January 2021
- - Winners announced - 15 January 2021
+ - Judging - 12 to 17 January 2021
+ - Winners announced - 18 January 2021
 
+The presentation can be found at our Discord. So join us there and stay tuned for updates.
+### [Join the Effect Network Discord](https://discord.gg/bq4teBnH3V)
 ## Process
 **Hackathon participants will need to:**
 
@@ -42,7 +46,7 @@ To celebrate the launch of our new sdk.
     -  Utilize your project name as the title for your initial pull Requests
     -  Provide a brief project description within the pull request comment
 
-***Congrats, you're officially a Effect Network Hackathon participant!***
+***Congrats, you're officially an Effect Network Hackathon participant!***
 
 
 ## Developer tools and resources
@@ -55,8 +59,6 @@ For a comprehensive list of resources and information, review [Effect Network Do
 
 View the [Developer Code Examples page](https://developer.effect.network/quickstart/) to get started using the Effect Network SDKs with guided coding exercises.
 
-### TOOLS
-
 #### SDKs
 
 -   [Effect-Js](https://www.npmjs.com/package/@effectai/effect-js)
@@ -64,4 +66,4 @@ View the [Developer Code Examples page](https://developer.effect.network/quickst
 #### Networks
 
 -   [Junglev3 Testnet](https://monitor.jungletestnet.io/#home)
--   [Faucet](https://discord.gg/bq4teBnH3V) for free testnet EFX
+-   [Faucet bot availabe on Discord](https://discord.gg/bq4teBnH3V) (for free testnet EFX)
