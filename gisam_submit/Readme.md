@@ -43,7 +43,9 @@ cons:
 here is the prototype: https://hackaton-finale.vercel.app/
 
 #### Presentation
-video presenting the project step by step: /assets/hackatongisam.mp4
+video presenting the project step by step:
+https://youtu.be/Q_kkfMrDra0
+./assets/hackatongisam.mp4 (for countries without youtube access)
 
 #### Next Steps
 The developpement state is partial as i'm lacking time
