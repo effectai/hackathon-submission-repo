@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@effectai/effect-js": "^0.1.17"
+  },
+  "devDependencies": {
+    "http-server": "^14.0.0"
+  }
+}
