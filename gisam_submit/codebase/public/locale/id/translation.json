@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "Gabung",
+    "connecteffect": " Gabung",
+    "createcampaign": " Buat kampanye",
+    "participate": " Berpartisipasi dalam kampanye",
+    "checkcampaign": " Periksa kampanye saya",
+    "worker": " pekerja",
+    "campaigncreator": " bisnis",
+    "currentcamaign": " Kampanye saat ini"
+  },
+  "create": {
+    "campaigntype": " Pilih jenis kampanye",
+    "addingfield": " Menambahkan bidang jawaban",
+    "validate": " Kirim kampanye",
+    "preview": " Pratinjau kampanye",
+    "twitter": " Indonesia",
+    "picture": " gambar",
+    "selecttypeoffield": " Menambahkan jawaban jenis:",
+    "option": " Soal pilihan ganda",
+    "textfield": " bidang teks",
+    "numberfield": " Nomor",
+    "minimumvalue": " Nilai minimum yang diterima",
+    "maximumvalue": " Nilai maksimum yang diterima",
+    "addingthisfield": " Menambahkan bidang ini",
+    "question": " deskripsi lapangan",
+    "questiondescribe": " Jelaskan bidang ini (contoh: Beri catatan, minimum 0, maksimum 10)",
+    "numberexplain": " Jenis pertanyaan : nomor, {{description}} (minimal : {{min}} , maksimal {{max}} )",
+    "textexplain": " Jenis pertanyaan : teks, {{description}} (panjang maksimal {{max}} )",
+    "optionexplain": " Jenis pertanyaan: opsi, opsi {{description}} (dapat dipilih hingga {{max}} ) {{option}}",
+    "numberoption": " Kemungkinan jumlah jawaban",
+    "maximumselectable": " Jawaban maksimum yang dapat dipilih",
+    "maxlen": " Panjang maksimum",
+    "optionnumber": " {{i}} Opsi",
+    "description": " Deskripsi kampanye",
+    "title": " Judul kampanye",
+    "reward": " Hadiah untuk satu tugas (EFX)",
+    "mycampaigns": " Kampanye saya"
+  },
+  "display": {
+    "addbatch": " Tambahkan batch",
+    "loadingbatch": " Memuat batch",
+    "enteryourdata": " Masukkan data untuk batch 1 per baris",
+    "repetition": " Pengulangan",
+    "next": " Selanjutnya",
+    "prev": " sebelumnya",
+    "reserve": " menyimpan"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (minimal : {{min}} , maksimal {{max}} )",
+    "textexplain": " {{description}} (panjang maksimal {{max}} )",
+    "optionexplain": " {{description}} (dapat dipilih hingga {{max}} )"
+  },
+  "campaignlist": {
+    "connect": " Hubungkan akun Anda untuk mengakses kampanye"
+  },
+  "campaignbase": {
+    "submit": "Kirimkan"
+  }
+}

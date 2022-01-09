@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "Connexion",
+    "connecteffect": "Connexion",
+    "createcampaign": "Créer une campagne",
+    "participate": "Participer à la campagne",
+    "checkcampaign": "Vérifier ma campagne",
+    "worker": "travailleur",
+    "campaigncreator": "entreprise",
+    "currentcamaign": "Campagnes en cours"
+  },
+  "create": {
+    "campaigntype": "Sélectionnez le type de campagne",
+    "addingfield": "Ajouter un champ de réponse",
+    "validate": "Soumettre la campagne",
+    "preview": "Prévisualiser la campagne",
+    "twitter": "twitter",
+    "picture": "photo",
+    "selecttypeoffield": "Ajout d'une réponse de type :",
+    "option": "Question à choix multiple",
+    "textfield": "Champ de texte",
+    "numberfield": "Nombre",
+    "minimumvalue": "Valeur minimale acceptée",
+    "maximumvalue": "Valeur maximale acceptée",
+    "addingthisfield": "Ajout de ce champ",
+    "question": "Description du champ",
+    "questiondescribe": "Décrire ce champ (exemple : Donner une note, minimum 0, maximum 10)",
+    "numberexplain": "Type de question : nombre, {{description}} (minimum : {{min}}, maximum {{max}})",
+    "textexplain": "Type de question : texte, {{description}} longueur maximale {{max}})",
+    "optionexplain": "Type de question : option, {{description}} (sélectionnable jusqu'à {{max}}) option {{option}}",
+    "numberoption": "Nombre de réponses possibles",
+    "maximumselectable": "Réponse maximale sélectionnable",
+    "maxlen": "Longueur maximale",
+    "optionnumber": "Option {{i}}",
+    "description": "Description de la campagne",
+    "title": "Titre de la campagne",
+    "reward": "Récompense pour une tâche (EFX)",
+    "mycampaigns": "Mes campagnes"
+  },
+  "display": {
+    "addbatch": "Ajouter un lot",
+    "loadingbatch": "Chargement d'un lot",
+    "enteryourdata": "Saisissez les données du lot 1 par ligne",
+    "repetition": "Répétitions",
+    "next": "suivant",
+    "prev": "précédent",
+    "reserve": "réserve"
+  },
+  "campaignfields": {
+    "numberexplain": "{{description}} (minimum : {{min}}, maximum {{max}})",
+    "textexplain": "{{description}} (longueur maximale : {{max}})",
+    "optionexplain": "{{description}} (sélectionnable jusqu'à {{max}})"
+  },
+  "campaignlist": {
+    "connect": "Connectez votre compte pour accéder aux campagnes"
+  },
+  "campaignbase": {
+    "submit": "soumettre"
+  }
+}

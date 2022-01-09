@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "تسجيل الدخول",
+    "connecteffect": " تسجيل الدخول",
+    "createcampaign": " أنشئ حملة",
+    "participate": " شارك في الحملة",
+    "checkcampaign": " تحقق من حملتي",
+    "worker": " عامل",
+    "campaigncreator": " اعمال",
+    "currentcamaign": " الحملات الحالية"
+  },
+  "create": {
+    "campaigntype": " حدد نوع الحملة",
+    "addingfield": " إضافة حقل إجابة",
+    "validate": " إرسال الحملة",
+    "preview": " معاينة الحملة",
+    "twitter": " تويتر",
+    "picture": " صورة",
+    "selecttypeoffield": " إضافة إجابة من النوع:",
+    "option": " سؤال متعدد الخيارات",
+    "textfield": " حقل النص",
+    "numberfield": " عدد",
+    "minimumvalue": " الحد الأدنى للقيمة المقبولة",
+    "maximumvalue": " القيمة القصوى المقبولة",
+    "addingthisfield": " مضيفا هذا المجال",
+    "question": " وصف الحقل",
+    "questiondescribe": " صِف هذا الحقل (مثال: قدِّم ملاحظة ، بحد أدنى 0 ، بحد أقصى 10)",
+    "numberexplain": " نوع السؤال: رقم ، {{description}} (الحد الأدنى: {{min}} ، الحد الأقصى {{max}} )",
+    "textexplain": " نوع السؤال: نص ، {{description}} (أقصى طول {{max}} )",
+    "optionexplain": " نوع السؤال: خيار {{description}} (يمكن اختياره حتى {{max}} ) خيار {{option}}",
+    "numberoption": " العدد المحتمل للإجابة",
+    "maximumselectable": " أقصى إجابة قابلة للتحديد",
+    "maxlen": " الحد الأقصى لطول",
+    "optionnumber": " الخيار {{i}}",
+    "description": " وصف الحملة",
+    "title": " عنوان الحملة",
+    "reward": " مكافأة لمهمة واحدة (EFX)",
+    "mycampaigns": " حملاتي"
+  },
+  "display": {
+    "addbatch": " إضافة دفعة",
+    "loadingbatch": " تحميل دفعة",
+    "enteryourdata": " أدخل البيانات للدفعة 1 في كل سطر",
+    "repetition": " التكرار",
+    "next": " التالي",
+    "prev": " السابق",
+    "reserve": " احتياطي"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (الحد الأدنى: {{min}} ، الحد الأقصى {{max}} )",
+    "textexplain": " {{description}} (الطول الأقصى {{max}} )",
+    "optionexplain": " {{description}} (يمكن تحديدها حتى {{max}} )"
+  },
+  "campaignlist": {
+    "connect": " ربط حسابك للوصول إلى الحملات"
+  },
+  "campaignbase": {
+    "submit": "إرسال"
+  }
+}

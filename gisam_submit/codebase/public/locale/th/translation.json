@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "เข้าสู่ระบบ",
+    "connecteffect": " เข้าสู่ระบบ",
+    "createcampaign": " สร้างแคมเปญ",
+    "participate": " เข้าร่วมแคมเปญ",
+    "checkcampaign": " ตรวจสอบแคมเปญของฉัน",
+    "worker": " คนงาน",
+    "campaigncreator": " ธุรกิจ",
+    "currentcamaign": " แคมเปญปัจจุบัน"
+  },
+  "create": {
+    "campaigntype": " เลือกประเภทแคมเปญ",
+    "addingfield": " การเพิ่มช่องคำตอบ",
+    "validate": " ส่งแคมเปญ",
+    "preview": " แคมเปญตัวอย่าง",
+    "twitter": " ทวิตเตอร์",
+    "picture": " รูปภาพ",
+    "selecttypeoffield": " เพิ่มคำตอบประเภท:",
+    "option": " คำถามปรนัย",
+    "textfield": " ช่องข้อความ",
+    "numberfield": " ตัวเลข",
+    "minimumvalue": " ค่าต่ำสุดที่ยอมรับ",
+    "maximumvalue": " รับค่าสูงสุด",
+    "addingthisfield": " กำลังเพิ่มฟิลด์นี้",
+    "question": " คำอธิบายของสนาม",
+    "questiondescribe": " อธิบายฟิลด์นี้ (ตัวอย่าง: ให้โน้ต ขั้นต่ำ 0, สูงสุด 10)",
+    "numberexplain": " ประเภทคำถาม : จำนวน ที่ {{description}} (ขั้นต่ำ : {{min}} สูงสุด {{max}} )",
+    "textexplain": " ประเภทคำถาม : ข้อความ, {{description}} (ความยาวสูงสุด {{max}} )",
+    "optionexplain": " ประเภทคำถาม : ตัวเลือกการ {{description}} (เลือกได้ถึง {{max}} ) ตัวเลือก {{option}}",
+    "numberoption": " จำนวนคำตอบที่เป็นไปได้",
+    "maximumselectable": " เลือกคำตอบสูงสุดได้",
+    "maxlen": " ความยาวสูงสุด",
+    "optionnumber": " ตัวเลือก {{i}}",
+    "description": " คำอธิบายของแคมเปญ",
+    "title": " ชื่อแคมเปญ",
+    "reward": " รางวัลสำหรับหนึ่งภารกิจ (EFX)",
+    "mycampaigns": " แคมเปญของฉัน"
+  },
+  "display": {
+    "addbatch": " เพิ่มแบทช์",
+    "loadingbatch": " กำลังโหลดแบตช์",
+    "enteryourdata": " ป้อนข้อมูลสำหรับชุดที่ 1 ต่อบรรทัด",
+    "repetition": " การทำซ้ำ",
+    "next": " ต่อไป",
+    "prev": " ก่อนหน้า",
+    "reserve": " จอง"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (ขั้นต่ำ : {{min}} , สูงสุด {{max}} )",
+    "textexplain": " {{description}} (ความยาวสูงสุด {{max}} )",
+    "optionexplain": " {{description}} (เลือกได้สูงสุด {{max}} )"
+  },
+  "campaignlist": {
+    "connect": " เชื่อมต่อบัญชีของคุณเพื่อเข้าถึงแคมเปญ"
+  },
+  "campaignbase": {
+    "submit": "ส่ง"
+  }
+}
