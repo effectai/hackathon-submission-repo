@@ -1,6 +1,8 @@
 # ChessForce
 ## Demo
-https://kevinlaan.github.io/hackathon-submission-repo/
+- Website: https://kevinlaan.github.io/hackathon-submission-repo/
+
+- Video: https://www.youtube.com/watch?v=3xVAG3cCZr8
 
 ##### Region location
 Netherlands
