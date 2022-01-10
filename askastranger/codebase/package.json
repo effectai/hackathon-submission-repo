@@ -20,6 +20,7 @@
     "svelte-preprocess": "^4.10.1"
   },
   "dependencies": {
+    "@effectai/effect-js": "^0.1.18",
     "sirv-cli": "^2.0.0"
   }
 }

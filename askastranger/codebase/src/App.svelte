@@ -1,22 +1,76 @@
 <script>
-	let question = "Can you tell me a joke?";
-	function submitQuestion() {
-		user.loggedIn = !user.loggedIn;
+	let client;
+	let submitted = false;
+	async function loadForce() {
+		client = new effectsdk.EffectClient("jungle");
+		const burnerAccount = effectsdk.createAccount(
+			"0x65e6b6b5aab5375c498bfb3097461db32bae76fca907806ea86f30b7a1908b86"
+		);
+		const burnerWallet = effectsdk.createWallet(burnerAccount);
+		const connectReponse = await client.connectAccount(burnerWallet);
+		console.log(connectReponse);
 	}
+	async function submitQuestion() {
+		submitted = true;
+		answer = null;
+		try {
+			const campaign = await client.force.getCampaign(178);
+			console.log("campaign", campaign);
+			const content = { tasks: [{ question }] };
+			console.log("making batch with tasks", content);
+			const batchResponse = await client.force.createBatch(
+				campaign.id,
+				content,
+				1
+			);
+			waitForResult(batchResponse.leaves[0].substring(2));
+		} catch (e) {
+			alert(`Something went wrong: ${e.message}`);
+			submitted = false;
+		}
+	}
+	async function waitForResult(leafHash) {
+		const result = await client.force.getTaskResult(leafHash);
+		console.log("result", result);
+		if (!result) {
+			console.log("result not found, try again in 5s");
+			setTimeout(() => {
+				waitForResult(leafHash);
+			}, 5000);
+		} else {
+			answer = JSON.parse(result.data).answer;
+		}
+	}
+	let answer;
+	let question = "Can you tell me a joke?";
+	loadForce();
 </script>
 
 <main>
 	<img src="/img/logo_animated.svg" alt="Logo Ask a Stranger" />
 	<h1>Ask a Stranger</h1>
-	<textarea bind:value={question} />
-	<div>
-		<button
-			class="button-5"
-			disabled={question === ""}
-			on:click={submitQuestion}
-			type="submit">Ask Question</button
-		>
-	</div>
+	<h3>On Effect Force</h3>
+	{#if !submitted}
+		<textarea bind:value={question} />
+
+		<div>
+			<button
+				class="button-5"
+				disabled={question === "" || (submitted && !answer)}
+				on:click={submitQuestion}
+				type="submit">Ask Question</button
+			>
+		</div>
+	{/if}
+	{#if submitted}
+		<p>Question</p>
+		<h3>{question}</h3>
+		{#if answer}
+			<p>{answer}</p>
+		{:else}
+			<p>- waiting for answer -</p>
+		{/if}
+	{/if}
 </main>
 
 <style lang="scss">
@@ -29,14 +83,18 @@
 	main {
 		text-align: center;
 		padding: 1em;
-		max-width: 240px;
 		margin: 0 auto;
+		max-width: 500px;
+		width: 100%;
 	}
 
 	h1 {
 		color: #fa6400;
 		font-size: 4em;
-		font-weight: 100;
+		font-weight: 400;
+		margin: 0;
+	}
+	h3 {
 		margin: 0;
 	}
 
@@ -79,12 +137,6 @@
 		&:disabled {
 			background-color: grey;
 			transform: translateY(0px);
-		}
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
 		}
 	}
 </style>

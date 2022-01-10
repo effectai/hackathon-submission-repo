@@ -58,7 +58,9 @@ export default {
 			browser: true,
 			dedupe: ['svelte']
 		}),
-		commonjs(),
+		commonjs({
+			include: 'node_modules/**'
+		  }),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
