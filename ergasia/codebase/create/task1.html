@@ -1,0 +1,136 @@
+<!DOCTYPE html encoding>
+<html lang="en">
+
+<head>
+  <title>Tweet Sentiment Analysis</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+  <script src="https://unpkg.com/@effectai/effect-js/dist/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
+  <!-- <script src="./node_modules/@effectai/effect-js/dist/index.js"></script> -->
+  <style>
+    body {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    </style>
+</head>
+
+<body class="content">
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+
+<div class="section">
+    <div class="container" has-text-centered>
+
+        <form onsubmit="event.preventDefault();addFile()">
+            Upload file ifps url<input class="input" type="text" id="url" required >
+           <button class="button is-info mt-4" id="submit" type="submit">Submit</button>
+         </form>
+        <div class="classify-image">
+            <h1 class="title">Classify The Image</h1>
+            <image src='https://gateway.pinata.cloud/ipfs/${ipfs}' id="imgf"></image>
+        </div>
+        <hr>
+        <!-- <h3>Add Batch</h3>
+        <button type="submit" class="button is-primary is-large mt-6" onclick="makeBatch()">Submit</button> -->
+
+        
+        <h2 id="result"></h2>
+
+    </div>
+
+</div>
+
+<script>
+  let client
+  window.addEventListener('load', async function() {
+    client = new effectsdk.EffectClient('jungle')
+    const burnerAccount = effectsdk.createAccount('0x57816ea17ac46afaac852f059b48a546175a20bb914a088cbf318da35a69eb4d');
+    const burnerWallet = effectsdk.createWallet(burnerAccount)
+    connectReponse = await client.connectAccount(burnerWallet)
+    console.log("abc")
+    console.log('account', connectReponse)
+  })
+
+
+  async function addFile() {
+    const url = document.getElementById("url").value
+    document.getElementById('submit').disabled = true
+    console.log(url)
+    document.getElementById('imgf').src=`https://gateway.pinata.cloud/ipfs/${url}`
+    console.log("https://gateway.pinata.cloud/ipfs/${url}")
+    const el = document.getElementById('result')
+    el.innerText = 'Uploading task to Effect Force..'
+    const campaign = await client.force.getCampaign(143)
+    console.log("campaign", campaign)
+    const content = {'tasks': [
+      
+    {'ipfs':url}
+  ]
+  }
+    console.log("making batch with tasks", content) 
+    const repetitions = '1'   
+    const batchResponse = await client.force.createBatch(143, content, repetitions)
+    console.log(batchResponse)
+    el.innerText = 'Waiting For Results'
+    waitForResult(batchResponse.leaves[0].substring(2))
+  }
+  
+//   async function waitForResult(leafHash) {
+//     const el = document.getElementById('result')
+//     el.innerText = 'Waiting for result..'
+//     const result = await client.force.getTaskResult(leafHash)
+//     console.log("result", result)
+//     if (!result) {
+//       console.log("result not found, try again in 5s")
+//       setTimeout(() => {
+//         waitForResult(leafHash)
+//       }, 5000)
+//     } else {
+//       const sentiment = JSON.parse(result.data).sentiment;
+//       let color = 'black'
+//       if (sentiment === 'negative') {
+//         color = 'red'
+//       } else if (sentiment === 'positive') {
+//         color = 'green'
+//       }
+//       el.innerHTML = `Sentiment: <span style="color: ${color};">${sentiment}</span>`
+//       document.getElementById('submit').disabled = false
+//     }
+//   }
+
+async function makeBatch() {
+    try {
+        const campaign = await client.force.getCampaign(142)
+        console.log(`Campaign 🚒:\n${JSON.stringify(campaign)}`)
+        const content = {
+            'tasks': [
+                { "ipfs": "20" },
+                { "ipfs": "22" }
+            ]
+        }
+
+        const repetitions = '1'
+
+        const batchResponse = await client.force.createBatch(campaign.id, content, repetitions)
+        // document.getElementById('show-batch').innerHTML = `<p>${JSON.stringify(batchResponse, null, 2)}</p>`
+        console.log(batchResponse);
+        await client.force.waitTransaction(batchResponse)
+        const newBatch = await client.force.getCampaignBatches(142)
+        batchidentification = newBatch.pop().batch_id
+        // document.getElementById('show-batch').innerHTML = `<p>${JSON.stringify(newBatch, null, 2)}</p>`
+        // document.getElementById('btn-get-result').removeAttribute('disabled')    
+
+    } catch (error) {
+        alert('Something went wrong. See console for error message')
+        console.error(error)
+    }
+}
+  </script>
+</body>
+</html>
