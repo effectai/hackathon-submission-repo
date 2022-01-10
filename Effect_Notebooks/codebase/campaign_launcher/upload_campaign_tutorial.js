@@ -1,7 +1,7 @@
 const uploadCampaignIpfs = {
 
     // The title of the campaign
-    title: 'Raw Data Test Campaign',
+    title: 'Raw Data Test Campaign 3',
 
     // Description of the campaign
     description: 'Summarize raw data',
@@ -12,17 +12,16 @@ const uploadCampaignIpfs = {
     // The template that will be used for the tasks
     template: `<div>
         <h1>Test CSV Template</h1>
-        <a href='` + '${raw_data}' + `' download="efx_notebook_sample.csv">Download Sample Data</a>
+        <a href="` + '${raw_data}' + `" download="efx_notebook_sample.csv">Download Sample Data</a>
         <input type="text" name="data_summary" id="data_summary" placeholder="Summarize Data">
-        <button submit type='button'>Submit</button>
-    </div>
-    `,
+        <button type="submit">Submit</button>
+    </div>`,
 
     // Campaign image
     image: 'https://effect-notebooks-public.s3.amazonaws.com/data_science_img.jpg',
 
     // The category of the campaign
-    category: '',
+    category: 'Data Science',
 
     // Example task that will prefill the task template
     example_task: {
@@ -36,17 +35,19 @@ const uploadCampaignIpfs = {
     reward: 1
 }
 
+require('dotenv').config();
+
 const runMain = async function () {
     const effectsdk = require('@effectai/effect-js');
     const client = new effectsdk.EffectClient('jungle');
     console.log("SDK ready");
 
-    const account = effectsdk.createAccount();
+    const account = effectsdk.createAccount(process.env.PKEY);
     const web3 = effectsdk.createWallet(account);
     const effectAccount = await client.connectAccount(web3);
     console.log("acct connected", effectAccount);
 
-    const makeCampaign = await client.force.makeCampaign(uploadCampaignIpfs, '10');
+    const makeCampaign = await client.force.makeCampaign(uploadCampaignIpfs, '2');
     console.log("campaign created", makeCampaign);
 }
 
