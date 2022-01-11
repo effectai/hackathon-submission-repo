@@ -70,3 +70,5 @@ Gemfile.lock
 node_modules
 
 /venv
+
+*checkpoint.ipynb
