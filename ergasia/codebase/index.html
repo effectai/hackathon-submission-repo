@@ -15,13 +15,13 @@
  </head>
 
  <body>
-     <!-- partial:index.partial.html -->
+ 
      <!-- Header -->
      <header id="header" class="header">
          <div class="header__container container container--px">
              <nav class="navbar flex">
                  <a href="#" class="navbar__brand" title="Back to the homepage">ergasia_</a>
-
+<!-- 
                  <button id="toggleMenuBtn" class="navbar__toggle-menu toggle-menu" type="button" aria-haspopup="true"
                      aria-expanded="false" aria-label="Toggle navigation">
                      <div class="toggle-menu__hamburger hamburger" aria-hidden="true">
@@ -29,23 +29,14 @@
                          <div class="hamburger__item"></div>
                          <div class="hamburger__item"></div>
                      </div>
-                 </button>
+                 </button> -->
 
                  <ul id="menuList" class="navbar__menu menu" role="menu">
                      <li class="menu__item" role="none">
                          <a href="#" class="menu__link menu__link--active" role="menuitem">Powered by Effect Network</a>
                      </li>
-                     <!-- <li class="menu__item" role="none">
-                         <a href="#" class="menu__link" role="menuitem">Services</a>
-                     </li>
-                      <li class="menu__item" role="none">
-                         <a href="#" class="menu__link" role="menuitem">Pricing</a>
-                     </li>
                      <li class="menu__item" role="none">
-                         <a href="#" class="menu__link" role="menuitem">About</a>
-                     </li> -->
-                     <li class="menu__item" role="none">
-                         <a href="#" class="menu__link cta cta--primary" role="menuitem">Create Campaign</a>
+                         <a href="#" class="menu__link cta cta--primary" role="menuitem">Get Started</a>
                      </li>
                  </ul>
              </nav>
@@ -60,11 +51,10 @@
          <section class="hero">
              <div class="hero__container container container--px flex">
                  <div class="hero__text">
-                     <h1 class="hero__title">Get rewarded for t<span class="hero__title-underline">asks.</span></h1>
+                     <h1 class="hero__title">Get tasks done<span class="hero__title-underline">quickly.</span></h1>
                      <p class="hero__paragraph">
                          <span class="menu__link--active">ergasia</span> is a task distribution platform powered by
-                         Effect Network. Complete quick-up tasks to
-                         get rewarded with EFX tokens.
+                         Effect Network. Upload tasks and get them completed Quickly
                      </p>
                      <a href="#" class="hero__cta cta cta--primary">Get started</a>
                  </div>
@@ -100,8 +90,7 @@
                      <h1 class="features__subtitle subtitle-primary">WHAT CAN YOU DO</h1>
                      <h2 class="features__title title-primary">Current Campaigns</h2>
                      <p class="features__paragraph">
-                         Lorem ipsum dolor sit amet, consec tetur
-                         adipiscing elit, sed do eiusmod tempor.
+                         These are the campaigns to which you can upload tasks
                      </p>
                  </div>
 
@@ -142,9 +131,9 @@
                              </svg>
                          </div>
 
-                         <h3 class="feature__title">Debug</h3>
+                         <h3 class="feature__title">Technical Help/Debug</h3>
                          <p class="feature__paragraph">
-                             Help solve bugs in code and get rewarded.
+                            Upload tour code and the issue you are facing and get solution quickly
                          </p>
                      </div>
 
@@ -156,9 +145,9 @@
                                      stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                              </svg>
                          </div>
-                         <h3 class="feature__title">Answer Surveys</h3>
+                         <h3 class="feature__title">Feedback</h3>
                          <p class="feature__paragraph">
-                             Answer general surveys and get rewarded.
+                             Get feedback for your posters/social media posts
                          </p>
                      </div>
 
@@ -170,20 +159,36 @@
                                      stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                              </svg>
                          </div>
-                         <h3 class="feature__title">Medical Transcriptions</h3>
+                         <h3 class="feature__title">Ask Subject Questions</h3>
                          <p class="feature__paragraph">
-                             Help digitalize the healthcare industry.
+                            Get various school/university level questions solved
                          </p>
                      </div>
+
+                     <div class="features__feature feature--4">
+                        <div class="feature__icon-wrapper flex">
+                            <svg class="feature__icon" viewBox="0 0 31 39" aria-hidden="true" focusable='false'>
+                                <path
+                                    d="M9.77778 29.2222V25.3333M15.6111 29.2222V21.4444M21.4444 29.2222V17.5556M25.3333 37H5.88889C4.85749 37 3.86834 36.5903 3.13903 35.861C2.40972 35.1317 2 34.1425 2 33.1111V5.88889C2 4.85749 2.40972 3.86834 3.13903 3.13903C3.86834 2.40972 4.85749 2 5.88889 2H16.7506C17.2662 2.00011 17.7607 2.20504 18.1253 2.56972L28.6525 13.0969C29.0172 13.4615 29.2221 13.956 29.2222 14.4717V33.1111C29.2222 34.1425 28.8125 35.1317 28.0832 35.861C27.3539 36.5903 26.3647 37 25.3333 37Z"
+                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">Image Editing</h3>
+                        <p class="feature__paragraph">
+                           Upload images and get them edited as per your needs
+                        </p>
+                    </div>
+
+                     
                  </div>
              </div>
          </section>
 
-         <!-- Portfolio -->
+        
          <section class="portfolio">
              <div class="portfolio__container container container--px">
                  <div class="portfolio__text">
-                     <h1 class="portfolio__subtitle subtitle-primary">Create Campaigns Now</h1>
+                     <h1 class="portfolio__subtitle subtitle-primary">Upload Tasks on our Existing Campaigns</h1>
                      <h2 class="portfolio__title title-primary">Explore your options</h2>
                  </div>
 
@@ -217,20 +222,19 @@
 
                          <div class="card__content">
                              <div class="card__header">
-                                 <h3 class="card__title">Debug Task</h3>
-                                 <button type="button" class="cta cta--btn cta--btn_yellow" aria-label="view portfolio"
+                                 <h3 class="card__title">Technical Help/Debug</h3>
+                                 <a href="create/TechnicalHelp.html" class="cta cta--btn cta--btn_yellow" aria-label="view portfolio"
                                      aria-expanded="false">
                                      <svg class="cta--btn-icon" viewBox="0 0 14 11" aria-hidden="true"
                                          focusable='false'>
                                          <path d="M1 5.5L13 5.5M13 5.5L8.5 1M13 5.5L8.5 10" stroke-width="2"
                                              stroke-linecap="round" stroke-linejoin="round" />
                                      </svg>
-                                 </button>
+                                    </a>
                              </div>
 
                              <p class="card__description">
-                                 Lorem ipsum dolor sit amet,
-                                 consec tetur adipiscing elit.
+                                Upload your code,issue and tech stack and get the right code/solution quickly
                              </p>
                          </div>
                      </div>
@@ -241,213 +245,74 @@
 
                          <div class="card__content">
                              <div class="card__header">
-                                 <h3 class="card__title">Questions Survey Task</h3>
-                                 <button type="button" class="cta cta--btn cta--btn_yellow" aria-label="view portfolio"
+                                 <h3 class="card__title">Get Feedback</h3>
+                                 <a href="create/post-review.html" class="cta cta--btn cta--btn_yellow" aria-label="view portfolio"
                                      aria-expanded="false">
                                      <svg class="cta--btn-icon" viewBox="0 0 14 11" aria-hidden="true"
                                          focusable='false'>
                                          <path d="M1 5.5L13 5.5M13 5.5L8.5 1M13 5.5L8.5 10" stroke-width="2"
                                              stroke-linecap="round" stroke-linejoin="round" />
                                      </svg>
-                                 </button>
+                                    </a>
                              </div>
 
                              <p class="card__description">
-                                 Lorem ipsum dolor sit amet,
-                                 consec tetur adipiscing elit.
+                                 Upload your social media posts or any posters and get detailed feedback
                              </p>
                          </div>
                      </div>
-                 </div>
 
-                 <div class="portfolio__footer">
-                     <a href="#" class="portfolio__link cta cta--link">
-                         View portfolio
-                         <svg class="testimonial__link__icon cta--link-icon" viewBox="0 0 17 14" aria-hidden="true"
-                             focusable='false'>
-                             <path d="M1 7.375L16 7.375M16 7.375L10.375 1.75M16 7.375L10.375 13" stroke-width="2"
-                                 stroke-linecap="round" stroke-linejoin="round" />
-                         </svg>
-                     </a>
+                     <div class="portfolio__card card--4">
+                        <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2019/07/top-5-free-survey-makers.png"
+                            alt="Overwatch sigma character image" class="card__image" loading="lazy">
+
+                        <div class="card__content">
+                            <div class="card__header">
+                                <h3 class="card__title">Ask Subject Related Questions</h3>
+                                <a href="create/Question.html" class="cta cta--btn cta--btn_yellow" aria-label="view portfolio"
+                                    aria-expanded="false">
+                                    <svg class="cta--btn-icon" viewBox="0 0 14 11" aria-hidden="true"
+                                        focusable='false'>
+                                        <path d="M1 5.5L13 5.5M13 5.5L8.5 1M13 5.5L8.5 10" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <p class="card__description">
+                                Upload questions of your school/university curriculum on various subjects like Maths
+                                and get them solved
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__card card--5">
+                        <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2019/07/top-5-free-survey-makers.png"
+                            alt="Overwatch sigma character image" class="card__image" loading="lazy">
+
+                        <div class="card__content">
+                            <div class="card__header">
+                                <h3 class="card__title">Image Editing</h3>
+                                <a href="create/edit-image-new.html" class="cta cta--btn cta--btn_yellow" aria-label="view portfolio"
+                                    aria-expanded="false">
+                                    <svg class="cta--btn-icon" viewBox="0 0 14 11" aria-hidden="true"
+                                        focusable='false'>
+                                        <path d="M1 5.5L13 5.5M13 5.5L8.5 1M13 5.5L8.5 10" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <p class="card__description">
+                                Upload any image and get it edited according to your needs
+                            </p>
+                        </div>
+                    </div>
                  </div>
              </div>
          </section>
 
-         <!-- Testimonial -->
-         <!-- <section class="testimonial">
-             <div class="testimonial__container container container--px">
-                 <div class="testimonial__header flex">
-                     <div class="testimonial__text">
-                         <h1 class="subtitle-primary">Testimonial</h1>
-                         <h2 class="title-primary">What are they saying?</h2>
-                     </div>
-
-                     <div class="testimonial__controls flex">
-                         <button type="button" id="sliderPrevBtn"
-                             class="testimonials__prev cta cta--btn cta--btn_gray disabled"
-                             aria-label="Previous testimonial">
-                             <svg class="cta--btn-icon" viewBox="0 0 14 11" aria-hidden="true" focusable='false'>
-                                 <path d="M13 5.5L1 5.5M1 5.5L5.5 10M1 5.5L5.5 1" stroke-width="2"
-                                     stroke-linecap="round" stroke-linejoin="round" />
-                             </svg>
-                         </button>
-
-                         <button type="button" id="sliderNextBtn"
-                             class="testimonials__next cta cta--btn cta--btn_yellow" aria-label="Next testimonial">
-                             <svg class="cta--btn-icon" viewBox="0 0 14 11" aria-hidden="true" focusable='false'>
-                                 <path d="M1 5.5L13 5.5M13 5.5L8.5 1M13 5.5L8.5 10" stroke-width="2"
-                                     stroke-linecap="round" stroke-linejoin="round" />
-                             </svg>
-                         </button>
-                     </div>
-                 </div>
-
-                 <div class="testimonial__wrapper">
-                     <div id="sliderArea" class="testimonial__slider flex">
-                         <div class="testimonial__slide">
-                             <div class="testimonial__slide-header flex">
-                                 <div class="testimonial__slide-data flex">
-                                     <img src="https://raw.githubusercontent.com/alawe45/Html-Css-Js-game-agency-project/master/images/slider_person-img-1.jpg"
-                                         alt="testimonial user avatar" class="testimonial__slide-img">
-                                     <div class="testimonial__slide-info">
-                                         <h3 class="testimonial__slide-name">Micheal Smith</h3>
-                                         <span class="testimonial__slide-subtitle">CEO of Xxxx Games</span>
-                                     </div>
-                                 </div>
-
-                                 <div class="testimonial__slide-stars">
-                                     <svg width="92" height="15" viewBox="0 0 92 15" aria-hidden="true"
-                                         focusable='false'>
-                                         <path
-                                             d="M8.64122 0.580182C8.39008 -0.193394 7.29565 -0.193394 7.04367 0.580182L5.76781 4.50602C5.71286 4.67455 5.606 4.82138 5.46252 4.92548C5.31904 5.02958 5.14631 5.08562 4.96904 5.08557H0.841619C0.0285656 5.08557 -0.310767 6.12709 0.347739 6.60585L3.6873 9.03157C3.83076 9.13586 3.93752 9.28288 3.99229 9.45156C4.04706 9.62025 4.04703 9.80194 3.9922 9.97061L2.71718 13.8964C2.4652 14.67 3.35133 15.3143 4.009 14.8355L7.34856 12.4098C7.4921 12.3054 7.66499 12.2492 7.84244 12.2492C8.0199 12.2492 8.19279 12.3054 8.33632 12.4098L11.6759 14.8355C12.3336 15.3143 13.2197 14.6709 12.9677 13.8964L11.6927 9.97061C11.6379 9.80194 11.6378 9.62025 11.6926 9.45156C11.7474 9.28288 11.8541 9.13586 11.9976 9.03157L15.3371 6.60585C15.9948 6.12709 15.6572 5.08557 14.8433 5.08557H10.715C10.5379 5.08544 10.3653 5.02932 10.222 4.92523C10.0787 4.82114 9.97198 4.67442 9.91707 4.50602L8.64122 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M27.6412 0.580182C27.3901 -0.193394 26.2956 -0.193394 26.0437 0.580182L24.7678 4.50602C24.7129 4.67455 24.606 4.82138 24.4625 4.92548C24.319 5.02958 24.1463 5.08562 23.969 5.08557H19.8416C19.0286 5.08557 18.6892 6.12709 19.3477 6.60585L22.6873 9.03157C22.8308 9.13586 22.9375 9.28288 22.9923 9.45156C23.0471 9.62025 23.047 9.80194 22.9922 9.97061L21.7172 13.8964C21.4652 14.67 22.3513 15.3143 23.009 14.8355L26.3486 12.4098C26.4921 12.3054 26.665 12.2492 26.8424 12.2492C27.0199 12.2492 27.1928 12.3054 27.3363 12.4098L30.6759 14.8355C31.3336 15.3143 32.2197 14.6709 31.9677 13.8964L30.6927 9.97061C30.6379 9.80194 30.6378 9.62025 30.6926 9.45156C30.7474 9.28288 30.8541 9.13586 30.9976 9.03157L34.3371 6.60585C34.9948 6.12709 34.6572 5.08557 33.8433 5.08557H29.715C29.5379 5.08544 29.3653 5.02932 29.222 4.92523C29.0787 4.82114 28.972 4.67442 28.9171 4.50602L27.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M46.6412 0.580182C46.3901 -0.193394 45.2956 -0.193394 45.0437 0.580182L43.7678 4.50602C43.7129 4.67455 43.606 4.82138 43.4625 4.92548C43.319 5.02958 43.1463 5.08562 42.969 5.08557H38.8416C38.0286 5.08557 37.6892 6.12709 38.3477 6.60585L41.6873 9.03157C41.8308 9.13586 41.9375 9.28288 41.9923 9.45156C42.0471 9.62025 42.047 9.80194 41.9922 9.97061L40.7172 13.8964C40.4652 14.67 41.3513 15.3143 42.009 14.8355L45.3486 12.4098C45.4921 12.3054 45.665 12.2492 45.8424 12.2492C46.0199 12.2492 46.1928 12.3054 46.3363 12.4098L49.6759 14.8355C50.3336 15.3143 51.2197 14.6709 50.9677 13.8964L49.6927 9.97061C49.6379 9.80194 49.6378 9.62025 49.6926 9.45156C49.7474 9.28288 49.8541 9.13586 49.9976 9.03157L53.3371 6.60585C53.9948 6.12709 53.6572 5.08557 52.8433 5.08557H48.715C48.5379 5.08544 48.3653 5.02932 48.222 4.92523C48.0787 4.82114 47.972 4.67442 47.9171 4.50602L46.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M65.6412 0.580182C65.3901 -0.193394 64.2956 -0.193394 64.0437 0.580182L62.7678 4.50602C62.7129 4.67455 62.606 4.82138 62.4625 4.92548C62.319 5.02958 62.1463 5.08562 61.969 5.08557H57.8416C57.0286 5.08557 56.6892 6.12709 57.3477 6.60585L60.6873 9.03157C60.8308 9.13586 60.9375 9.28288 60.9923 9.45156C61.0471 9.62025 61.047 9.80194 60.9922 9.97061L59.7172 13.8964C59.4652 14.67 60.3513 15.3143 61.009 14.8355L64.3486 12.4098C64.4921 12.3054 64.665 12.2492 64.8424 12.2492C65.0199 12.2492 65.1928 12.3054 65.3363 12.4098L68.6759 14.8355C69.3336 15.3143 70.2197 14.6709 69.9677 13.8964L68.6927 9.97061C68.6379 9.80194 68.6378 9.62025 68.6926 9.45156C68.7474 9.28288 68.8541 9.13586 68.9976 9.03157L72.3371 6.60585C72.9948 6.12709 72.6572 5.08557 71.8433 5.08557H67.715C67.5379 5.08544 67.3653 5.02932 67.222 4.92523C67.0787 4.82114 66.972 4.67442 66.9171 4.50602L65.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M84.6412 0.580182C84.3901 -0.193394 83.2956 -0.193394 83.0437 0.580182L81.7678 4.50602C81.7129 4.67455 81.606 4.82138 81.4625 4.92548C81.319 5.02958 81.1463 5.08562 80.969 5.08557H76.8416C76.0286 5.08557 75.6892 6.12709 76.3477 6.60585L79.6873 9.03157C79.8308 9.13586 79.9375 9.28288 79.9923 9.45156C80.0471 9.62025 80.047 9.80194 79.9922 9.97061L78.7172 13.8964C78.4652 14.67 79.3513 15.3143 80.009 14.8355L83.3486 12.4098C83.4921 12.3054 83.665 12.2492 83.8424 12.2492C84.0199 12.2492 84.1928 12.3054 84.3363 12.4098L87.6759 14.8355C88.3336 15.3143 89.2197 14.6709 88.9677 13.8964L87.6927 9.97061C87.6379 9.80194 87.6378 9.62025 87.6926 9.45156C87.7474 9.28288 87.8541 9.13586 87.9976 9.03157L91.3371 6.60585C91.9948 6.12709 91.6572 5.08557 90.8433 5.08557H86.715C86.5379 5.08544 86.3653 5.02932 86.222 4.92523C86.0787 4.82114 85.972 4.67442 85.9171 4.50602L84.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                     </svg>
-                                 </div>
-                             </div>
-
-                             <div class="testimonial__slide-body">
-                                 <p class="testimonial__slide-description">
-                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                     sed do eiusmod tempor incididunt ut labore et dolore.
-                                     Ut enim ad minim veniam, quis nostrud exercitation
-                                     ullamco laboris nisi ut aliquip ex ea commodo dolor.
-                                 </p>
-                             </div>
-                         </div>
-
-                         <div class="testimonial__slide">
-                             <div class="testimonial__slide-header flex">
-                                 <div class="testimonial__slide-data flex">
-                                     <img src="https://raw.githubusercontent.com/alawe45/Html-Css-Js-game-agency-project/master/images/slider_person-img-2.jpg"
-                                         alt="testimonial user avatar" class="testimonial__slide-img">
-                                     <div class="testimonial__slide-info">
-                                         <h3 class="testimonial__slide-name">Harry Mon</h3>
-                                         <span class="testimonial__slide-subtitle">Manager of Xxxx Games</span>
-                                     </div>
-                                 </div>
-
-                                 <div class="testimonial__slide-stars">
-                                     <svg width="92" height="15" viewBox="0 0 92 15" aria-hidden="true"
-                                         focusable='false'>
-                                         <path
-                                             d="M8.64122 0.580182C8.39008 -0.193394 7.29565 -0.193394 7.04367 0.580182L5.76781 4.50602C5.71286 4.67455 5.606 4.82138 5.46252 4.92548C5.31904 5.02958 5.14631 5.08562 4.96904 5.08557H0.841619C0.0285656 5.08557 -0.310767 6.12709 0.347739 6.60585L3.6873 9.03157C3.83076 9.13586 3.93752 9.28288 3.99229 9.45156C4.04706 9.62025 4.04703 9.80194 3.9922 9.97061L2.71718 13.8964C2.4652 14.67 3.35133 15.3143 4.009 14.8355L7.34856 12.4098C7.4921 12.3054 7.66499 12.2492 7.84244 12.2492C8.0199 12.2492 8.19279 12.3054 8.33632 12.4098L11.6759 14.8355C12.3336 15.3143 13.2197 14.6709 12.9677 13.8964L11.6927 9.97061C11.6379 9.80194 11.6378 9.62025 11.6926 9.45156C11.7474 9.28288 11.8541 9.13586 11.9976 9.03157L15.3371 6.60585C15.9948 6.12709 15.6572 5.08557 14.8433 5.08557H10.715C10.5379 5.08544 10.3653 5.02932 10.222 4.92523C10.0787 4.82114 9.97198 4.67442 9.91707 4.50602L8.64122 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M27.6412 0.580182C27.3901 -0.193394 26.2956 -0.193394 26.0437 0.580182L24.7678 4.50602C24.7129 4.67455 24.606 4.82138 24.4625 4.92548C24.319 5.02958 24.1463 5.08562 23.969 5.08557H19.8416C19.0286 5.08557 18.6892 6.12709 19.3477 6.60585L22.6873 9.03157C22.8308 9.13586 22.9375 9.28288 22.9923 9.45156C23.0471 9.62025 23.047 9.80194 22.9922 9.97061L21.7172 13.8964C21.4652 14.67 22.3513 15.3143 23.009 14.8355L26.3486 12.4098C26.4921 12.3054 26.665 12.2492 26.8424 12.2492C27.0199 12.2492 27.1928 12.3054 27.3363 12.4098L30.6759 14.8355C31.3336 15.3143 32.2197 14.6709 31.9677 13.8964L30.6927 9.97061C30.6379 9.80194 30.6378 9.62025 30.6926 9.45156C30.7474 9.28288 30.8541 9.13586 30.9976 9.03157L34.3371 6.60585C34.9948 6.12709 34.6572 5.08557 33.8433 5.08557H29.715C29.5379 5.08544 29.3653 5.02932 29.222 4.92523C29.0787 4.82114 28.972 4.67442 28.9171 4.50602L27.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M46.6412 0.580182C46.3901 -0.193394 45.2956 -0.193394 45.0437 0.580182L43.7678 4.50602C43.7129 4.67455 43.606 4.82138 43.4625 4.92548C43.319 5.02958 43.1463 5.08562 42.969 5.08557H38.8416C38.0286 5.08557 37.6892 6.12709 38.3477 6.60585L41.6873 9.03157C41.8308 9.13586 41.9375 9.28288 41.9923 9.45156C42.0471 9.62025 42.047 9.80194 41.9922 9.97061L40.7172 13.8964C40.4652 14.67 41.3513 15.3143 42.009 14.8355L45.3486 12.4098C45.4921 12.3054 45.665 12.2492 45.8424 12.2492C46.0199 12.2492 46.1928 12.3054 46.3363 12.4098L49.6759 14.8355C50.3336 15.3143 51.2197 14.6709 50.9677 13.8964L49.6927 9.97061C49.6379 9.80194 49.6378 9.62025 49.6926 9.45156C49.7474 9.28288 49.8541 9.13586 49.9976 9.03157L53.3371 6.60585C53.9948 6.12709 53.6572 5.08557 52.8433 5.08557H48.715C48.5379 5.08544 48.3653 5.02932 48.222 4.92523C48.0787 4.82114 47.972 4.67442 47.9171 4.50602L46.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M65.6412 0.580182C65.3901 -0.193394 64.2956 -0.193394 64.0437 0.580182L62.7678 4.50602C62.7129 4.67455 62.606 4.82138 62.4625 4.92548C62.319 5.02958 62.1463 5.08562 61.969 5.08557H57.8416C57.0286 5.08557 56.6892 6.12709 57.3477 6.60585L60.6873 9.03157C60.8308 9.13586 60.9375 9.28288 60.9923 9.45156C61.0471 9.62025 61.047 9.80194 60.9922 9.97061L59.7172 13.8964C59.4652 14.67 60.3513 15.3143 61.009 14.8355L64.3486 12.4098C64.4921 12.3054 64.665 12.2492 64.8424 12.2492C65.0199 12.2492 65.1928 12.3054 65.3363 12.4098L68.6759 14.8355C69.3336 15.3143 70.2197 14.6709 69.9677 13.8964L68.6927 9.97061C68.6379 9.80194 68.6378 9.62025 68.6926 9.45156C68.7474 9.28288 68.8541 9.13586 68.9976 9.03157L72.3371 6.60585C72.9948 6.12709 72.6572 5.08557 71.8433 5.08557H67.715C67.5379 5.08544 67.3653 5.02932 67.222 4.92523C67.0787 4.82114 66.972 4.67442 66.9171 4.50602L65.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M84.6412 0.580182C84.3901 -0.193394 83.2956 -0.193394 83.0437 0.580182L81.7678 4.50602C81.7129 4.67455 81.606 4.82138 81.4625 4.92548C81.319 5.02958 81.1463 5.08562 80.969 5.08557H76.8416C76.0286 5.08557 75.6892 6.12709 76.3477 6.60585L79.6873 9.03157C79.8308 9.13586 79.9375 9.28288 79.9923 9.45156C80.0471 9.62025 80.047 9.80194 79.9922 9.97061L78.7172 13.8964C78.4652 14.67 79.3513 15.3143 80.009 14.8355L83.3486 12.4098C83.4921 12.3054 83.665 12.2492 83.8424 12.2492C84.0199 12.2492 84.1928 12.3054 84.3363 12.4098L87.6759 14.8355C88.3336 15.3143 89.2197 14.6709 88.9677 13.8964L87.6927 9.97061C87.6379 9.80194 87.6378 9.62025 87.6926 9.45156C87.7474 9.28288 87.8541 9.13586 87.9976 9.03157L91.3371 6.60585C91.9948 6.12709 91.6572 5.08557 90.8433 5.08557H86.715C86.5379 5.08544 86.3653 5.02932 86.222 4.92523C86.0787 4.82114 85.972 4.67442 85.9171 4.50602L84.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                     </svg>
-                                 </div>
-                             </div>
-
-                             <div class="testimonial__slide-body">
-                                 <p class="testimonial__slide-description">
-                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                     sed do eiusmod tempor incididunt ut labore et dolore.
-                                     Ut enim ad minim veniam, quis nostrud exercitation
-                                     ullamco laboris nisi ut aliquip ex ea commodo dolor.
-                                 </p>
-                             </div>
-                         </div>
-
-                         <div class="testimonial__slide">
-                             <div class="testimonial__slide-header flex">
-                                 <div class="testimonial__slide-data flex">
-                                     <img src="https://raw.githubusercontent.com/alawe45/Html-Css-Js-game-agency-project/master/images/slider_person-img-3.jpg"
-                                         alt="testimonial user avatar" class="testimonial__slide-img">
-                                     <div class="testimonial__slide-info">
-                                         <h3 class="testimonial__slide-name">Noah Wood</h3>
-                                         <span class="testimonial__slide-subtitle">UX Engineer of Xxxx Games</span>
-                                     </div>
-                                 </div>
-
-                                 <div class="testimonial__slide-stars">
-                                     <svg width="92" height="15" viewBox="0 0 92 15" aria-hidden="true"
-                                         focusable='false'>
-                                         <path
-                                             d="M8.64122 0.580182C8.39008 -0.193394 7.29565 -0.193394 7.04367 0.580182L5.76781 4.50602C5.71286 4.67455 5.606 4.82138 5.46252 4.92548C5.31904 5.02958 5.14631 5.08562 4.96904 5.08557H0.841619C0.0285656 5.08557 -0.310767 6.12709 0.347739 6.60585L3.6873 9.03157C3.83076 9.13586 3.93752 9.28288 3.99229 9.45156C4.04706 9.62025 4.04703 9.80194 3.9922 9.97061L2.71718 13.8964C2.4652 14.67 3.35133 15.3143 4.009 14.8355L7.34856 12.4098C7.4921 12.3054 7.66499 12.2492 7.84244 12.2492C8.0199 12.2492 8.19279 12.3054 8.33632 12.4098L11.6759 14.8355C12.3336 15.3143 13.2197 14.6709 12.9677 13.8964L11.6927 9.97061C11.6379 9.80194 11.6378 9.62025 11.6926 9.45156C11.7474 9.28288 11.8541 9.13586 11.9976 9.03157L15.3371 6.60585C15.9948 6.12709 15.6572 5.08557 14.8433 5.08557H10.715C10.5379 5.08544 10.3653 5.02932 10.222 4.92523C10.0787 4.82114 9.97198 4.67442 9.91707 4.50602L8.64122 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M27.6412 0.580182C27.3901 -0.193394 26.2956 -0.193394 26.0437 0.580182L24.7678 4.50602C24.7129 4.67455 24.606 4.82138 24.4625 4.92548C24.319 5.02958 24.1463 5.08562 23.969 5.08557H19.8416C19.0286 5.08557 18.6892 6.12709 19.3477 6.60585L22.6873 9.03157C22.8308 9.13586 22.9375 9.28288 22.9923 9.45156C23.0471 9.62025 23.047 9.80194 22.9922 9.97061L21.7172 13.8964C21.4652 14.67 22.3513 15.3143 23.009 14.8355L26.3486 12.4098C26.4921 12.3054 26.665 12.2492 26.8424 12.2492C27.0199 12.2492 27.1928 12.3054 27.3363 12.4098L30.6759 14.8355C31.3336 15.3143 32.2197 14.6709 31.9677 13.8964L30.6927 9.97061C30.6379 9.80194 30.6378 9.62025 30.6926 9.45156C30.7474 9.28288 30.8541 9.13586 30.9976 9.03157L34.3371 6.60585C34.9948 6.12709 34.6572 5.08557 33.8433 5.08557H29.715C29.5379 5.08544 29.3653 5.02932 29.222 4.92523C29.0787 4.82114 28.972 4.67442 28.9171 4.50602L27.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M46.6412 0.580182C46.3901 -0.193394 45.2956 -0.193394 45.0437 0.580182L43.7678 4.50602C43.7129 4.67455 43.606 4.82138 43.4625 4.92548C43.319 5.02958 43.1463 5.08562 42.969 5.08557H38.8416C38.0286 5.08557 37.6892 6.12709 38.3477 6.60585L41.6873 9.03157C41.8308 9.13586 41.9375 9.28288 41.9923 9.45156C42.0471 9.62025 42.047 9.80194 41.9922 9.97061L40.7172 13.8964C40.4652 14.67 41.3513 15.3143 42.009 14.8355L45.3486 12.4098C45.4921 12.3054 45.665 12.2492 45.8424 12.2492C46.0199 12.2492 46.1928 12.3054 46.3363 12.4098L49.6759 14.8355C50.3336 15.3143 51.2197 14.6709 50.9677 13.8964L49.6927 9.97061C49.6379 9.80194 49.6378 9.62025 49.6926 9.45156C49.7474 9.28288 49.8541 9.13586 49.9976 9.03157L53.3371 6.60585C53.9948 6.12709 53.6572 5.08557 52.8433 5.08557H48.715C48.5379 5.08544 48.3653 5.02932 48.222 4.92523C48.0787 4.82114 47.972 4.67442 47.9171 4.50602L46.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M65.6412 0.580182C65.3901 -0.193394 64.2956 -0.193394 64.0437 0.580182L62.7678 4.50602C62.7129 4.67455 62.606 4.82138 62.4625 4.92548C62.319 5.02958 62.1463 5.08562 61.969 5.08557H57.8416C57.0286 5.08557 56.6892 6.12709 57.3477 6.60585L60.6873 9.03157C60.8308 9.13586 60.9375 9.28288 60.9923 9.45156C61.0471 9.62025 61.047 9.80194 60.9922 9.97061L59.7172 13.8964C59.4652 14.67 60.3513 15.3143 61.009 14.8355L64.3486 12.4098C64.4921 12.3054 64.665 12.2492 64.8424 12.2492C65.0199 12.2492 65.1928 12.3054 65.3363 12.4098L68.6759 14.8355C69.3336 15.3143 70.2197 14.6709 69.9677 13.8964L68.6927 9.97061C68.6379 9.80194 68.6378 9.62025 68.6926 9.45156C68.7474 9.28288 68.8541 9.13586 68.9976 9.03157L72.3371 6.60585C72.9948 6.12709 72.6572 5.08557 71.8433 5.08557H67.715C67.5379 5.08544 67.3653 5.02932 67.222 4.92523C67.0787 4.82114 66.972 4.67442 66.9171 4.50602L65.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                         <path
-                                             d="M84.6412 0.580182C84.3901 -0.193394 83.2956 -0.193394 83.0437 0.580182L81.7678 4.50602C81.7129 4.67455 81.606 4.82138 81.4625 4.92548C81.319 5.02958 81.1463 5.08562 80.969 5.08557H76.8416C76.0286 5.08557 75.6892 6.12709 76.3477 6.60585L79.6873 9.03157C79.8308 9.13586 79.9375 9.28288 79.9923 9.45156C80.0471 9.62025 80.047 9.80194 79.9922 9.97061L78.7172 13.8964C78.4652 14.67 79.3513 15.3143 80.009 14.8355L83.3486 12.4098C83.4921 12.3054 83.665 12.2492 83.8424 12.2492C84.0199 12.2492 84.1928 12.3054 84.3363 12.4098L87.6759 14.8355C88.3336 15.3143 89.2197 14.6709 88.9677 13.8964L87.6927 9.97061C87.6379 9.80194 87.6378 9.62025 87.6926 9.45156C87.7474 9.28288 87.8541 9.13586 87.9976 9.03157L91.3371 6.60585C91.9948 6.12709 91.6572 5.08557 90.8433 5.08557H86.715C86.5379 5.08544 86.3653 5.02932 86.222 4.92523C86.0787 4.82114 85.972 4.67442 85.9171 4.50602L84.6412 0.580182Z"
-                                             fill="#F9C94E" />
-                                     </svg>
-                                 </div>
-                             </div>
-
-                             <div class="testimonial__slide-body">
-                                 <p class="testimonial__slide-description">
-                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                     sed do eiusmod tempor incididunt ut labore et dolore.
-                                     Ut enim ad minim veniam, quis nostrud exercitation
-                                     ullamco laboris nisi ut aliquip ex ea commodo dolor.
-                                 </p>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="testimonial__footer">
-                     <a href="#" class="testimonial__link cta cta--link">
-                         See all testimonials
-                         <svg class="testimonial__link__icon cta--link-icon" viewBox="0 0 17 14" aria-hidden="true"
-                             focusable='false'>
-                             <path d="M1 7.375L16 7.375M16 7.375L10.375 1.75M16 7.375L10.375 13" stroke-width="2"
-                                 stroke-linecap="round" stroke-linejoin="round" />
-                         </svg>
-                     </a>
-                 </div>
-             </div>
-         </section> -->
-
+    
          <!-- Team -->
          <section class="team">
              <div class="team__container container container--px">
@@ -473,7 +338,7 @@
 
                          <div class="member__info">
                              <h3 class="member__title">Surbhit Agrawal</h3>
-                             <span class="member__designation">Blockchain Enthusiast</span>
+                             <span class="member__designation">Blockchain Developer</span>
                          </div>
                      </div>
 
@@ -484,94 +349,7 @@
          </section>
      </main>
 
-     <!-- Footer (: -->
-     <footer class="footer">
-         <div class="footer__container container container--px flex">
-             <div class="footer__header flex">
-                 <a href="#" class="footer__brand" title="Back to the homepage">play_</a>
-
-                 <div class="footer__social-icons social-icons flex">
-                     <a href="#" class="social-icons__link social-icons__link--dribbble">
-                         <i class='bx bxl-dribbble'></i>
-                         <span class="visually-hidden">Dribbble</span>
-                     </a>
-                     <a href="#" class="social-icons__link social-icons__link--facebook">
-                         <i class='bx bxl-facebook'></i>
-                         <span class="visually-hidden">Facebook</span>
-                     </a>
-                     <a href="#" class="social-icons__link social-icons__link--twitter">
-                         <i class='bx bxl-twitter'></i>
-                         <span class="visually-hidden">Twitter</span>
-                     </a>
-                     <a href="#" class="social-icons__link social-icons__link--youtube">
-                         <i class='bx bxl-youtube'></i>
-                         <span class="visually-hidden">YouTube</span>
-                     </a>
-                 </div>
-             </div>
-
-             <nav class="footer__inner flex">
-                 <ul class="footer__list list" role="menu">
-                     <h3 class="list__title">Home</h3>
-
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Partners</a>
-                     </li>
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Features</a>
-                     </li>
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Testimonial</a>
-                     </li>
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Team</a>
-                     </li>
-                 </ul>
-                 <ul class="footer__list list" role="menu">
-                     <h3 class="list__title">Pages</h3>
-
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">About Us</a>
-                     </li>
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Careers</a>
-                     </li>
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Case Studies</a>
-                     </li>
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Pricing</a>
-                     </li>
-                 </ul>
-                 <ul class="footer__list list" role="menu">
-                     <h3 class="list__title">Blog</h3>
-
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Blog Listing</a>
-                     </li>
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Blog Article</a>
-                     </li>
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Newsroom</a>
-                     </li>
-                 </ul>
-                 <ul class="footer__list list" role="menu">
-                     <h3 class="list__title">Portfolio</h3>
-
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Portfolio</a>
-                     </li>
-                     <li class="list__item" role="none">
-                         <a href="#" class="list__link" role="menuitem">Single Case</a>
-                     </li>
-                 </ul>
-             </nav>
-
-             <p class="footer__text">© 2021 Game Analytics</p>
-         </div>
-     </footer>
-     <!-- partial -->
+ 
      <script src="./script.js"></script>
 
  </body>
