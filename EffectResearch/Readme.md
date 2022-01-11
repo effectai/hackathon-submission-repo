@@ -7,19 +7,19 @@ Please [**fork this repo**](https://help.github.com/articles/fork-a-repo/) and u
 
 Effect Research
 
-### Team name
+## Team name
 
 Mani Sai Prasad
 
-##### Region location
+#### Region location
 
 India
 
-##### Team Members
+#### Team Members
 
 -   Mani Sai Prasad
 
-#### Project Description
+## Project Description
 
 ### Inspiration
 
@@ -27,44 +27,45 @@ We know that research is necessary for many reasons like building Knowledge, Com
 
 A User can create a research study and submit it to the effect network and They will get the data from a global workforce for their research. They can view and download that data.
 
-#### Summary
+### Summary
 
 EffectResearch helps students, scholars and researchers to get quality data for their ongoing research.
 
-#### URLs
+### URLs
 
-#### Presentation
+Demo Video:
+https://youtu.be/VVIShfU1TNg
 
-# How it works
+### Presentation
+
+### How it works
 
 ![How it works](./assets/how_it_works.gif)
 
-# Application Screenshots
-
-## Landing Page
+### Landing Page
 
 ![](./assets/landing.png)
 
-## Dashboard
+### Dashboard
 
 ![](./assets/dash.png)
 
-## Create new Research Study
+### Create new Research Study
 
 ![](./assets/createSurvey.png)
 
-## Workforce Template
+### Workforce Template
 
 ![](./assets/effectforce.png)
 
-## Results
+### Results
 
 ![](./assets/results.png)
 
-#### Next Steps
+## Next Steps
 
-What do you need to do next to turn this prototype into a working solution?
+Next, I am planning to export the data in a spreadsheets format and allow them to retrieve through an API.
 
-#### License
+## License
 
 This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
