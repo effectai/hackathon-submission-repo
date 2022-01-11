@@ -1,11 +1,6 @@
-# Effect-JS Broswer Boilerplate
+# EYEFX codebase
 
-With this boilerplate, you can get a basic understanding of how to use the Effect-JS library in order to interact with the sdk.
+To run, type:
 
-Run the following commands to get started:
-```bash
-git clone https://github.com/effectai/hackathon-boilerplate.git
-cd hackathon-boilerplate/browser
-npm i 
-npm run serve
-```
+    npm i
+    npm run serve
