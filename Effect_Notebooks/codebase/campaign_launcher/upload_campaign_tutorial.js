@@ -1,7 +1,7 @@
 const uploadCampaignIpfs = {
 
     // The title of the campaign
-    title: 'Raw Data Test Campaign 3',
+    title: 'Notebook Wrapper Template test',
 
     // Description of the campaign
     description: 'Summarize raw data',
@@ -11,21 +11,22 @@ const uploadCampaignIpfs = {
 
     // The template that will be used for the tasks
     template: `<div>
-        <h1>Test CSV Template</h1>
-        <a href="` + '${raw_data}' + `" download="efx_notebook_sample.csv">Download Sample Data</a>
-        <input type="text" name="data_summary" id="data_summary" placeholder="Summarize Data">
-        <button type="submit">Submit</button>
-    </div>`,
+            <h1>Effect Notebooks Client</h1>
+            <p>` + '${notes}' + `</p>
+            <iframe src="http://localhost:8888" name="notebook" frameborder="0" style="width: 100%;
+        height: 800px;">
+        </div>`,
 
     // Campaign image
     image: 'https://effect-notebooks-public.s3.amazonaws.com/data_science_img.jpg',
 
     // The category of the campaign
-    category: 'Data Science',
+    category: 'Notebooks',
 
     // Example task that will prefill the task template
     example_task: {
-        'raw_data': 'https://effect-notebooks-public.s3.amazonaws.com/sample_baseball.csv'
+        // 'raw_data': 'https://effect-notebooks-public.s3.amazonaws.com/sample_baseball.csv'
+        'notes': 'these are sample notes about what the data should be'
     },
 
     // Version of the campaign
