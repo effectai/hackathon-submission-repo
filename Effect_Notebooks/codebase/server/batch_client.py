@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template
 
+# from ./ipynb_modifiers import
 
 template_dir = os.path.dirname(os.path.abspath(__file__))
 template_dir = os.path.join(template_dir, "pages")
@@ -10,7 +11,12 @@ app = Flask(__name__, template_folder=template_dir)
 
 @app.route("/")
 def entry_point():
-    return render_template("helloworld.html")
+
+    # TODO, plain html/js SPA
+    # will have fields to enter the data and all js handers in the file
+    # will interact with the other api methods here
+
+    return render_template("index.html")
 
 
 # BATCH ROUTES
