@@ -80,7 +80,7 @@
 #
 #          Takes precedence over allow_origin_pat.
 #  Default: ''
-# c.NotebookApp.allow_origin = ''
+c.NotebookApp.allow_origin = "*"
 
 ## Use a regular expression for the Access-Control-Allow-Origin header
 #

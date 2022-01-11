@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://unpkg.com/@effectai/effect-js/dist/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <style>
         body {
             text-align: center;
@@ -13,10 +15,46 @@
             margin: 0 auto;
         }
     </style>
+    <script>
+        function getFinalMethodDefinition(persistId) {
+            let codeCells = document.getElementsByClassName('CodeMirror');
+            let persistenceEl = document.getElementById(persistId);
+
+            for (let cell of codeCells) {
+                if (cell.innerText.includes("cleanData")) {
+                    submit_method = cell.innerText;
+                    // console.log("FOUND IT")
+                    // console.log(submit_method);
+                    persistenceEl.value = cell.innerText;
+                    break;
+                }
+            }
+        }
+
+        const interval = setInterval(function () {
+            // method to be executed;
+            getFinalMethodDefinition("method_definition");
+        }, 1000);
+
+        function showmethodval() {
+            var iframe = $('#notebookFrame');
+            // console.log($(".CodeMirror", iframe.contents()));
+            console.log("clicked");
+            getFinalMethodDefinition('method_definition');
+            console.log(document.getElementById('method_definition'));
+        }
+
+    </script>
 </head>
 
 <body class="content">
-    <h1>Effect Notebooks Client</h1>
-    <iframe src="http://localhost:8888" name="notebook" frameborder="0" style="width: 100%;
-  height: 800px;">
+    <div>
+        <h1>Effect Notebooks Client</h1>
+        <p>${notes}</p>
+        <button onclick="showmethodval()">SHARE METHODS</button>
+        <iframe src="http://localhost:8888/notebooks/basic.ipynb" id="notebookFrame" frameborder="0" style="width: 100%;
+    height: 800px;">
+    </div>
+    <input type="hidden" name="method_definition" id="method_definition">
+
 </body>
