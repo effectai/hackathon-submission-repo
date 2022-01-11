@@ -1,4 +1,5 @@
 import os
+import json
 from flask import Flask, render_template, request, make_response, jsonify
 
 # from ./ipynb_modifiers import
@@ -73,8 +74,24 @@ def use_task_submission():
 def get_method_def():
 
     # given filename use the method to get the definition, return a big string
+    return getMethodDef("virtualFileSystem/task_notebook.ipynb")
 
-    return "TODO: get the method out of a given file"
+
+def getMethodDef(fname):
+    with open(fname, "r") as notebook:
+        notebook_json = json.loads(notebook.read())
+        print(type(notebook_json))
+        cells = notebook_json["cells"]
+
+        for cell in cells:
+            for line in cell["source"]:
+                if "cleanData" in line:
+                    response = jsonify({"method": "".join(cell["source"])})
+                    response.headers.add("Access-Control-Allow-Origin", "*")
+                    return response
+                    # return "".join(cell["source"])
+
+        return jsonify({"method": "error"})
 
 
 if __name__ == "__main__":

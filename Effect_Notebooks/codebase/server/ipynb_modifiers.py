@@ -17,11 +17,6 @@ def getMethodDef(fname):
         return None
 
 
-def createBlankNotebook():
-    FCM().new(path="/test.ipynb")
-    return
-
-
 # f = "basic.ipynb"
 # print(getMethodDef(f))
-createBlankNotebook()
+# createBlankNotebook()

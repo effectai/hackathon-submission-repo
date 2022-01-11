@@ -1,7 +1,7 @@
 const uploadCampaignIpfs = {
 
     // The title of the campaign
-    title: 'Effect Notebooks',
+    title: 'Effect Notebooks Test',
 
     // Description of the campaign
     description: 'Allow users to submit notebooks with data science insights into the data provided',
@@ -11,6 +11,9 @@ const uploadCampaignIpfs = {
 
     // The template that will be used for the tasks
     template: `
+    
+
+
     
     `,
 
@@ -22,7 +25,8 @@ const uploadCampaignIpfs = {
 
     // Example task that will prefill the task template
     example_task: {
-        'seed_data_csv': 'https://effect-notebooks-public.s3.amazonaws.com/sample_baseball.csv'
+        'notebook': 'http://localhost:8888/notebooks/virtualFileSystem/task_notebook.ipynb',
+        'notes': 'Sample notes on how the data should be cleaned'
     },
 
     // Version of the campaign
