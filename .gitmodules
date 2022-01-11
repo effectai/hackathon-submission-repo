@@ -1,0 +1,6 @@
+[submodule "blocksage/codebase/web-app"]
+	path = blocksage/codebase/web-app
+	url = git@github.com:Blocksage/web-app.git
+[submodule "blocksage/codebase/server"]
+	path = blocksage/codebase/server
+	url = git@github.com:Blocksage/server.git
