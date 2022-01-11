@@ -1,6 +1,23 @@
 let client, campaignid, batchidentification;
 let connectAccount = { providerName: undefined, provider: undefined, account: undefined };
+let outputContent = [];
+let nTaskCards;
 const rewardEfx = 1; // 
+const eyefxCampaignId = 84; // the one and only
+const campaignToIpfs = {
+	title: 'EYEFX - Webpage Testing',
+	description: 'This campaign is designed to test the usability of webpages.',
+	instructions: "This campaign leverages a webcam based Eye Tracking algorithm to record your pupil and head position before presenting you with a specific task, e.g.: finding a specific piece of information on the webpage.",
+	template: undefined,
+	image: './cmp/media/arteum-ro-7H41oiADqqg-unsplash.jpg',
+	category: 'Effect Eye Tracking',
+	example_task: { 
+			'TestWebsite': 'https://en.wikipedia.org/wiki/Main_Page',
+			'InputPrompt': 'How Many Articles are currently present in the English Wikipedia?',
+			},
+	version: 1,
+	reward: rewardEfx,
+}
 
 $(document).ready(function(){
 	// initialize client
@@ -9,81 +26,253 @@ $(document).ready(function(){
 		} catch (error) {
 		console.error(error)
 	}
+	connectWallet()
 
+	// ForwardCampaign();
 	// prompt wallet link
+	// RepeatCardNTimes(3);
+
+});
+
+
+function CreateTriggers() {
+	// add listeners for each card
+	cards = document.getElementsByClassName('card');
+	Array.from(cards).forEach(function(card){
+		// Add listeners for buttons in each card
+		// To store input in outputContent
+		var webViewer = findFirstChildByClass(card, 'websiteViewer');
+		var websiteInputField = findFirstChildByClass(card, 'websiteInput');
+		var promptInputField = findFirstChildByClass(card, 'promptText');
+		var viewButton = findFirstChildByClass(card, 'previewWebsite');
+		var addTaskButton = findFirstChildByClass(card, 'addTask');
+		// console.log(websiteInputField)
+
+		viewButton.addEventListener('click', function () {
+			// console.log(websiteInputField.value)
+			if (websiteInputField) {
+				webViewer.src = websiteInputField.value;
+			}
+		});
+
+		addTaskButton.addEventListener('click', function () {
+			 //// ADD QUIK VALIDATION
+			if (websiteInputField.value && promptInputField.value) {
+				outputContent.push({
+					"TestWebsite": websiteInputField.value,
+					"InputPrompt": promptInputField.value,
+				})
+			} else {
+				Swal.fire({
+					title: 'Error',
+					text: 'Both website and prompt are required inputs',
+					icon: 'warning',
+					showCancelButton: false,
+				});
+			}
+		});
+	});
+
+	// send campaign
+	document.getElementById('submitBatch').addEventListener('click', function () {
+		if (outputContent.length != nTaskCards) {
+			Swal.fire({
+				title: 'Error',
+				text: 'It appears you missed a few. You can complete your batch request, or restart 🖥️👁️ EYEFX Fowarding Tool in order to change batch size.',
+				icon: 'warning',
+				showCancelButton: false,
+			});
+		} else {
+			ForwardCampaign();
+		};
+	});
+}
+// async function generateBurnerWallet(result) {
+// 	let burnerAddress;
+// 	Swal.fire({
+// 		title: 'Burner Wallet',
+// 		text: 'Insert your private key, or click next to create a new wallet',
+// 		input: 'text',
+// 	}).then((privateKey) => {
+// 		console.log('callback')
+// 		if (privateKey) {
+// 			try {
+// 				createBurnerWallet(privateKey);
+// 			} catch {
+// 				Swal.fire({
+// 					icon: 'warning', 
+// 					title: 'Oops...',
+// 					text: `Cannot connect to ${privateKey} address.`,
+// 				})
+// 			}
+// 		} else {
+// 			burnerAddress = createBurnerWallet();
+// 		}
+// 	})
+// 	console.log('tries to generate bunrer')
+// 	return burnerAddress
+// };
+
+function connectWallet() {
+	let accountID;
 	Swal.fire({
 		title: 'Select your preferred wallet',
 		text: 'Or test this campaign with a burner wallet',
 		showDenyButton: true,
-		showCancelButton: true,
+		showCancelButton: false,
 		focusConfirm: false,
 		confirmButtonText: '⚓ Anchor',
 		denyButtonText: `🦊 Metamask`,
-		cancelButtonText: 'Burner Wallet',
+		// cancelButtonText: 'Burner Wallet',
 		confirmButtonColor: '#66ccff',
 		denyButtonColor: '#fccd1d',
-		cancelButtonColor: '#9e9e9e',
+		// cancelButtonColor: '#9e9e9e',
+		allowOutsideClick: false, 
+		allowEscapeKey: false,
 		// Wait before 
 		preConfirm: async () => {return await connectAnchor()}, // connect anchor wallet function
 		preDeny: async () => {return await connectMetamask()}, // connect metamask wallet function
 
 	}).then((result) => {
-		/* Read more about isConfirmed, isDenied below */
-		console.log(result.value)
-		if (!result.isConfirmed && !result.isDenied) {
-			// connect burner wallet
-			Swal.fire({
-				Title: 'Burner Wallet',
-				text: 'Insert your private key, or click next to create a new wallet',
-				input: 'text',
-			}).then((privateKey) => {
-				let burnerAddress;
-				if (privateKey) {
-					try {
-						burnerAddress = createBurnerWallet(privateKey);
-					} catch {
-						Swal.fire({
-							icon: 'warning', 
-							title: 'Oops...',
-							text: `Cannot connect to ${privateKey} address.`,
-						})
-					}
-				} else {
-					createBurnerWallet();
-				}
-			})
-		} 
-		Swal.fire({
-			// potentially show "connectAccount.account" and ask confirm
-			title: 'Connect TEN to Wallet',
-			text: `Connect account: ${result.value} to the Effect Network?`,
-			showCancelButton: false ,
-			confirmButtonText: 'Go ahead',
-			showLoaderOnConfirm: true ,
-			preConfirm: async () => {await connectEffectAccount()},
-			allowOutsideClick: false,
-		}).then((result) => {
-			if (result.isConfirmed) {
-				Swal.fire({
-					title: 'EYEFX BatchR',
-					text: 'Insert batch size',
-					inputAttributes: {
-						min: 2,
-						max: 8,
-						step: 1,
-						},
-					inputValue: 4,
-					input: 'range',
-				}).then((result) => {
-					console.log(result)
-					IssueBatch(result.value)
-				});
-			}
-		});
-	});
-});
+	
+		accountID = result.value
 
-function IssueBatch(nTasks) {
+	Swal.fire({
+		// potentially show "connectAccount.account" and ask confirm
+		title: 'Connect TEN to Wallet',
+		text: `Connect account: ${accountID} to the Effect Network?`,
+		showCancelButton: false ,
+		confirmButtonText: 'Go ahead',
+		showLoaderOnConfirm: true ,
+		allowOutsideClick: false, 
+		allowEscapeKey: false,
+		preConfirm: async () => {await connectEffectAccount()},
+		allowOutsideClick: false,
+	}).then((result) => {
+		if (result.isConfirmed) {
+			Swal.fire({
+				title: 'EYEFX BatchR',
+				text: 'Insert batch size',
+				inputAttributes: {
+					min: 3,
+					max: 9,
+					step: 1,
+					},
+				inputValue: 4,
+				input: 'range',
+				allowOutsideClick: false, 
+				allowEscapeKey: false,
+			}).then((result) => {
+				// console.log(result);
+				nTaskCards = result.value;
+				RepeatCardNTimes(result.value);
+				CreateTriggers();
+				// ForwardCampaign();
+			});
+		}
+	});
+})
+}
+
+
+
+function ForwardCampaign() {
+
+
+	Swal.fire({
+		title: 'Campaign creation',
+		icon: 'question',
+		text: 'Are you updating the campaign? By clicking yes, you will permanently change the campaign uploaded on TEN',
+		showCancelButton: false,
+		showDenyButton: true,
+		allowOutsideClick: false, 
+		allowEscapeKey: false,
+		confirmButtonColor: '#66ccff',
+		denyButtonColor: '#fccd1d',
+		confirmButtonText: 'Yes',
+		denyButtonText: 'No',
+		preConfirm: async () => {
+			const tempResp = await fetch('./cmp/index.html');
+			campaignToIpfs.template = await tempResp.text();
+			const hash = await client.force.uploadCampaign(campaignToIpfs)
+			await client.force.editCampaign(eyefxCampaignId, hash, rewardEfx);
+			},
+		}).then((response) => {
+			if (response.isConfirmed) {
+				Swal.fire('Done!',
+						'Campaign has been changed',
+						'success') 
+		} else if (response.isDenied) {
+			console.log('error in changing campaign')
+		}
+	ForwardBatch()
+	});
+}
+
+async function ForwardBatch() {
+
+	Swal.fire({
+		title: 'Forwarding batch',
+		text: "It should only take a few seconds",
+		allowOutsideClick: false, 
+		allowEscapeKey: false,
+		preConfirm: async () => {
+			// Swal.showLoading();
+			var mobyDick = {'tasks': outputContent}
+			console.log(mobyDick)
+			let batchResponse = await client.force.createBatch(eyefxCampaignId, outputContent, 1);
+			await client.force.waitTransaction(batchResponse);
+			//batchResponse = await client.force.createBatch(campaign.id, outputContent, 1);
+			//client.force.waitTransaction(batchResponse);
+			},
+	}).then((transactionResp) => {
+			console.log(transactionResp);
+			Swal.fire(
+				'Batch Forwarded', 
+				'You will be able to visualize the results once the campaign is taken to completion',
+				'success')
+			},
+	);
+
+
+	// RECEIVE DATA
+	// const newBatch = client.force.getCampaignBatches(campaign.id)
+	// VISUALdata?
+}
+
+
+
+function findFirstChildByClass(element, className) {
+		var foundElement = null, found;
+		function recurse(element, className, found) {
+			for (var i = 0; i < element.childNodes.length && !found; i++) {
+				var el = element.childNodes[i];
+				var classes = el.className != undefined? el.className.split(" ") : [];
+				for (var j = 0, jl = classes.length; j < jl; j++) {
+					if (classes[j] == className) {
+						found = true;
+						foundElement = element.childNodes[i];
+						break;
+					}
+				}
+				if(found)
+					break;
+				recurse(element.childNodes[i], className, found);
+			}
+		}
+		recurse(element, className, false);
+		return foundElement;
+}
+
+
+function RepeatCardNTimes(nTasks) {
+
+	if (nTasks > 1) {
+		for (var i = 1; i < nTasks; i++) {
+			// console.log('i: ', i)
+			$AdditionalWebsiteInput = $('#containerN1').clone(true)
+			$('.row').append($AdditionalWebsiteInput)
+	}
 	// get campaign
 	//
 	// insert data in (template)
@@ -91,7 +280,7 @@ function IssueBatch(nTasks) {
 	// 1. website, and
 	// 2. question to ask.
 	// 3. submit
-}
+}};
 
 /**
  * SDK Client
@@ -99,28 +288,11 @@ function IssueBatch(nTasks) {
  * Note how the entry name is `effectsdk`!.
  */
 function generateClient() {
-    console.log('Creating SDK...')
+    // console.log('Creating SDK...')
     try {
         client = new effectsdk.EffectClient('jungle') //kylin
-/* 
-        console.log(client)
-        const divSdkClient = document.getElementById('sdk-client');
-        divSdkClient.innerHTML =
-            `SDK Client: Connected (See console for more info.): 
-         <p>Host: ${client.config.host}</p>
-         <p>IPFS ${client.config.ipfs_node}</p>
-         <p>Network: ${client.config.network}</p>`; 
-
-        // If successfull remove disabled attribute for buttons.
-        document.getElementById('btn-connect-account').removeAttribute('disabled')
-        document.getElementById('btn-get-campaign').removeAttribute('disabled')
-		 */
     } catch (error) {
         console.error(error)
-		 /*
-        const divSdkClient = document.getElementById('sdk-client');
-        divSdkClient.innerHTML = `<p>${JSON.stringify(error)}</p>`
-		  */
     }
 }
 
@@ -213,7 +385,7 @@ async function connectMetamask() {
 		}
 	} else {
 		Swal({
-			Title: 'Metamask not installed.',
+			title: 'Metamask not installed.',
 			icon: 'warning',
 		})
 	}
@@ -286,60 +458,6 @@ async function connectEffectAccount() {
  * We need to upload the campaign to IPFS, then create the campaign on the blockchain.
  * This is done for us by the makeCampaign function.
  */
-async function makeCampaign() {
-    console.log('creating campaign...')
-
-    try {
-        // Template String is available in this repo, otherwise it can be anywhere else.
-        const templateResponse = await fetch('./cmp/index.html')
-        const templateText = await templateResponse.text()
-
-        const campaignToIpfs = {
-            title: 'EYEFX - Webpage Testing',
-            description: 'This campaign is designed to test the usability of webpages.',
-            instructions: "This campaign leverages a webcam based Eye Tracking algorithm to record your pupil and head position before presenting you with a specific task, e.g.: finding a specific piece of information on the webpage.",
-            template: templateText,
-            image: './cmp/media/arteum-ro-7H41oiADqqg-unsplash.jpg',
-            category: 'Effect Eye Tracking',
-            example_task: { 
-						'TestWebsite': 'https://en.wikipedia.org/wiki/Main_Page',
-						'InputPrompt': 'How Many Articles are currently present in the English Wikipedia?',
-						},
-            version: 1,
-            reward: rewardEfx,
-        }
-
-        const quantity = rewardEfx; 
-        const makeCampaingResponse = await client.force.makeCampaign(campaignToIpfs, quantity)
-        console.log(makeCampaingResponse)
-        await client.force.waitTransaction(makeCampaign)
-
-        // document.getElementById('btn-make-batch').removeAttribute('disabled')
-
-        const retrieveCampaign = await client.force.getMyLastCampaign()
-        const divShowCampaign = document.getElementById('show-campaign');
-        divShowCampaign.innerHTML = `<p>${JSON.stringify(retrieveCampaign, null, 2)}</p>`
-    } catch (error) {
-        alert('Something went wrong. See console for error message')
-        console.error(error)
-    }
-}
-
-/**
- * Retrieve the last campaign you made with this account.
- */
-async function getLastCampaign() {
-    console.log('getting last campaign...')
-    try {
-        const retrieveCampaign = await client.force.getMyLastCampaign()
-        const divShowCampaign = document.getElementById('show-campaign');
-        divShowCampaign.innerHTML = `<p>${JSON.stringify(retrieveCampaign, null, 2)}</p>`
-        document.getElementById('btn-make-batch').removeAttribute('disabled')
-    } catch (error) {
-        alert('Something went wrong. See console for error message')
-        console.error(error)
-    }
-}
 
 /**
  * Make Batch
