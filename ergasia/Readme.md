@@ -57,3 +57,6 @@ The future scope of our project is really big. We can implement various other ta
 
 #### License
 This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
+
+#Note
+We haven't provided login functionality using metamask because only the owner of the respective campaigns are allowed to make a new task.
