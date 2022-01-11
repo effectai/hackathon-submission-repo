@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <section class="mb-5 d-flex flex-column align-items-start justify-content-center text-white vh-100 container">
+    <section class="mb-5 d-flex flex-column align-items-start justify-content-center text-white  container">
 
         <img style="width:250px; filter:invert(200);" class="my-5 ms-3" src="../images/ergasia.svg" alt="" srcset="">
 
@@ -55,8 +55,10 @@
                     <div id="loader" style="position:absolute; left: 40rem;" class="loading d-none"></div>
                 </div>
                 <div class="mt-5 d-none" id="uploaded">
-                    <h3 class="fw-bold">Your Uploaded Task Image</h3>
-                    <image class="d-none" src='https://gateway.pinata.cloud/ipfs/${ipfs}' id="imgf"></image>
+                    <h3 class="fw-bold  mb-4">Your Uploaded Task Image</h3>
+                    <image style="width:100%" class="shadow rounded" src='https://gateway.pinata.cloud/ipfs/${ipfs}'
+                        id="imgf">
+                    </image>
                 </div>
                 <hr>
                 <h2 id="result"></h2>
@@ -89,6 +91,9 @@
             document.getElementById('submit').disabled = true
             console.log(url)
             document.getElementById('imgf').src = `https://gateway.pinata.cloud/ipfs/${url}`
+            document.getElementById('imgf').classList.remove("d-none");
+            document.getElementById('loader').classList.remove("loading");
+
 
             // Display Image After Getting the Hash
             document.getElementById('uploaded').classList.remove("d-none");
@@ -125,6 +130,7 @@
                 const txt = JSON.parse(result.data).txt;
                 el.innerText = `Your Result is :${txt}`;
                 document.getElementById('loader').classList.add("d-none");
+                document.getElementById('uploaded').classList.remove("d-none");
                 // let color = 'black'
                 // if (sentiment === 'negative') {
                 //   color = 'red'
