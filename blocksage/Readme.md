@@ -33,7 +33,8 @@ The following components were built in the process:
 
 #### URLs
 https://github.com/blocksage
-http://blocksage.github.io/web-app 
+
+http://blocksage.github.io/web-app  (WIP)
 
 
 #### Presentation
@@ -41,10 +42,11 @@ https://github.com/Blocksage/web-app/blob/master/blocksage.pdf
 
 #### Next Steps
 
-1. Integrate more content platforms
+1. Integrate more content platforms (beyond Youtube)
 2. Better targeting options based on Demographics
 3. Improve usability
-4. Reach out to content platforms to get feedback
+4. Allow API users to determine the sample size and p-value for statastical significance
+4. Reach out to content platform teams to get feedback
 
 
 #### License
