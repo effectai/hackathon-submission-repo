@@ -88,12 +88,12 @@
 		</div>
 	</div>
 	<div id="websiteContainer">
-		<!-- '${TestWebsite}'-->
-		<iframe id="websiteDisplay" src="https://effect.network/token-page" scrolling="no"></iframe> 
+		<!-- Website to load for testing: '${TestWebsite}'. -->
+		<iframe id="websiteDisplay" src=`${TestWebsite}` scrolling="no"></iframe> 
 	</div>
 
-	<!-- submission modal -->
-	<p hidden id='input-prompt'>Via which platforms can you buy EFX?</p> <!-- '${InputPrompt}'-->
+	<!-- Question / input required for user to complete his task. -->
+	<p hidden id='input-prompt'>`${InputPrompt}`</p> <!-- -->
 	<div id="submissionModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 
@@ -112,8 +112,6 @@
 
 		</div>
 	</div>
-
-   <!--button type="submit" id="close-app" class="button is-primary is-large mt-6">Submit</button-->
 
 	<!--these last-->
 	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

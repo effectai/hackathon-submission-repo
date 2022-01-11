@@ -1,6 +1,6 @@
-var nCalClicks = 2;
-var PointCalibrate = 0;
-var CalibrationPoints={};
+const nCalClicks = 8;
+let PointCalibrate = 0;
+let CalibrationPoints={};
 // var canvas = document.getElementById("plotting_canvas");
 
 
