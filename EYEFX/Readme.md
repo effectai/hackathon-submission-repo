@@ -30,13 +30,18 @@ Describe the basic functionality of your project. What are the features you were
 The effect workforce would use our AI-based eyetracking program to collect and synthesize data from campaigns and present customers (websites, adTech, app devs) with actionable insights that will guide their design efforts towards fruition. This provides an opportunity to tap into the 41.8 bn USD (just U.S) web design services market and contribute to the web dev and digital design job market already at a 13% growth rate.
 
 #### URLs
-List any URLs relevant to demonstrating your prototype
+
+N/A
 
 #### Presentation
-List any links to your presentation or any related visuals you want to share.
+
+[3 Minutes Video](https://youtu.be/TXW0R2PfgYY) 
+
+[4 Minutes Video](https://youtu.be/uXlsayVKdrA)
 
 #### Next Steps
-What do you need to do next to turn this prototype into a working solution?
+
+In the future, eye tracking accuracy could increase thanks to the combination of thousands of eyetracking data available throughout the world. More echnical, simpler improvements are also possible, such as Full Screen Mode to offer a greater tracking surface, conversely dicreasing distactors and inter-browser differences. Lastly, the recent increase of biometric (Infra Red) cameras in consumer-grade devices opens avenues of potential improvement for webcam based eye tracking technologies. 
 
 #### License
 This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
