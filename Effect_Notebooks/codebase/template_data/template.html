@@ -1,11 +1,4 @@
-<!-- <!DOCTYPE html encoding>
-<html lang="en">
-
-<head>
-    <title>Effect Notebooks Client</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-<div>
+<div style='height:100%;'>
     <script src="https://unpkg.com/@effectai/effect-js/dist/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -44,12 +37,7 @@
                 let persistenceEl = document.getElementById("method_definition");
                 persistenceEl.value = data["method"];
             })
-            // getFinalMethodDefinition("method_definition");
         }, 1000);
-
-        // function showmethodval() {
-        //     console.log(document.getElementById('method_definition').value);
-        // }
 
     </script>
 
@@ -60,13 +48,17 @@
                 Use the notebook below to create a method that will clean the data
             </p>
             <h4>Notes from the uploader</h4>
-            <p>${notes}</p>
-            <input type="hidden" name="method_definition" id="method_definition">
-            <button submit type="button" style="width: 250px;margin: auto;">SUBMIT WORK</button>
+            <!-- <p>${notes}</p> -->
+            <p>The data should all be capitalized and the empty column should be removed...</p>
+            <form>
+                <input type="hidden" name="method_definition" id="method_definition">
+                <button submit type="button" style="width: 250px;margin: auto;">SUBMIT WORK</button>
+            </form>
+
         </div>
 
-        <iframe src="http://localhost:8888/notebooks/data_clean_template.ipynb" id="notebookFrame" frameborder="0"
-            style="width: 100%;
+        <iframe src="http://localhost:8888/notebooks/virtualFileSystem/task_notebook.ipynb" id="notebookFrame"
+            frameborder="0" style="width: 100%;
     height: 800px;">
     </div>
 
