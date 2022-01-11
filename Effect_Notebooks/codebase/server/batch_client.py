@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request, make_response, jsonify
 
 # from ./ipynb_modifiers import
 
@@ -16,23 +16,36 @@ def entry_point():
     # will have fields to enter the data and all js handers in the file
     # will interact with the other api methods here
 
-    return render_template("index.html")
+    return render_template("index.html", account_key="keyyyy", campaign_id=44)
 
 
 # BATCH ROUTES
-@app.route("/batch")
+@app.route("/batch", methods=["POST"])
 def create_new_batch():
 
-    # Save 3 csvs
+    uploaded_csv = request.form.get("ogContents")
+    desired_csv = request.form.get("editedContents")
+
+    print(uploaded_csv)
+    f = open("virtualFileSystem/original_data.csv", "a")
+    f.write(uploaded_csv)
+    f.close()
+    print(desired_csv)
+    f = open("virtualFileSystem/desired_data.csv", "a")
+    f.write(desired_csv)
+    f.close()
+
+    # Save 2 csvs
     # og
-    # sample start
     # sample end
 
     # create ipynb
     # fill in the fields
     # give the client the name of the file
 
-    return "TODO: supply the data needed to create batch tasks"
+    return make_response(
+        jsonify({"notebook": "virtualFileSystem/task_notebook.ipynb"}), 200
+    )
 
 
 @app.route("/validate")

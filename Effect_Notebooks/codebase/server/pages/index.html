@@ -45,10 +45,13 @@
     <textarea name="notes" id="notes" cols="25" rows="10" style="display: inline;" placeholder="Notes..."></textarea>
 
     <br>
-    <button type="submit">Submit Task</button>
+    <button type="submit" id="submit">Submit Task</button>
 
     <script>
+        let client;
         $(document).ready(function () {
+
+            // Fill in the textareas with uploaded data
             $("#csvUpload").change(function (e) {
                 var file = e.target.files[0];
                 console.log("CSV UPLOADED");
@@ -56,11 +59,64 @@
                 reader.onload = function (e) {
                     var contents = e.target.result;
                     $("#beforeLines").val(contents);
+                    $("#afterLines").val(contents);
                 };
                 reader.readAsText(file);
             });
 
+            // Submit handler
+            $("#submit").click(function () {
+                console.log("CLICKED");
+
+                let formData = new FormData();
+                // formData.append('csv', $('#csvUpload').prop('files')[0]);
+                formData.append('ogContents', $("#beforeLines").val());
+                formData.append('editedContents', $("#afterLines").val());
+                console.log(formData);
+
+                $.ajax({
+                    type: 'POST',
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    url: '/batch',
+                    data: formData,
+                    statusCode: {
+                        200: function (data) {
+                            console.log("DO EFX STUFF HERE");
+                            client = new effectsdk.EffectClient('jungle')
+                            const burnerAccount = effectsdk.createAccount('{{ account_key }}');
+                            const burnerWallet = effectsdk.createWallet(burnerAccount)
+                            connectReponse = await client.connectAccount(burnerWallet)
+                            console.log('account', connectReponse)
+                            uploadData();
+                        }
+                    }
+                });
+                // send formdata with
+                // File
+                // updated data
+
+            });
+
         });
+
+
+        async function uploadData() {
+            const campaignId = parseInt("{{ campaign_id }}");
+            const campaign = await client.force.getCampaign(campaignId)
+            console.log("campaign", campaign)
+            const content = {
+                "tasks": [{
+                    "notes": $("#notes").val(),
+                    "notebook": "http://localhost:8888/notebooks/virtualFileSystem/task_notebook.ipynb"
+                }]
+            }
+            console.log("making batch with tasks", content)
+            const batchResponse = await client.force.createBatch(campaign.id, content, 1)
+            waitForResult(batchResponse.leaves[0].substring(2))
+        }
+
 
     </script>
 
