@@ -15,34 +15,36 @@
 </head>
 
 <body>
-    <section class="d-flex flex-column align-items-center justify-content-center text-white vh-100 container">
+    <section class="mb-5 d-flex flex-column align-items-start justify-content-center text-white vh-100 container">
 
-        <img style="width:250px; filter:invert(200);" class="mb-4 mt-2" src="../../assets/ergasia.svg" alt="" srcset="">
+        <img style="width:250px; filter:invert(200);" class="my-5 ms-3" src="../../assets/ergasia.svg" alt="" srcset="">
 
-        <div class="section glass p-5 ">
-            <div class="">
-                <h1 class="h1 fw-bold w-75">Covert Handwriten Images to Text with Error checking</h1>
+        <div class="section glass w-100">
+            <div class="p-5">
+                <h1 class="h1 fw-bold w-75">Convert images of Handwriting to Text with error checking.</h1>
                 <div class="mt-5">
-                    <div class="fw-bold">Steps to Submit the Image</div>
-                    <li>
-                        Go to
-                        <a class="text-decoration-none text-warning fw-bold"
-                            href="https://anarkrypto.github.io/upload-files-to-ipfs-from-browser-panel/public/"
-                            target="_blank">
-                            IPFS File Uploader
-                        </a>
-                    </li>
-                    <li>Upload your Image.</li>
-                    <li>Copy the hash and paste in the field given below</li>
+                    <div class="fw-bold h5">Steps to Submit the Image</div>
+                    <ul style="color:#bbbbbb">
+                        <li>
+                            Go to
+                            <a class="text-decoration-none text-warning fw-bold"
+                                href="https://anarkrypto.github.io/upload-files-to-ipfs-from-browser-panel/public/"
+                                target="_blank">
+                                IPFS File Uploader
+                            </a>
+                        </li>
+                        <li>Upload your Image.</li>
+                        <li>Copy the hash and paste in the field given below</li>
+                    </ul>
                 </div>
                 <form class="mt-4" onsubmit="event.preventDefault();addFile()">
                     <div class="fw-bold">Upload your IPFS Image URL here</div>
 
-                    <div class="d-flex pt-2 input-group">
-                        <input class="form-control bg-dark text-white p-3" type="text" id="url" required>
+                    <div class="d-md-flex d-block pt-2 input-group">
+                        <input class="form-control rounded bg-dark text-white p-4 w-100" type="text" id="url" required>
 
-                        <div class="input-group-append">
-                            <button class="btn btn-dark fw-bold p-3" id="submit" type="submit">
+                        <div class=" w-100">
+                            <button class="btn shadow btn-warning fw-bold p-3 w-100" id="submit" type="submit">
                                 Start the Campaign
                             </button>
                         </div>
