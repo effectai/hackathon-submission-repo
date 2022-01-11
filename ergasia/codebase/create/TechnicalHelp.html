@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Poster/Post review</title>
+  <title>Debug/Technical help</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
@@ -25,23 +25,15 @@
 
 <div class="section">
     <div class="container" has-text-centered>
-        <h1 class="title">Upload Image of your Poster/Post and get reviews and ratings/h1>
-        <ul>Steps to upload image on ipfs</ul>
-        <li>Go to  <a href="https://anarkrypto.github.io/upload-files-to-ipfs-from-browser-panel/public/" target="_blank"> This URL</a></li>
-        <li>Upload your File </li>
-        <li>Copy the hash and paste in the field given below</li>
+        <h1 class="title">Upload your code with the issue</h1>
         <form onsubmit="event.preventDefault();addFile()">
-            Upload image ifps url<input class="input" type="text" id="url" required >
+            Enter Code<input type="text" name="code" id="code">
+            Enter The Issue<input type="text" name="issue" id="issue">
+            Enter The Technology being used<input type="text" name="tech" id="tech">
            <button class="button is-info mt-4" id="submit" type="submit">Submit</button>
          </form>
-        <div class="classify-image">
-            <h1 class="title">Your Uploaded Poster/Post</h1>
-            <image src='https://gateway.pinata.cloud/ipfs/${ipfs}' id="imgf"></image>
-        </div>
         <hr> 
-        <h2 id="appr"></h2>
-        <h2 id="rating"></h2>
-        <h2 id="review"></h2>
+        <h2 id="result"></h2>
 
     </div>
 
@@ -59,20 +51,19 @@
 
 
   async function addFile() {
-    const url = document.getElementById("url").value
+    const code = document.getElementById("code").value
+    const issue=document.getElementById("issue").value
+    const tech=document.getElementById("tech").value
     document.getElementById('submit').disabled = true
-    console.log(url)
-    document.getElementById('imgf').src=`https://gateway.pinata.cloud/ipfs/${url}`
-    console.log("https://gateway.pinata.cloud/ipfs/${url}")
     const el = document.getElementById('result')
     el.innerText = 'Uploading your task to Effect Force..'
     const campaign = await client.force.getCampaign(204)
     console.log("campaign", campaign)
-
     const content = {'tasks': [
-    {'ipfs':url,
-    'subject':ins
-}
+    {'code':code,
+    'issue':issue,
+    'tech':tech
+    }
   ]
   }
     console.log("making batch with tasks", content) 
@@ -93,22 +84,9 @@
       }, 5000)
     } else {
       console.log(result.data);
-      const appropriate= JSON.parse(result.data).appropriate;
-      const a=document.getElementById('appr')
-      if(appropriate==="on")
-      a.innerText = `Your  post is appropriate`;
-
-      else
-      a.innerText = `Your  post is not appropriate`;
-
-      const b=document.getElementById('rating');
-      const rate=JSON.parse(result.data).rate;
-      b.innerText=`Your post rating is ${rate}`;
-      
-      const review=Json.parse(result.data).review;
-      const c=document.getElementById('review');
-      c.innerText=`Your post review is ${review}`;
-
+      const el = document.getElementById('result')
+      const txt= JSON.parse(result.data).sol;
+      el.innerText = `Your Result is :${txt}`;
     }
   }
 

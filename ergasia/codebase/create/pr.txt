@@ -1,0 +1,47 @@
+<div class="section">
+    <div class="container" has-text-centered>
+
+        <div class="classify-image">
+            <h1 class="title">Provide your feedback on the following poster/social media post</h1>
+            <image src='https://gateway.pinata.cloud/ipfs/${ipfs}'></image>
+        </div>
+
+        <div class="block">
+            <h3>Is this image appropriate</h3>
+            <input type="checkbox" name="appropriate" id="appropriate">
+            <label for="animated">Appropriate</label>
+        </div>
+
+        <hr>
+
+              
+                <div class="block">
+                    <h3>Rate this poster/post on scale of 1 to 5?</h3>
+                    <input type="number" name="rating" id="rating">
+                </div>
+
+                <div class="block">
+                    <h3>Enter Review</h3>
+                    <input type="text" name="review" id="review"> 
+                </div>
+        
+
+        <button type="submit" class="button is-primary is-large mt-6">Submit</button>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-checkradio@2.1.2/dist/css/bulma-checkradio.min.css">
+
+
+<script>
+//  Logic here
+// Log the placeholder values with window.FORCE_PLACEHOLDERS
+setTimeout(() => console.log(window.FORCE_PLACEHOLDERS), 1000)
+</script>
+
+<style>
+/* Custom styles here. */
+</style>
