@@ -1,23 +1,9 @@
-# ⚡ Hackathon Project Template ⚡
+# Effect Research
 
-_This is a sample submission repository.
-Please [**fork this repo**](https://help.github.com/articles/fork-a-repo/) and use this as a starting point for your hackathon project._
+### Mani Sai Prasad
 
-## Project Name
+### Tirupati, India
 
-Effect Research
-
-## Team name
-
-Mani Sai Prasad
-
-#### Region location
-
-India
-
-#### Team Members
-
--   Mani Sai Prasad
 
 ## Project Description
 
