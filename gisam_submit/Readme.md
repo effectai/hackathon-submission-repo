@@ -8,7 +8,8 @@ Taipei
 -Gisam - all roles, i'm a french C / backend js developper
 #### Project Description
 
-This is a simple ui for the project.
+This is a simple ux for the project.
+I tried to address the problems that could be faced by the effect network users
 
 
 #### Summary
