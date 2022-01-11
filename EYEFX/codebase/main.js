@@ -219,8 +219,9 @@ async function ForwardBatch() {
 		preConfirm: async () => {
 			// Swal.showLoading();
 			const inputObject = {'tasks': outputContent}
-			let batchResponse = await client.force.createBatch(eyefxCampaignId, inputObject, 2);
-			await client.force.waitTransaction(batchResponse);
+			const batchResponse = await client.force.createBatch(eyefxCampaignId, inputObject, 2);
+			console.log(batchResponse);
+			await client.force.waitTransaction(batchResponse.transaction);
 			//batchResponse = await client.force.createBatch(campaign.id, outputContent, 1);
 			//client.force.waitTransaction(batchResponse);
 			},
