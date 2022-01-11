@@ -21,7 +21,7 @@
 
         <div class="section glass w-100">
             <div class="p-5">
-                <h1 class="h1 fw-bold">Convert images of Handwriting to Text with error checking.</h1>
+                <h1 class="h1 fw-bold">Get your images edited according to your needs</h1>
                 <div class="mt-5">
                     <div class="fw-bold h5">Steps to Submit the Image</div>
                     <ul style="color:#bbbbbb">
@@ -39,9 +39,15 @@
                 </div>
                 <form class="mt-4"
                     onsubmit="event.preventDefault();document.getElementById('loader').classList.remove('d-none');addFile()">
-                    <div class="fw-bold">Upload your IPFS Image URL here</div>
+
 
                     <div class="d-md-flex d-block pt-2 input-group">
+                        <label class="fw-bold mb-2">Work that needs to be done (Requirements)</label>
+                        <textarea class="form-control rounded bg-dark text-white p-4 w-100 mb-4" rows="3" id="inst"
+                            required></textarea>
+
+
+                        <label class="fw-bold mb-2">Upload your IPFS Image URL here</label>
                         <input class="form-control rounded bg-dark text-white p-4 w-100 mb-4" type="text" id="url"
                             required>
 
@@ -51,6 +57,7 @@
                             </button>
                         </div>
                     </div>
+
                 </form>
                 <div>
                     <div id="loader" style="position:absolute; left: 40rem;" class="loading d-none"></div>
@@ -89,9 +96,11 @@
 
         async function addFile() {
             const url = document.getElementById("url").value
+            const ins = document.getElementById("inst").value
             document.getElementById('submit').disabled = true
             console.log(url)
             document.getElementById('imgf').src = `https://gateway.pinata.cloud/ipfs/${url}`
+
             document.getElementById('imgf').classList.remove("d-none");
             document.getElementById('loader').classList.remove("loading");
 
@@ -102,16 +111,17 @@
             console.log("https://gateway.pinata.cloud/ipfs/${url}")
             const el = document.getElementById('result')
             el.innerText = 'Uploading your task to Effect Force..'
-            const campaign = await client.force.getCampaign(204)
+            const campaign = await client.force.getCampaign(205)
             console.log("campaign", campaign)
             const content = {
                 'tasks': [{
-                    'ipfs': url
+                    'ipfs': url,
+                    'requirements': ins
                 }]
             }
             console.log("making batch with tasks", content)
             const repetitions = '1'
-            const batchResponse = await client.force.createBatch(204, content, repetitions)
+            const batchResponse = await client.force.createBatch(205, content, repetitions)
             console.log(batchResponse)
             el.innerText = 'Waiting For Results'
             waitForResult(batchResponse.leaves[0].substring(2))
@@ -127,19 +137,15 @@
                 }, 5000)
             } else {
                 console.log(result.data);
-                const el = document.getElementById('result')
-                const txt = JSON.parse(result.data).txt;
-                el.innerText = `Your Result is :${txt}`;
                 document.getElementById('loader').classList.add("d-none");
                 document.getElementById('uploaded').classList.remove("d-none");
-                // let color = 'black'
-                // if (sentiment === 'negative') {
-                //   color = 'red'
-                // } else if (sentiment === 'positive') {
-                //   color = 'green'
-                // }
-                // el.innerHTML = `Sentiment: <span style="color: ${color};">${sentiment}</span>`
-                // document.getElementById('submit').disabled = false
+                const el = document.getElementById('result')
+                const txt = JSON.parse(result.data).code;
+                const ul = `https://gateway.pinata.cloud/ipfs/${txt}`
+                el.innerText = `Your image url is ${txt}`;
+                var x = document.createElement("IMG");
+                x.setAttribute("src", ul);
+                document.body.appendChild(x);
             }
         }
     </script>
