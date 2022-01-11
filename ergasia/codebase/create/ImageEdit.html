@@ -1,0 +1,115 @@
+<!DOCTYPE html encoding>
+<html lang="en">
+
+<head>
+  <title>Handwriting to Text</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+  <script src="https://unpkg.com/@effectai/effect-js/dist/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
+  <style>
+    body {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    </style>
+</head>
+
+<body class="content">
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+
+<div class="section">
+    <div class="container" has-text-centered>
+        <h1 class="title">Get your images edited according to your needs</h1>
+        <ul>Steps to upload image on ipfs</ul>
+        <li>Go to  <a href="https://anarkrypto.github.io/upload-files-to-ipfs-from-browser-panel/public/" target="_blank"> This URL</a></li>
+        <li>Upload your File </li>
+        <li>Copy the hash and paste in the field given below</li>
+        <form onsubmit="event.preventDefault();addFile()">
+            Upload image ifps url<input class="input" type="text" id="url" required >
+            Work that needs to be done (Requirements)<input type="text" id="inst" required>
+           <button class="button is-info mt-4" id="submit" type="submit">Submit</button>
+         </form>
+        <div class="classify-image">
+            <h1 class="title">Your Uploaded Image</h1>
+            <image src='https://gateway.pinata.cloud/ipfs/${ipfs}' id="imgf"></image>
+        </div>
+        <hr> 
+        <h2 id="result"></h2>
+
+    </div>
+
+</div>
+
+<script>
+  let client
+  window.addEventListener('load', async function() {
+    client = new effectsdk.EffectClient('jungle')
+    const burnerAccount = effectsdk.createAccount('0x57816ea17ac46afaac852f059b48a546175a20bb914a088cbf318da35a69eb4d');
+    const burnerWallet = effectsdk.createWallet(burnerAccount)
+    connectReponse = await client.connectAccount(burnerWallet)
+    console.log('account', connectReponse)
+  })
+
+
+  async function addFile() {
+    const url = document.getElementById("url").value
+    const ins=document.getElementById("inst").value
+    document.getElementById('submit').disabled = true
+    console.log(url)
+    document.getElementById('imgf').src=`https://gateway.pinata.cloud/ipfs/${url}`
+    console.log("https://gateway.pinata.cloud/ipfs/${url}")
+    const el = document.getElementById('result')
+    el.innerText = 'Uploading your task to Effect Force..'
+    const campaign = await client.force.getCampaign(205)
+    console.log("campaign", campaign)
+    const content = {'tasks': [
+    {'ipfs':url,
+    'requirements':ins
+}
+  ]
+  }
+    console.log("making batch with tasks", content) 
+    const repetitions = '1'   
+    const batchResponse = await client.force.createBatch(205, content, repetitions)
+    console.log(batchResponse)
+    el.innerText = 'Waiting For Results'
+    waitForResult(batchResponse.leaves[0].substring(2))
+  }
+  
+  async function waitForResult(leafHash) {
+    const result = await client.force.getTaskResult(leafHash)
+    console.log("result", result)
+    if (!result) {
+      console.log("result not found, try again in 5s")
+      setTimeout(() => {
+        waitForResult(leafHash)
+      }, 5000)
+    } else {
+      console.log(result.data);
+      const el = document.getElementById('result')
+      const txt= JSON.parse(result.data).code;
+      const ul=`https://gateway.pinata.cloud/ipfs/${txt}`
+      el.innerText = `Your image url is ${txt}`;
+      var x = document.createElement("IMG");
+      x.setAttribute("src", ul);
+      document.body.appendChild(x);
+      // let color = 'black'
+      // if (sentiment === 'negative') {
+      //   color = 'red'
+      // } else if (sentiment === 'positive') {
+      //   color = 'green'
+      // }
+      // el.innerHTML = `Sentiment: <span style="color: ${color};">${sentiment}</span>`
+      // document.getElementById('submit').disabled = false
+    }
+  }
+
+  </script>
+</body>
+</html>
