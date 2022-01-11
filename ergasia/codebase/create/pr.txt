@@ -9,12 +9,9 @@
         <div class="block">
             <h3>Is this image appropriate</h3>
             <input type="checkbox" name="appropriate" id="appropriate">
-            <label for="animated">Appropriate</label>
         </div>
 
         <hr>
-
-              
                 <div class="block">
                     <h3>Rate this poster/post on scale of 1 to 5?</h3>
                     <input type="number" name="rating" id="rating">

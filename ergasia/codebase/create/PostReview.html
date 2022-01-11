@@ -25,7 +25,7 @@
 
 <div class="section">
     <div class="container" has-text-centered>
-        <h1 class="title">Upload Image of your Poster/Post and get reviews and ratings/h1>
+        <h1 class="title">Upload Image of your Poster/Post and get reviews and ratings</h1>
         <ul>Steps to upload image on ipfs</ul>
         <li>Go to  <a href="https://anarkrypto.github.io/upload-files-to-ipfs-from-browser-panel/public/" target="_blank"> This URL</a></li>
         <li>Upload your File </li>
@@ -38,7 +38,8 @@
             <h1 class="title">Your Uploaded Poster/Post</h1>
             <image src='https://gateway.pinata.cloud/ipfs/${ipfs}' id="imgf"></image>
         </div>
-        <hr> 
+        <hr>
+        <h2 id="result"></h2> 
         <h2 id="appr"></h2>
         <h2 id="rating"></h2>
         <h2 id="review"></h2>
@@ -66,18 +67,17 @@
     console.log("https://gateway.pinata.cloud/ipfs/${url}")
     const el = document.getElementById('result')
     el.innerText = 'Uploading your task to Effect Force..'
-    const campaign = await client.force.getCampaign(204)
+    const campaign = await client.force.getCampaign(229)
     console.log("campaign", campaign)
 
     const content = {'tasks': [
-    {'ipfs':url,
-    'subject':ins
-}
+    {'ipfs':url
+    }
   ]
   }
     console.log("making batch with tasks", content) 
     const repetitions = '1'   
-    const batchResponse = await client.force.createBatch(204, content, repetitions)
+    const batchResponse = await client.force.createBatch(229, content, repetitions)
     console.log(batchResponse)
     el.innerText = 'Waiting For Results'
     waitForResult(batchResponse.leaves[0].substring(2))
@@ -92,22 +92,25 @@
         waitForResult(leafHash)
       }, 5000)
     } else {
+        const el = document.getElementById('result')
+    el.innerText = 'Your Results are..'
       console.log(result.data);
       const appropriate= JSON.parse(result.data).appropriate;
       const a=document.getElementById('appr')
       if(appropriate==="on")
       a.innerText = `Your  post is appropriate`;
-
       else
+      {
       a.innerText = `Your  post is not appropriate`;
+      }
 
       const b=document.getElementById('rating');
-      const rate=JSON.parse(result.data).rate;
+      const rate=JSON.parse(result.data).rating;
       b.innerText=`Your post rating is ${rate}`;
       
-      const review=Json.parse(result.data).review;
+      const rev=JSON.parse(result.data).review;
       const c=document.getElementById('review');
-      c.innerText=`Your post review is ${review}`;
+      c.innerText=`Your post review is ${rev}`;
 
     }
   }
