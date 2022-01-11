@@ -5,10 +5,14 @@
  
  ---
  
-##### Region: India
-##### Team Members:
+#### Region: 
+- India
+
+#### Team Members:
 - **Fabian Ferno**, Full Stack Engineer
 - **Surbhit Agrawal**, Blockchain Developer
+
+----
 
 #### Project Description
 Provide a clear statement of the challenges/issues/problems/gaps your project engages as well as a brief, high-level description of how your project engages the areas you've identified. What is the value of your approach? Who are the intended users?
@@ -23,6 +27,7 @@ Describe the basic functionality of your project. What are the features you were
 - https://testnet.effect.network/
 
 #### Presentation
+Product Demo on YouTube: 
 ![image](https://user-images.githubusercontent.com/57835412/148960286-77bce782-0bf3-46c5-8e5b-b06cc6f5b2a0.png)
 ![image](https://user-images.githubusercontent.com/57835412/148960343-7ba434ed-58fa-41a1-b6cb-3e9c9500cc39.png)
 
