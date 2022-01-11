@@ -27,9 +27,9 @@
     <div class="container" has-text-centered>
         <h1 class="title">Upload your code with the issue</h1>
         <form onsubmit="event.preventDefault();addFile()">
-            Enter Code<input type="text" name="code" id="code">
-            Enter The Issue<input type="text" name="issue" id="issue">
-            Enter The Technology being used<input type="text" name="tech" id="tech">
+            Enter Code<textarea name="code" id="code"> </textarea> <br>
+            Enter The Issue<textarea name="issue" id="issue"> </textarea><br>
+            Enter The Technology being used<textarea name="tech" id="tech"> </textarea><br>
            <button class="button is-info mt-4" id="submit" type="submit">Submit</button>
          </form>
         <hr> 
@@ -57,7 +57,7 @@
     document.getElementById('submit').disabled = true
     const el = document.getElementById('result')
     el.innerText = 'Uploading your task to Effect Force..'
-    const campaign = await client.force.getCampaign(204)
+    const campaign = await client.force.getCampaign(276)
     console.log("campaign", campaign)
     const content = {'tasks': [
     {'code':code,
@@ -68,7 +68,7 @@
   }
     console.log("making batch with tasks", content) 
     const repetitions = '1'   
-    const batchResponse = await client.force.createBatch(204, content, repetitions)
+    const batchResponse = await client.force.createBatch(276, content, repetitions)
     console.log(batchResponse)
     el.innerText = 'Waiting For Results'
     waitForResult(batchResponse.leaves[0].substring(2))
@@ -85,7 +85,7 @@
     } else {
       console.log(result.data);
       const el = document.getElementById('result')
-      const txt= JSON.parse(result.data).sol;
+      const txt= JSON.parse(result.data).answer;
       el.innerText = `Your Result is :${txt}`;
     }
   }
