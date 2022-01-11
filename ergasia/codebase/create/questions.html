@@ -49,9 +49,13 @@
                 </div>
                 <form class="mt-4"
                     onsubmit="event.preventDefault();document.getElementById('loader').classList.remove('d-none');addFile()">
-                    <div class="fw-bold">Upload your IPFS Image URL here</div>
 
                     <div class="d-md-flex d-block pt-2 input-group">
+                        <label class="fw-bold mb-2">Enter subject</label>
+                        <input class="form-control rounded bg-dark text-white p-4 w-100 mb-4" type="text" name="subject"
+                            id="subject" required>
+
+                        <label class="fw-bold mb-2">Upload your IPFS Image URL here</label>
                         <input class="form-control rounded bg-dark text-white p-4 w-100 mb-4" type="text" id="url"
                             required>
 
@@ -61,6 +65,10 @@
                             </button>
                         </div>
                     </div>
+
+
+
+
                 </form>
                 <div>
                     <div id="loader" style="position:absolute; left: 40rem;" class="loading d-none"></div>
@@ -71,7 +79,6 @@
                         id="imgf">
                     </image>
                 </div>
-                <hr>
                 <h2 id="result"></h2>
             </div>
         </div>
