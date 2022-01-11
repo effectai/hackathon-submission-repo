@@ -28,6 +28,28 @@ It is based on the first Blockchain-based framework for the Future-of-Work.  thu
 - It can be run across various **devices** (like phones/pcs/tablets) as well as across **platforms** (like Android 📱 , Windows 🪟 , Mac 💻 , Linux :heart:).
 - Unified development process for all devices.
 
+## Setting up
+
+Installing dependencing and debuging locally.
+
+```bash
+ cd codebase\server
+ npm install 
+ npm start
+```
+In another terminal
+
+```bash
+ cd codebase\creator
+ npm install 
+ npm run serve
+```
+  OR
+
+
+### Try it out 
+[EFX-Authentic](https://efx-authentic.herokuapp.com/)
+
 ## How we built it 🔧 
 
 We built it using
@@ -62,4 +84,3 @@ Hope you enjoyed the project 😃.
 A sincere thanks to Effect.AI and Devpost for creating an opportunity to learn through the Hackathon.
 
 Have a beautiful day 😊.
-
