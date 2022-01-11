@@ -1,0 +1,133 @@
+<div class="main">
+  <div class="swiper">
+    <div class="swiper-wrapper"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="header">
+    <h2>${title}</h2>
+    <a href="${link}" target="_blank">View on retailer's website</a> -
+    <a href="${search}" target="_blank">Lookup product on Google</a>
+  </div>
+  <select required multiple="multiple" name="selected"></select>
+  <button class="button is-success" type="submit">Submit</button>
+</div>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/multi.js/0.5.3/multi.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/he/1.2.0/he.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/multi.js/0.5.3/multi.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
+
+<script>
+  const collections = JSON.parse(he.decode("${collections}"));
+  const images = JSON.parse(he.decode("${images}"));
+  if (images.length > 0) {
+    document.querySelector(".swiper-wrapper").innerHTML = images
+      .map((img) => `<div class="swiper-slide"><img src="` + img + `"/></div>`)
+      .join("");
+    new Swiper(".swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  } else {
+    document.querySelector(".swiper").remove();
+  }
+  document.querySelector("select").innerHTML = collections
+    .map((el) => `<option value="${el.id}">${el.title}</option>`)
+    .join("");
+  multi(document.querySelector("select"), {
+    search_placeholder: "Search categories...",
+    non_selected_header: "Available categories",
+    selected_header: "Selected categories",
+  });
+</script>
+<style>
+  html {
+    background-color: #fff;
+    font-size: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    color: #4a4a4a;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  *,
+  ::after,
+  ::before {
+    box-sizing: inherit;
+  }
+  body,
+  input {
+    font-family: "Inter", sans-serif;
+  }
+  .main {
+    padding: 14px 0;
+  }
+  .header {
+    margin-bottom: 20px;
+  }
+  .header a {
+    text-decoration: none;
+    color: rgb(0, 0, 238) !important;
+  }
+  .button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-width: 1px;
+    cursor: pointer;
+    justify-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    white-space: nowrap;
+    height: 2.5em;
+    margin: 20px auto 0;
+    display: block;
+  }
+  .button.is-success {
+    background-color: #48c78e;
+    border-color: transparent;
+    color: #fff;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-slide img {
+    max-height: 250px;
+  }
+</style>
