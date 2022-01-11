@@ -11,8 +11,9 @@
     <style>
         body {
             text-align: center;
-            max-width: 600px;
+            max-width: 90%;
             margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
         }
     </style>
     <script>
@@ -50,10 +51,17 @@
 <body class="content">
     <div>
         <h1>Effect Notebooks Client</h1>
-        <p>${notes}</p>
-        <button onclick="showmethodval()">SHARE METHODS</button>
-        <iframe src="http://localhost:8888/notebooks/virtualFileSystem/test_copy.ipynb" id="notebookFrame"
-            frameborder="0" style="width: 100%;
+        <div>
+            <p>
+                Use the notebook below to create a method that will clean the data
+            </p>
+            <h4>Notes from the uploader</h4>
+            <p>${notes}</p>
+        </div>
+
+        <button onclick="showmethodval()">SUBMIT WORK</button>
+        <iframe src="http://localhost:8888/notebooks/data_clean_template.ipynb" id="notebookFrame" frameborder="0"
+            style="width: 100%;
     height: 800px;">
     </div>
     <input type="hidden" name="method_definition" id="method_definition">

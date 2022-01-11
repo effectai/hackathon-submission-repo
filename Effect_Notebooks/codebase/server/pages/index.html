@@ -15,37 +15,70 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        .card {
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        button,
+        input[type=file] {
+            background-color: orange;
+            /* Green */
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 10px 16px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body class="content">
-    <h1>Effect Notebooks Batch Creator</h1>
-    <br>
-    <h4>Upload Raw Data</h4>
-    <input type="file" name="csvUpload" id="csvUpload">
-    <br>
-    <br>
-    <div>
-        <p>Data before and after cleaning. Use these two boxes to show how the data should be transformed</p>
-        <p>Leave the first box as is and edit the second one</p>
+    <div style="width: 80%;margin: auto;">
+        <h1>Effect Notebooks Batch Creator</h1>
+
+        <div style="text-align: left;">
+            <br>
+            <div class="card">
+                <h4>Upload Raw Data</h4>
+                <input type="file" name="csvUpload" id="csvUpload" style="width: 400px;">
+            </div>
+            <br>
+            <div class="card">
+                <div class="row">
+                    <div class="col-sm">
+                        <h4>Define how to clean it</h4>
+                        <p>Data before and after cleaning. Use these two boxes to show how the data should be
+                            transformed
+                        </p>
+                        <p>Leave the first box as is and edit the second one</p>
+                        <br>
+                        <textarea name="beforeLines" id="beforeLines" cols="30" rows="4"
+                            style="display: inline;width: 40%;" placeholder="Current Data"></textarea>
+                        <span>To</span>
+                        <textarea name="afterLines" id="afterLines" cols="30" rows="4"
+                            style="display: inline;width: 40%;" placeholder="How you want it cleaned"></textarea>
+                        <div style="margin-top: 15px;">
+                            <button style="display: inline;">Obscure Data</button>
+                            <span> (Optional) Obscure sensitive data from workers</span>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <h4>Any notes for workers</h4>
+                        <textarea name="notes" id="notes" cols="25" rows="10" style="display: inline;"
+                            placeholder="Notes..."></textarea>
+
+                        <br>
+                        <button type="submit" id="submit" style="float:right">Submit Task</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <textarea name="beforeLines" id="beforeLines" cols="30" rows="4" style="display: inline;"></textarea>
-        <span>To</span>
-        <textarea name="afterLines" id="afterLines" cols="30" rows="4" style="display: inline;"></textarea>
-    </div>
-    <br>
-    <div>
-        <button style="display: inline;">Obscure Data</button>
-        <span> (Optional) Obscure sensitive data from workers</span>
-    </div>
-
-    <br>
-    <h4>Any notes for the workers</h4>
-    <textarea name="notes" id="notes" cols="25" rows="10" style="display: inline;" placeholder="Notes..."></textarea>
-
-    <br>
-    <button type="submit" id="submit">Submit Task</button>
 
     <script>
         let client;
