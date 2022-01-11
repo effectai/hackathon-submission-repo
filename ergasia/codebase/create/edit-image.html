@@ -173,9 +173,11 @@
                 const txt = JSON.parse(result.data).code;
                 const ul = `https://gateway.pinata.cloud/ipfs/${txt}`
                 el.innerText = `Your image url is ${txt}`;
-                var x = document.createElement("IMG");
+                var x = document.createElement("img");
                 x.setAttribute("src", ul);
                 document.body.appendChild(x);
+                x.style.width = "100%";
+                x.classList.add("shadow", "rounded");
             }
         }
     </script>
