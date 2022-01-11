@@ -1,0 +1,222 @@
+<section class="section">
+  <div class="container has-text-centered">
+      <div class="mb-5">
+        <img src="../assets/img/logo/Logo-wit.png" class="mt-6" style="width: 200px; margin: 0 auto; display: block;">
+      </div>
+
+      <div class="question question-sentiment">
+          <h2 class="subtitle mb-5">Answer the questions down below about the following song:</h2>
+          <iframe class="mb-5" src="${song_embed}" width="400" height="350" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          <br>
+          <!-- Genre -->
+          <div class="field block my-5 py-5 px-5">
+            <p class="mb-2">What genre would you define this song?</p>
+            <div class="select is-primary">
+              <select name="genre">
+                <option disabled selected>-</option>
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="hiphop">Hip Hop</option>
+                <option value="latin">Latin</option>
+                <option value="dance">Dance/Electronic</option>
+                <option value="rb">R&B</option>
+                <option value="country">Country</option>
+                <option value="folk">Folk/Acoustic</option>
+                <option value="classical">Classical</option>
+                <option value="metal">Metal</option>
+                <option value="jazz">Jazz</option>
+                <option value="blues">Blues</option>
+                <option value="punk">Punk</option>
+                <option value="indie">Indie</option>
+                <option value="techno">Techno</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <!-- Instrument -->
+          <div class="field block my-5 py-5 px-5">
+            <p class="mb-2">What is the dominant instrument?</p>
+            <div class="select is-primary">
+              <select name="instrument">
+                <option disabled selected>-</option>
+                <option value="accguitar">Acoustic Guitar</option>
+                <option value="elecguitar">Electric Guitar</option>
+                <option value="bass">Bass Guitar</option>
+                <option value="synth">Synthesizer</option>
+                <option value="piano">Piano</option>
+                <option value="drums">Drums</option>
+                <option value="saxophone">Saxophone</option>
+                <option value="Violin">Violin</option>
+                <option value="Harmonica">Harmonica</option>
+                <option value="Accordion">Accordion</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <!-- Mood -->
+          <div class="field block my-5 py-5 px-5">
+            <p class="mb-2">How does this song make you feel?</p>
+            <div class="moji">😐</div>
+            <div class="slider">
+              <input class="slider" name="mood" type="range">
+            </div>
+          </div>
+          <!-- Color -->
+          <div class="field block my-5 py-5 px-5">
+            <p class="mb-2">If you had to describe the song with a color, which color would you give it?</p>
+            <div class="select select-color">
+              <input type="color" name="color">
+            </div>
+          </div>
+          <div class="field block my-5 py-5 px-5">
+            <p>Which of the following weather conditions does this song remind you of the most?</p>
+            <br>
+            <div class="season-select">
+              <label class="radio">
+                <input type="radio" name="answer" value="sun">
+                <img src="https://simplifaster.com/wp-content/uploads/2017/05/Sunshine-Vitamin-D.jpg">
+              </label>
+              <label class="radio">
+                <input type="radio" name="answer" value="rain">
+                <img src="https://cdn.quinews.net/slir/w1200-h630/images/9/1/91-pioggia.png">
+              </label>
+              <label class="radio">
+                <input type="radio" name="answer" value="snow">
+                <img src="https://image.shutterstock.com/image-photo/snowy-weather-park-snow-covered-260nw-359278520.jpg">
+              </label>
+              <label class="radio">
+                <input type="radio" name="answer" value="gloomy">
+                <img src="https://wallpaperboat.com/wp-content/uploads/2020/10/22/57630/gloomy-01.jpg">
+              </label>
+            </div>
+          </div>
+        <button type="submit" class="button is-primary is-large mt-6">Submit</button>
+      </div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-checkradio@2.1.2/dist/css/bulma-checkradio.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.4/dist/css/bulma-slider.min.css">
+
+<script>
+(function() {
+  const range = document.querySelector('.slider > input');
+  const div = document.querySelector('.moji');
+  const mojis = ['😪','🙁','😕','😐','🙂','😄','🤩'];
+
+  range.addEventListener('input', (e) => {
+    
+    let rangeValue = Math.round(e.target.value / 15.5);
+    div.textContent = mojis[rangeValue];
+  });
+})();
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body {
+  background-color: #121212;
+  color: #F2E7FE;
+  font-size: 23px !important;
+  font-family: 'VT323', monospace;
+}
+.block {
+  border-radius: 6px;
+  background-color: #1E1E1E;
+}
+.is-primary {
+  background-color: #bb86fc !important;
+  border-radius: 6px;
+}
+button, input {
+  font-size: 23px !important;
+  font-family: 'VT323', monospace;
+}
+button {
+  height: 2.1em !important;
+}
+
+input {
+  height: 2.2em;
+}
+
+.title, .subtitle {
+  font-weight: normal;
+  color: #F2E7FE;
+  font-size: 23px;
+}
+
+.is-primary select {
+  border-radius: 6px;
+  font-size: 25px !important;
+  font-family: 'VT323', monospace;
+  border-color: #bb86fc !important;
+}
+
+.container {
+  max-width: 600px !important;
+}
+.moji {
+  margin-top: 30px;
+  font-size: 4em;
+  line-height: .9em;
+  text-align: center;
+}
+.slider input {
+  width: 400px;
+}
+.season-select {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+.season-select img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.1s ease;
+}
+.season-select .radio {
+  display: block;
+  width: 45%;
+  padding: 0 5px;
+}
+.season-select input {
+  visibility: hidden;
+  height: 10px;
+}
+.radio+.radio {
+  margin-left: 0;    
+}
+.season-select input:checked + img {
+  border: 5px solid #bb86fc;
+  border-radius: 6px;
+}
+hr {
+  margin: 2.1rem 0;
+}
+.select {
+  height: 2.3rem !important;
+}
+.select select {
+  height: 2.3rem !important;
+  padding-left: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #121212;
+  line-height: 1;
+  color: #F2E7FE;
+}
+.select.is-primary:not(:hover)::after {
+  border-color: #bb86fc !important;
+}
+.select-color {
+  height: 2.5em !important;
+}
+
+.select-color::after {
+  display: none !important
+}
+</style>
