@@ -63,7 +63,7 @@
     document.getElementById('submit').disabled = true
     console.log(url)
     document.getElementById('imgf').src=`https://gateway.pinata.cloud/ipfs/${url}`
-    console.log("https://gateway.pinata.cloud/ipfs/${url}")
+    console.log(`https://gateway.pinata.cloud/ipfs/${url}`)
     const el = document.getElementById('result')
     el.innerText = 'Uploading your task to Effect Force..'
     const campaign = await client.force.getCampaign(205)
