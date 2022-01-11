@@ -10,7 +10,7 @@ This Application is built on top of Effect Network, so there is a globle workfor
 
 # How it works
 
-![How it works](how_it_works.gif)
+![How it works](./ss/how_it_works.gif)
 
 # Application Screenshots
 
