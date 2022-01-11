@@ -218,9 +218,8 @@ async function ForwardBatch() {
 		allowEscapeKey: false,
 		preConfirm: async () => {
 			// Swal.showLoading();
-			var mobyDick = {'tasks': outputContent}
-			console.log(mobyDick)
-			let batchResponse = await client.force.createBatch(eyefxCampaignId, outputContent, 1);
+			const inputObject = {'tasks': outputContent}
+			let batchResponse = await client.force.createBatch(eyefxCampaignId, inputObject, 2);
 			await client.force.waitTransaction(batchResponse);
 			//batchResponse = await client.force.createBatch(campaign.id, outputContent, 1);
 			//client.force.waitTransaction(batchResponse);
