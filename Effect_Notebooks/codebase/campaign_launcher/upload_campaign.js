@@ -1,10 +1,10 @@
 const uploadCampaignIpfs = {
 
     // The title of the campaign
-    title: 'Effect Notebooks Test 3',
+    title: 'Effect Notebooks',
 
     // Description of the campaign
-    description: 'Create a method to clean data in an automated way, without viewing the original data yourself',
+    description: 'Help create methods to clean data in an automated way',
 
     // Instructions for workers on how to complete tasks, accepts Markdown
     instructions: 'Complete the implementation of the clean data method in the notebook. Use the supplied data to build your method',
@@ -72,7 +72,7 @@ const uploadCampaignIpfs = {
     </div></div>`,
 
     // Campaign image
-    image: 'https://effect-notebooks-public.s3.amazonaws.com/data_science_img.jpg',
+    image: 'https://effect-notebooks-public.s3.amazonaws.com/Effect-Notebooks-Logo.jpg',
 
     // The category of the campaign
     category: 'Data Science',
