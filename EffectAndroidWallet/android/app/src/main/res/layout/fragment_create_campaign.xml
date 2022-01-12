@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navyBlue500">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/actionBarItemBackground"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_white_back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Create campaign"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+            app:layout_constraintStart_toEndOf="@id/btn_back"
+            app:layout_constraintTop_toTopOf="@id/btn_back" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_title"
+            style="@style/TextInputLayoutLightGreyOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Title"
+            android:textColorHint="@color/white"
+            android:visibility="visible"
+            app:boxBackgroundColor="@color/navyBlueEditTexts"
+            app:boxStrokeColor="@color/purple_200"
+            app:boxStrokeWidth="1.5dp"
+            app:endIconTint="@color/white"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@+id/btn_back">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_description"
+            style="@style/TextInputLayoutLightGreyOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Description"
+            android:textColorHint="@color/white"
+            android:visibility="visible"
+            app:boxBackgroundColor="@color/navyBlueEditTexts"
+            app:boxStrokeColor="@color/purple_200"
+            app:boxStrokeWidth="1.5dp"
+            app:endIconTint="@color/white"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@+id/til_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_instructions"
+            style="@style/TextInputLayoutLightGreyOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Instructions"
+            android:textColorHint="@color/white"
+            android:visibility="visible"
+            app:boxBackgroundColor="@color/navyBlueEditTexts"
+            app:boxStrokeColor="@color/purple_200"
+            app:boxStrokeWidth="1.5dp"
+            app:endIconTint="@color/white"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@+id/til_description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_campaign_image"
+            style="@style/TextInputLayoutLightGreyOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Campaign image"
+            app:startIconDrawable="@drawable/ic_white_photo"
+            android:textColorHint="@color/white"
+            android:visibility="visible"
+            app:startIconTint="@color/white_60_opacity"
+            app:boxBackgroundColor="@color/navyBlueEditTexts"
+            app:boxStrokeColor="@color/purple_200"
+            app:boxStrokeWidth="1.5dp"
+            app:endIconTint="@color/white"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@+id/til_instructions">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_campaign_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_amount"
+            style="@style/TextInputLayoutLightGreyOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Amount EFX to award"
+            android:textColorHint="@color/white"
+            android:visibility="visible"
+            app:boxBackgroundColor="@color/navyBlueEditTexts"
+            app:boxStrokeColor="@color/purple_200"
+            app:boxStrokeWidth="1.5dp"
+            app:startIconDrawable="@drawable/ic_white_app_logo"
+            app:startIconTint="@color/white"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@+id/til_campaign_image">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_amount_efx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_question_one"
+            style="@style/TextInputLayoutLightGreyOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Feedback Question 1"
+            android:textColorHint="@color/white"
+            android:visibility="visible"
+            app:boxBackgroundColor="@color/navyBlueEditTexts"
+            app:startIconDrawable="@drawable/ic_white_60_question_box"
+            app:startIconTint="@color/white_60_opacity"
+            app:boxStrokeColor="@color/purple_200"
+            app:boxStrokeWidth="1.5dp"
+            app:endIconTint="@color/white"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@+id/til_amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_question_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_question_two"
+            style="@style/TextInputLayoutLightGreyOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Feedback Question 2"
+            android:textColorHint="@color/white"
+            app:startIconDrawable="@drawable/ic_white_60_question_box"
+            app:startIconTint="@color/white_60_opacity"
+            android:visibility="visible"
+            app:boxBackgroundColor="@color/navyBlueEditTexts"
+            app:boxStrokeColor="@color/purple_200"
+            app:boxStrokeWidth="1.5dp"
+            app:endIconTint="@color/white"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@+id/til_question_one">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_question_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_question_three"
+            style="@style/TextInputLayoutLightGreyOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Feedback Question 3"
+            app:startIconDrawable="@drawable/ic_white_60_question_box"
+            app:startIconTint="@color/white_60_opacity"
+            android:textColorHint="@color/white"
+            android:visibility="visible"
+            app:boxBackgroundColor="@color/navyBlueEditTexts"
+            app:boxStrokeColor="@color/purple_200"
+            app:boxStrokeWidth="1.5dp"
+            app:endIconTint="@color/white"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@+id/til_question_two">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_question_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_question_four"
+            style="@style/TextInputLayoutLightGreyOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Feedback Question 4"
+            app:startIconDrawable="@drawable/ic_white_60_question_box"
+            app:startIconTint="@color/white_60_opacity"
+            android:textColorHint="@color/white"
+            android:visibility="visible"
+            app:boxBackgroundColor="@color/navyBlueEditTexts"
+            app:boxStrokeColor="@color/purple_200"
+            app:boxStrokeWidth="1.5dp"
+            app:endIconTint="@color/white"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@+id/til_question_three">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_question_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_question_five"
+            style="@style/TextInputLayoutLightGreyOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Feedback Question 5"
+            android:textColorHint="@color/white"
+            app:startIconDrawable="@drawable/ic_white_60_question_box"
+            app:startIconTint="@color/white_60_opacity"
+            android:visibility="visible"
+            app:boxBackgroundColor="@color/navyBlueEditTexts"
+            app:boxStrokeColor="@color/purple_200"
+            app:boxStrokeWidth="1.5dp"
+            app:endIconTint="@color/white"
+            app:hintTextColor="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@+id/til_question_four">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_question_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create_campaign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/purple_500"
+            android:text="Create"
+            android:visibility="visible"
+            app:iconGravity="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/til_question_five" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
