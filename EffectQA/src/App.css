@@ -1,0 +1,123 @@
+.App {
+  /* text-align: center; */
+}
+
+.float-right {
+  float: right;
+}
+.home-button-section {
+  margin-top: 25px;
+}
+
+.ant-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px,
+    rgba(0, 0, 0, 0.18) 0px 4px 11px;
+}
+
+.ant-card {
+  margin: 15px;
+}
+
+.home-logo {
+  margin-top: 150px;
+  margin-bottom: 125px;
+}
+
+.home-subtitle {
+  size: 32px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 75px;
+}
+
+.standard-margin {
+  padding: 20px;
+}
+
+.site-layout-content {
+  min-height: 280px;
+  padding: 24px;
+  background: #fff;
+}
+
+.ant-layout-header {
+  background: white !important;
+}
+
+.header-button {
+  float: right;
+  align: right;
+  margin-left: auto;
+  margin: 15px;
+}
+
+a :hover {
+  text-decoration: underline;
+}
+
+.pointer {
+  cursor: pointer;
+}
+#components-layout-demo-top .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  /* background: rgba(255, 255, 255, 0.3); */
+}
+.ant-row-rtl #components-layout-demo-top .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+
+.content-area {
+  min-height: 95vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.error-text {
+  color: red;
+}
+
+.success-text {
+  color: green;
+}
+
+.white {
+  background: white;
+}
+
+.ant-input,
+.vertical-margin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.boxed {
+  box-shadow: 10px 5px 5px lightgray;
+  margin-top: 20px;
+}
+
+.create-form {
+  text-align: left;
+  padding: 40px;
+}
+
+.create-form input {
+}
+
+.content-area input {
+  padding: 50px;
+  margin: 10px;
+}
+
+.standard-button {
+  margin-top: 20px;
+}
+
+.header-logo {
+  height: 40px;
+  display: inline-block;
+}
