@@ -1,0 +1,90 @@
+<!DOCTYPE html encoding>
+<html lang="en">
+
+    <head>
+
+            <title>Effect Voice</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="shortcut icon" href="/resources/img/logo.ico"/>
+            <link href="/resources/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+            <link href="/resources/css/themify.css" type="text/css" rel="stylesheet"/>
+            <link href="/resources/css/campaign.css" type="text/css" rel="stylesheet"/>
+            <script src="./node_modules/@effectai/effect-js/dist/index.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="/resources/js/sweetalert.min.js"></script>
+            
+    </head>
+    <body>
+
+         <!--Loader section -->
+         <div class='page-loader'>
+            <div class='loader'>
+                <img src="/resources/img/loader.gif"/>            
+            </div>
+        </div>
+        
+        <div class="blob">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
+                <path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z" />
+            </svg>
+        </div>
+        
+        <div class="blob2">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
+                <path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z" />
+            </svg>
+        </div>
+
+        <div class='form'>
+            <div class='form-left'>
+                <img src='/resources/img/campaign.gif'/>
+            </div>
+            <div class='form-right'>
+                <h1> Create Campaign  </h1>
+                
+                <div class='row'>
+                    <div class='col-sm-6'>
+                        <h3> Title </h3>
+                        <input type='text' class='form-control' id='title'/>
+                    </div>
+                    <div class='col-sm-6'>
+                        <h3> Reward </h3>
+                        <input type='number'  class='form-control' step='0.01' id='reward' disabled value="0"/>
+                        <small>I set it to 0 because my account is on cooldown</small>
+                    </div>
+                    <div class='col-12'>
+                        <h3> Description </h3>
+                        <input type='text'  class='form-control'id='description'/>        
+                    </div>
+           
+                  
+                    <div class='col-12 mt-2'>
+                        <div class='d-flex justify-content-between'>
+                            <h3> Task </h3>
+                            <button class='btn btn-default' id='addTask'> Add  <i class='ti ti-plus'></i> </button>           
+                        </div>
+                        <div id='taskList'>
+                            <div class='task'>
+                                <div class='d-flex justify-content-between'>
+                                    <label> Task Content </label>
+                                    <button class='btn btn-link delete-task'>  <i class='ti ti-trash'></i> </button>           
+                                </div>
+                                <input type='text' class='form-control' name='content'/>
+                            </div>
+                        </div>    
+                     
+                    </div>
+                    <div class='col-12 text-right'>
+                        <button class='btn btn-primary' id='create'> Create </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                      
+        <script src="/resources/js/campaignTemplate.js"></script>
+        <script src="/resources/js/campaign.js"></script>
+
+    </body>
+</html>
