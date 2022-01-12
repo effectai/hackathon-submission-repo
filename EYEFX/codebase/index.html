@@ -1,0 +1,82 @@
+<!DOCTYPE html encoding>
+<html lang="en">
+
+<head>
+	<title>EYEFX Campaign Creation </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Effect Network">
+	<!-- unpkg.com/:package@:version/:file -->
+	<script src="https://unpkg.com/@effectai/effect-js/dist/index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+	<script src="https://unpkg.com/anchor-link@2"></script>
+	<script src="https://unpkg.com/anchor-link-browser-transport@2"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.4/dist/sweetalert2.all.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+	<noscript>
+		You need to enable JavaScript to run this app.
+	</noscript>
+
+	<section class="bg-light py-4 my-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="mb-3 text-danger">🖥️👁️ EYEFX Forwarding Tool</h2>
+				</div>
+	
+				<div class="col-md-6 col-lg-4" id="containerN1">
+					<div class="card my-3">
+						<div class="card-thumbnail">
+							<iframe class="websiteViewer" src="https://example.com/"> </iframe> <!-- Web Viewer -->
+						</div>
+						<div class="card-body">
+							<div class="input-group mb-3"> 
+								<span class="input-group-text">www</span>
+								<input type="text" class="form-control websiteInput" placeholder="https://example.com"> <!-- Webpage Input -->
+							</div>
+							<div class="input-group mb-3">
+								<span class="input-group-text">Prompt</span>
+								<textarea class="form-control promptText" aria-label="Prompt"></textarea> <!-- Prompt Question -->
+							</div>
+							<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+								<a href="#" class="btn btn-danger previewWebsite">Preview Webpage</a> <!-- View Button -->
+								<a href="#" class="btn btn-info justify-content-md-end addTask">Add Task</a> <!-- Add Q Button -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="d-grid gap-2">
+				<button id="submitBatch" class="btn btn-primary btn-lg" type="button">Send Batch</button>
+			</div>
+		</div>
+	</section>	
+		<!-- Ask metamaks connection -->
+		<!-- Ask how many websites would you like to input -->
+		<!-- Add input website -->
+
+	<script src="main.js?v=4"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+	<style>
+		.card-thumbnail {
+			max-height: 250px;
+			overflow: hidden;
+		}
+		iframe {
+			height: 250px;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	</style>
+</body>
+</html>

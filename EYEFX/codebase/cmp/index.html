@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EYEFX - trial</title>
+  <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-checkradio@2.1.2/dist/css/bulma-checkradio.min.css" -->
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/mknw/hackathon-submission-repo@eyefx-submission-a6c9803fff9da13cc9a548ae63d351d3/EYEFX/codebase/cmp/css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/mknw/hackathon-submission-repo@eyefx-submission-a6c9803fff9da13cc9a548ae63d351d3/EYEFX/codebase/cmp/js/webgazer.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/mknw/hackathon-submission-repo@eyefx-submission-a6c9803fff9da13cc9a548ae63d351d3/EYEFX/codebase/cmp/js/precision_store_points.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/mknw/hackathon-submission-repo@eyefx-submission-a6c9803fff9da13cc9a548ae63d351d3/EYEFX/codebase/cmp/js/precision_calculation.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/mknw/hackathon-submission-repo@eyefx-submission-a6c9803fff9da13cc9a548ae63d351d3/EYEFX/codebase/cmp/js/calibration.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/mknw/hackathon-submission-repo@eyefx-submission-a6c9803fff9da13cc9a548ae63d351d3/EYEFX/codebase/cmp/js/main.js"></script>
+</head>
+
+<body lang='en-us' link="#0000ff" dir='ltr'>
+	<!-- Shows face within optimal detection window. -->
+	<canvas id="plotting_canvas" width="500" height="500" style="cursor:crosshair;"></canvas>
+	
+		<script src="./node_modules/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="./js/precision_calculation.js"></script>
+		<script src="./js/precision_store_points.js"></script>
+		
+		<!-- script src="./js/website_display.js"></script-->
+
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark navbar-fixed-top">
+			<a class="navbar-header" href="#">EYEFX</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#" onclick="SkipTask()">Skip task</a>
+					</li>
+					<li class="nav-item">
+						<a id="submitAnswer" class="nav-link disabled" href="#" onclick="ShowInputPrompt()">Done</a>
+					</li>
+					<li class="nav-item dropdown"> <!-- eye tracking options -->
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Eye-tracking
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" onclick="RestartCalibration()" href="#">Recalibrate</a>
+							<a class="dropdown-item" onclick="webgazer.applyKalmanFilter(!webgazer.params.applyKalmanFilter)" href="#">Toggle Kalman Filter</a>
+							<a class="dropdown-item" onclick="webgazer.showFaceOverlay(!webgazer.params.showFaceOverlay)" href="#">Toggle Face Overlay</a>
+							<a class="dropdown-item" onclick="webgazer.showVideo(!webgazer.params.showVideo)" href="#">Toggle Video</a>
+							<a class="dropdown-item" onclick="webgazer.showFaceFeedbackBox(!webgazer.params.showFaceFeedbackBox)" href="#">Toggle Feedback Box</a>
+							<a class="dropdown-item" onclick="HideAllWebgazerPreviews()" href="#">Hide All</a>
+						</div>
+					</li>
+				</ul>
+				<span id="Accuracy" class="navbar-text">
+					Not yet Calibrated
+				</span>
+			</div>
+		</nav>
+
+	<div class="calibrationDiv">
+			<input type="button" class="Calibration" id="Pt1"></input>
+			<input type="button" class="Calibration" id="Pt2"></input>
+			<input type="button" class="Calibration" id="Pt3"></input>
+			<input type="button" class="Calibration" id="Pt4"></input>
+			<input type="button" class="Calibration" id="Pt5"></input>
+			<input type="button" class="Calibration" id="Pt6"></input>
+			<input type="button" class="Calibration" id="Pt7"></input>
+			<input type="button" class="Calibration" id="Pt8"></input>
+			<input type="button" class="Calibration" id="Pt9"></input>
+	</div>
+
+	<!-- Modal -->
+	<div id="helpModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body">
+					<img src="media/calibration.png" width="100%" height="100%" alt="webgazer demo instructions"></img>
+				</div>
+				<div class="modal-footer">
+					<button id="closeBtn" type="button" class="btn btn-default" data-dismiss="modal">Close & load saved model </button>
+					<button type="button" id='start_calibration' class="btn btn-primary" data-dismiss="modal" cursor="pointer" onclick="StartCalibration()">Calibrate</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="websiteContainer">
+		<!-- Website to load for testing: '${TestWebsite}'. -->
+		<iframe id="websiteDisplay" src=`${TestWebsite}` scrolling="no"></iframe> 
+	</div>
+
+	<!-- Question / input required for user to complete his task. -->
+	<p hidden id='input-prompt'>`${InputPrompt}`</p> <!-- -->
+	<div id="submissionModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body">
+					<p> 'Thank you for contributing! Your EFX will be transferred to your account once your submission has been validated. To earn more EFX, start another batch!'</p>
+					<input hidden type='text' id="user-submission"></input>
+					<input hidden type='text' id="eyetracking-data" maxlength=""></input>
+					<input hidden type='text' id="calibration-data" maxlength=""></input>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" id='end-task' class="btn btn-primary" data-dismiss="modal">End Task</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!--these last-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/mknw/hackathon-submission-repo@eyefx-submission-a6c9803fff9da13cc9a548ae63d351d3/EYEFX/codebase/cmp/js/resize_canvas.js"></script>
+
+</body>
