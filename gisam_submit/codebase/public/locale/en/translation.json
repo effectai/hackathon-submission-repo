@@ -1,0 +1,60 @@
+{
+    "login": {
+        "login": "login",
+        "connecteffect": "Login",
+        "createcampaign": "Create campaign",
+        "participate": "Participate in campaign",
+        "checkcampaign": "Check my campaign",
+        "worker": "worker",
+        "campaigncreator": "business",
+        "currentcamaign": "Current campaigns"
+    },
+    "create": {
+        "campaigntype": "Select the campaign's type",
+        "addingfield": "Adding an answer field",
+        "validate": "Submit campaign",
+        "preview": "Preview campaign",
+        "twitter": "twitter",
+        "picture": "picture",
+        "selecttypeoffield": "Adding an answer of type:",
+        "option": "Multiple choice question",
+        "textfield": "Text field",
+        "numberfield": "Number",
+        "minimumvalue": "Minimum value accepted",
+        "maximumvalue": "Maximum value accepted",
+        "addingthisfield": "Adding this field",
+        "question": "Field's description",
+        "questiondescribe": "Describe this field (example: Give a note, minimum 0, maximum 10)",
+        "numberexplain": "Question type : number, {{description}} (minimum : {{min}}, maximum {{max}})",
+        "textexplain": "Question type : text, {{description}} (maximum length {{max}})",
+        "optionexplain": "Question type : option, {{description}} (selectable up to {{max}}) option {{option}}",
+        "numberoption": "Possible number of answer",
+        "maximumselectable": "Maximum answer selectable",
+        "maxlen": "Maximum length",
+        "optionnumber": "Option {{i}}",
+        "description": "Campaign's description",
+        "title": "Campaign's title",
+        "reward": "Reward for one task (EFX)",
+        "mycampaigns": "My campaigns"
+    },
+    "display": {
+        "addbatch": "Add batch",
+        "loadingbatch": "Loading batch",
+        "enteryourdata": "Enter data for batch 1 per line",
+        "repetition": "Repetitions",
+        "next": "next",
+        "prev": "previous",
+        "reserve": "reserve"
+    },
+    "campaignfields": {
+        "numberexplain": "{{description}} (minimum : {{min}}, maximum {{max}})",
+        "textexplain": "{{description}} (maximum length {{max}})",
+        "optionexplain": "{{description}} (selectable up to {{max}})"
+    },
+    "campaignlist": {
+        "connect": "Connect your account to access campaigns"
+    },
+    "campaignbase": {
+        "submit": "submit"
+    }
+}

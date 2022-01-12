@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "ログイン",
+    "connecteffect": "ログイン",
+    "createcampaign": "キャンペーンの作成",
+    "participate": "キャンペーンに参加する",
+    "checkcampaign": "自分のキャンペーンを確認する",
+    "worker": "ワーカー",
+    "campaigncreator": "ビジネス",
+    "currentcamaign": "現在のキャンペーン"
+  },
+  "create": {
+    "campaigntype": "キャンペーンの種類を選ぶ",
+    "addingfield": "回答欄の追加",
+    "validate": "キャンペーンの送信",
+    "preview": "キャンペーンのプレビュー",
+    "twitter": "twitter",
+    "picture": "画像",
+    "selecttypeoffield": "タイプの回答を追加する",
+    "option": "多肢選択問題",
+    "textfield": "テキストフィールド",
+    "numberfield": "数値",
+    "minimumvalue": "最小許容値",
+    "maximumvalue": "受け入れられる最大値",
+    "addingthisfield": "このフィールドの追加",
+    "question": "フィールドの説明",
+    "questiondescribe": "このフィールドを説明する（例：メモをつける、最小0、最大10)",
+    "numberexplain": "質問タイプ：数字、{{description}}（最小：{{min}}、最大{{max}})",
+    "textexplain": "質問タイプ：テキスト、{{description}}（最大長{{max}}",
+    "optionexplain": "質問タイプ：オプション、{{description}}（{{max}}つまで選択可能） オプション{{option}}",
+    "numberoption": "回答可能数",
+    "maximumselectable": "選択可能な最大解答数",
+    "maxlen": "最大長さ",
+    "optionnumber": "オプション{{i}}",
+    "description": "キャンペーンの説明",
+    "title": "キャンペーンのタイトル",
+    "reward": "1回の作業で得られる報酬（EFX）",
+    "mycampaigns": "マイキャンペーン"
+  },
+  "display": {
+    "addbatch": "バッチの追加",
+    "loadingbatch": "バッチの読み込み",
+    "enteryourdata": "バッチ1行分のデータを入力",
+    "repetition": "繰り返し",
+    "next": "次の",
+    "prev": "前",
+    "reserve": "予備"
+  },
+  "campaignfields": {
+    "numberexplain": "{{description}}（最小：{{min}}、最大{{max}}",
+    "textexplain": "{{description}}(最大長{{max}})",
+    "optionexplain": "{{description}}（最大{{max}}まで選択可能）"
+  },
+  "campaignlist": {
+    "connect": "お客様のアカウントを接続してキャンペーンにアクセス"
+  },
+  "campaignbase": {
+    "submit": "投稿する"
+  }
+}

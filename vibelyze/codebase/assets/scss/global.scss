@@ -1,0 +1,79 @@
+@import '../../node_modules/bulma';
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+html {
+  background-color: $bg-color;
+}
+
+body {
+  font-family: 'VT323', monospace;
+  color: $text-primary;
+  font-size: 25px;
+}
+
+button, input {
+  font-size: 25px !important;
+  font-family: 'VT323', monospace;
+}
+
+button {
+  height: 2.1em !important;
+}
+
+input {
+  height: 2.2em;
+}
+
+.title {
+  font-weight: normal;
+  color: $primary;
+}
+
+.container {
+  max-width: 750px !important;
+}
+
+.block {
+  background-color: $block-color;
+  border-radius: 6px;
+}
+
+input[type="text"] {
+  color: $text-primary;
+  background-color: $bg-color;
+  border-color: $text-primary;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.table {
+  background-color: $bg-color;
+  color: $text-primary;
+  border-radius: 6px;
+
+  th {
+    color: $text-primary !important;
+    font-weight: normal;
+    border-color: rgba(255,255,255,0.5);
+    font-size: 22px;
+    color: $primary !important;
+  }
+
+  td {
+    font-size: 20px;
+    border-color: rgba(255,255,255,0.3);
+  }
+}
+
+.box {
+  color: $text-primary;
+  strong {
+    color: $text-primary;
+  }
+
+  .media-content {
+    line-height: 1.8rem;
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "로그인",
+    "connecteffect": " 로그인",
+    "createcampaign": " 캠페인 만들기",
+    "participate": " 캠페인 참여",
+    "checkcampaign": " 내 캠페인 확인",
+    "worker": " 노동자",
+    "campaigncreator": " 사업",
+    "currentcamaign": " 현재 캠페인"
+  },
+  "create": {
+    "campaigntype": " 캠페인 유형 선택",
+    "addingfield": " 답변 필드 추가",
+    "validate": " 캠페인 제출",
+    "preview": " 캠페인 미리보기",
+    "twitter": " 트위터",
+    "picture": " 그림",
+    "selecttypeoffield": " 유형의 답변 추가:",
+    "option": " 객관식 질문",
+    "textfield": " 텍스트 필드",
+    "numberfield": " 숫자",
+    "minimumvalue": " 허용되는 최소값",
+    "maximumvalue": " 허용되는 최대값",
+    "addingthisfield": " 이 필드 추가",
+    "question": " 필드 설명",
+    "questiondescribe": " 이 필드를 설명하십시오(예: 메모, 최소 0, 최대 10)",
+    "numberexplain": " 질문 유형 : 숫자, {{description}} (최소 : {{min}} , 최대 {{max}} )",
+    "textexplain": " 질문 유형 : 텍스트, {{description}} (최대 길이 {{max}} )",
+    "optionexplain": " 질문 유형: 옵션, {{description}} (최대 {{max}} 까지 선택 가능) 옵션 {{option}}",
+    "numberoption": " 가능한 답변 수",
+    "maximumselectable": " 최대 답변 선택 가능",
+    "maxlen": " 최대 길이",
+    "optionnumber": " 옵션 {{i}}",
+    "description": " 캠페인 설명",
+    "title": " 캠페인 제목",
+    "reward": " 하나의 작업에 대한 보상(EFX)",
+    "mycampaigns": " 내 캠페인"
+  },
+  "display": {
+    "addbatch": " 배치 추가",
+    "loadingbatch": " 일괄 로드 중",
+    "enteryourdata": " 라인당 배치 1에 대한 데이터 입력",
+    "repetition": " 반복",
+    "next": " 다음",
+    "prev": " 이전",
+    "reserve": " 예약하다"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (최소 : {{min}} , 최대 {{max}} )",
+    "textexplain": " {{description}} (최대 길이 {{max}} )",
+    "optionexplain": " {{description}} (최대 {{max}} 선택 가능)"
+  },
+  "campaignlist": {
+    "connect": " 캠페인에 액세스하려면 계정을 연결하세요."
+  },
+  "campaignbase": {
+    "submit": "제출하다"
+  }
+}

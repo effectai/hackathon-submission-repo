@@ -1,0 +1,22 @@
+{
+  "name": "gitstar",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-static": "^1.0.0-next.24",
+    "@sveltejs/kit": "next",
+    "rollup": "^2.63.0",
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.10.1"
+  },
+  "type": "module",
+  "dependencies": {
+    "@effectai/effect-js": "^0.1.18"
+  }
+}

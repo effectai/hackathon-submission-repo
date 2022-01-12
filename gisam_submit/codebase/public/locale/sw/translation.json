@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "Ingia",
+    "connecteffect": " Ingia",
+    "createcampaign": " Unda kampeni",
+    "participate": " Shiriki katika kampeni",
+    "checkcampaign": " Angalia kampeni yangu",
+    "worker": " mfanyakazi",
+    "campaigncreator": " biashara",
+    "currentcamaign": " Kampeni za sasa"
+  },
+  "create": {
+    "campaigntype": " Chagua aina ya kampeni",
+    "addingfield": " Kuongeza sehemu ya jibu",
+    "validate": " Wasilisha kampeni",
+    "preview": " Hakiki kampeni",
+    "twitter": " twitter",
+    "picture": " picha",
+    "selecttypeoffield": " Kuongeza jibu la aina:",
+    "option": " Swali la chaguo nyingi",
+    "textfield": " Sehemu ya maandishi",
+    "numberfield": " Nambari",
+    "minimumvalue": " Thamani ya chini imekubaliwa",
+    "maximumvalue": " Thamani ya juu zaidi imekubaliwa",
+    "addingthisfield": " Inaongeza uwanja huu",
+    "question": " Maelezo ya uwanja",
+    "questiondescribe": " Eleza sehemu hii (mfano: Toa dokezo, kima cha chini zaidi 0, kisichozidi 10)",
+    "numberexplain": " Aina ya swali : nambari, {{description}} (kiwango cha chini kabisa: {{min}} , upeo wa {{max}} )",
+    "textexplain": " Aina ya swali : maandishi, {{description}} (upeo wa urefu {{max}} )",
+    "optionexplain": " Aina ya swali : chaguo, {{description}} (vinaweza kuchaguliwa hadi {{max}} ) chaguo la {{option}}",
+    "numberoption": " Nambari inayowezekana ya jibu",
+    "maximumselectable": " Upeo wa jibu unaoweza kuchaguliwa",
+    "maxlen": " Urefu wa juu zaidi",
+    "optionnumber": " {{i}} Chaguo",
+    "description": " Maelezo ya kampeni",
+    "title": " Jina la kampeni",
+    "reward": " Zawadi kwa kazi moja (EFX)",
+    "mycampaigns": " Kampeni zangu"
+  },
+  "display": {
+    "addbatch": " Ongeza kundi",
+    "loadingbatch": " Inapakia kundi",
+    "enteryourdata": " Ingiza data ya kundi 1 kwa kila mstari",
+    "repetition": " Marudio",
+    "next": " ijayo",
+    "prev": " uliopita",
+    "reserve": " hifadhi"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (kiwango cha chini zaidi: {{min}} , kiwango cha juu {{max}} )",
+    "textexplain": " {{description}} (upeo wa urefu {{max}} )",
+    "optionexplain": " {{description}} (linaweza kuchaguliwa hadi {{max}} )"
+  },
+  "campaignlist": {
+    "connect": " Unganisha akaunti yako ili kufikia kampeni"
+  },
+  "campaignbase": {
+    "submit": "wasilisha"
+  }
+}

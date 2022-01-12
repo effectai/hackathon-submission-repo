@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "вход",
+    "connecteffect": "Вход",
+    "createcampaign": "Создать кампанию",
+    "participate": "Участвовать в кампании",
+    "checkcampaign": "Проверить мою кампанию",
+    "worker": "работник",
+    "campaigncreator": "бизнес",
+    "currentcamaign": "Текущие кампании"
+  },
+  "create": {
+    "campaigntype": "Выберите тип кампании",
+    "addingfield": "Добавление поля для ответа",
+    "validate": "Отправить кампанию",
+    "preview": "Предварительный просмотр кампании",
+    "twitter": "твиттер",
+    "picture": "картинка",
+    "selecttypeoffield": "Добавление ответа типа:",
+    "option": "Вопрос с множественным выбором",
+    "textfield": "Текстовое поле",
+    "numberfield": "Число",
+    "minimumvalue": "Минимальное принятое значение",
+    "maximumvalue": "Максимальное принятое значение",
+    "addingthisfield": "Добавление этого поля",
+    "question": "Описание поля",
+    "questiondescribe": "Опишите это поле (пример: Дать примечание, минимум 0, максимум 10)",
+    "numberexplain": "Тип вопроса : число, {{description}} (минимум: {{min}}, максимум {{max}})",
+    "textexplain": "Тип вопроса : текст, {{description}} (максимальная длина {{max}})",
+    "optionexplain": "Тип вопроса : опция, {{description}} (можно выбрать до {{max}}) опция {{option}}",
+    "numberoption": "Возможное количество ответов",
+    "maximumselectable": "Максимально возможный ответ",
+    "maxlen": "Максимальная длина",
+    "optionnumber": "Опция {{i}}",
+    "description": "Описание кампании",
+    "title": "Название кампании",
+    "reward": "Вознаграждение за одно задание (EFX)",
+    "mycampaigns": "Мои кампании"
+  },
+  "display": {
+    "addbatch": "Добавить пакет",
+    "loadingbatch": "Загрузка партии",
+    "enteryourdata": "Введите данные для партии 1 в строку",
+    "repetition": "Повторы",
+    "next": "следующий",
+    "prev": "предыдущий",
+    "reserve": "резерв"
+  },
+  "campaignfields": {
+    "numberexplain": "{{description}} (минимум : {{min}}, максимум {{max}})",
+    "textexplain": "{{description}} (максимальная длина {{max}})",
+    "optionexplain": "{{description}} (можно выбрать до {{max}})"
+  },
+  "campaignlist": {
+    "connect": "Подключите свой аккаунт для доступа к кампаниям"
+  },
+  "campaignbase": {
+    "submit": "отправить"
+  }
+}

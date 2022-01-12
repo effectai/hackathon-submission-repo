@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "लॉग इन करें",
+    "connecteffect": " लॉग इन करें",
+    "createcampaign": " अभियान बनाएं",
+    "participate": " अभियान में भाग लें",
+    "checkcampaign": " मेरा अभियान जांचें",
+    "worker": " मज़दूर",
+    "campaigncreator": " व्यापार",
+    "currentcamaign": " वर्तमान अभियान"
+  },
+  "create": {
+    "campaigntype": " अभियान का प्रकार चुनें",
+    "addingfield": " उत्तर फ़ील्ड जोड़ना",
+    "validate": " अभियान जमा करें",
+    "preview": " पूर्वावलोकन अभियान",
+    "twitter": " ट्विटर",
+    "picture": " चित्र",
+    "selecttypeoffield": " प्रकार का उत्तर जोड़ना:",
+    "option": " बहुवैकल्पिक प्रश्न",
+    "textfield": " पाठ्य से भरा",
+    "numberfield": " संख्या",
+    "minimumvalue": " न्यूनतम मूल्य स्वीकृत",
+    "maximumvalue": " अधिकतम मूल्य स्वीकृत",
+    "addingthisfield": " इस फ़ील्ड को जोड़ना",
+    "question": " फ़ील्ड का विवरण",
+    "questiondescribe": " इस फ़ील्ड का वर्णन करें (उदाहरण: एक नोट दें, न्यूनतम 0, अधिकतम 10)",
+    "numberexplain": " प्रश्न प्रकार: संख्या, {{description}} (न्यूनतम: {{min}} , अधिकतम {{max}} )",
+    "textexplain": " प्रश्न प्रकार: टेक्स्ट, {{description}} (अधिकतम लंबाई {{max}} )",
+    "optionexplain": " प्रश्न प्रकार: विकल्प, {{description}} ( {{max}} तक चयन करने योग्य) विकल्प {{option}}",
+    "numberoption": " उत्तर की संभावित संख्या",
+    "maximumselectable": " अधिकतम उत्तर चयन योग्य",
+    "maxlen": " अधिकतम लंबाई",
+    "optionnumber": " विकल्प {{i}}",
+    "description": " अभियान का विवरण",
+    "title": " अभियान का शीर्षक",
+    "reward": " एक कार्य के लिए पुरस्कार (EFX)",
+    "mycampaigns": " मेरे अभियान"
+  },
+  "display": {
+    "addbatch": " बैच जोड़ें",
+    "loadingbatch": " बैच लोड हो रहा है",
+    "enteryourdata": " बैच 1 प्रति पंक्ति के लिए डेटा दर्ज करें",
+    "repetition": " repetitions",
+    "next": " अगला",
+    "prev": " पहले का",
+    "reserve": " रिज़र्व"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (न्यूनतम: {{min}} , अधिकतम {{max}} )",
+    "textexplain": " {{description}} (अधिकतम लंबाई {{max}} )",
+    "optionexplain": " {{description}} ( {{max}} तक चयन योग्य)"
+  },
+  "campaignlist": {
+    "connect": " अभियानों तक पहुँचने के लिए अपना खाता कनेक्ट करें"
+  },
+  "campaignbase": {
+    "submit": "प्रस्तुत"
+  }
+}

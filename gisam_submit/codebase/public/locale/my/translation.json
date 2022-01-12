@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "လော့ဂ်အင်",
+    "connecteffect": " လော့ဂ်အင်",
+    "createcampaign": " လှုံ့ဆော်မှုဖန်တီးပါ။",
+    "participate": " ကမ်ပိန်းတွင်ပါဝင်ပါ။",
+    "checkcampaign": " ကျွန်ုပ်၏မဲဆွယ်စည်းရုံးမှုကို စစ်ဆေးပါ။",
+    "worker": " အလုပ်သမား",
+    "campaigncreator": " စီးပွားရေး",
+    "currentcamaign": " လက်ရှိလှုပ်ရှားမှုများ"
+  },
+  "create": {
+    "campaigntype": " ကမ်ပိန်း၏ အမျိုးအစားကို ရွေးပါ။",
+    "addingfield": " အဖြေအကွက်ကို ပေါင်းထည့်ခြင်း။",
+    "validate": " မဲဆွယ်စည်းရုံးရေးတင်ပြ",
+    "preview": " ကြိုတင်မဲဆွယ်",
+    "twitter": " တွစ်တာ",
+    "picture": " ပုံ",
+    "selecttypeoffield": " အမျိုးအစား၏အဖြေကိုထည့်ခြင်း-",
+    "option": " ရွေးချယ်စရာမေးခွန်း",
+    "textfield": " စာသားအကွက်",
+    "numberfield": " နံပါတ်",
+    "minimumvalue": " အနိမ့်ဆုံးတန်ဖိုးကို လက်ခံသည်။",
+    "maximumvalue": " အများဆုံးတန်ဖိုးလက်ခံသည်။",
+    "addingthisfield": " ဤအကွက်ကို ထည့်ခြင်း။",
+    "question": " Field ၏ ဖော်ပြချက်",
+    "questiondescribe": " ဤအကွက်ကို ဖော်ပြပါ (ဥပမာ- မှတ်စုတစ်ခုပေးပါ၊ အနည်းဆုံး 0၊ အများဆုံး 10)",
+    "numberexplain": " မေးခွန်းအမျိုးအစား : နံပါတ်၊ သား {{description}} (အနည်းဆုံး : {{min}} ၊ အများဆုံး {{max}} )",
+    "textexplain": " မေးခွန်းအမျိုးအစား- စာသား၊ {{description}} (အများဆုံး အရှည် {{max}} )",
+    "optionexplain": " မေးခွန်းအမျိုးအစား- ရွေးချယ်ခွင့်၊ {{description}} ( {{max}} အထိ ရွေးချယ်နိုင်သော) ရွေးချယ်မှု {{option}}",
+    "numberoption": " ဖြစ်နိုင်ချေရှိသော အဖြေအရေအတွက်",
+    "maximumselectable": " အများဆုံးအဖြေကို ရွေးချယ်နိုင်သည်။",
+    "maxlen": " အများဆုံးအရှည်",
+    "optionnumber": " ရွေးချယ်စရာ {{i}}",
+    "description": " Campaign ၏ ဖော်ပြချက်",
+    "title": " ကမ်ပိန်း၏ခေါင်းစဉ်",
+    "reward": " အလုပ်တစ်ခုအတွက် ဆုလာဘ် (EFX)",
+    "mycampaigns": " ကျွန်ုပ်၏လှုံ့ဆော်မှုများ"
+  },
+  "display": {
+    "addbatch": " အသုတ်ထည့်ပါ။",
+    "loadingbatch": " အသုတ်လိုက်တင်ပေးသည်။",
+    "enteryourdata": " တစ်ကြောင်းလျှင် အတွဲ 1 အတွက် ဒေတာထည့်ပါ။",
+    "repetition": " ထပ်ခါထပ်ခါ",
+    "next": " နောက်တစ်ခု",
+    "prev": " ယခင်",
+    "reserve": " အရံ"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (အနည်းဆုံး : {{min}} ၊ အမြင့်ဆုံး {{max}} )",
+    "textexplain": " {{description}} (အမြင့်ဆုံးအရှည် {{max}} )",
+    "optionexplain": " {{description}} ( {{max}} အထိ ရွေးချယ်နိုင်သည်)"
+  },
+  "campaignlist": {
+    "connect": " ကမ်ပိန်းများဝင်ရောက်ရန် သင့်အကောင့်ကို ချိတ်ဆက်ပါ။"
+  },
+  "campaignbase": {
+    "submit": "တင်ပြပါ။"
+  }
+}

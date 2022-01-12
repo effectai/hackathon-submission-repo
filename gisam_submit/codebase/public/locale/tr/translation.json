@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "giriş yapmak",
+    "connecteffect": " Giriş yapmak",
+    "createcampaign": " Kampanya oluştur",
+    "participate": " kampanyaya katıl",
+    "checkcampaign": " Kampanyamı kontrol et",
+    "worker": " çalışan",
+    "campaigncreator": " işletme",
+    "currentcamaign": " Mevcut kampanyalar"
+  },
+  "create": {
+    "campaigntype": " Kampanyanın türünü seçin",
+    "addingfield": " Cevap alanı ekleme",
+    "validate": " Kampanya gönder",
+    "preview": " Önizleme kampanyası",
+    "twitter": " twitter",
+    "picture": " resim",
+    "selecttypeoffield": " Şu türde bir yanıt ekleme:",
+    "option": " Çoktan seçmeli soru",
+    "textfield": " Metin alanı",
+    "numberfield": " Numara",
+    "minimumvalue": " Kabul edilen minimum değer",
+    "maximumvalue": " Kabul edilen maksimum değer",
+    "addingthisfield": " Bu alanı ekleme",
+    "question": " Alanın açıklaması",
+    "questiondescribe": " Bu alanı tanımlayın (örnek: Not verin, minimum 0, maksimum 10)",
+    "numberexplain": " Soru tipi : sayı, {{description}} (minimum : {{min}} , maksimum {{max}} )",
+    "textexplain": " Soru tipi : metin, {{description}} (maksimum uzunluk {{max}} )",
+    "optionexplain": " Soru tipi : seçenek, {{description}} ( {{max}} 'e kadar seçilebilir) seçenek {{option}}",
+    "numberoption": " Olası cevap sayısı",
+    "maximumselectable": " Maksimum cevap seçilebilir",
+    "maxlen": " Maksimum uzunluk",
+    "optionnumber": " Seçenek {{i}}",
+    "description": " Kampanyanın açıklaması",
+    "title": " kampanyanın başlığı",
+    "reward": " Bir görev için ödül (EFX)",
+    "mycampaigns": " kampanyalarım"
+  },
+  "display": {
+    "addbatch": " Toplu iş ekle",
+    "loadingbatch": " Toplu yükleniyor",
+    "enteryourdata": " Her satır için parti 1 için veri girin",
+    "repetition": " tekrarlar",
+    "next": " sonraki",
+    "prev": " öncesi",
+    "reserve": " rezerv"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (minimum : {{min}} , maksimum {{max}} )",
+    "textexplain": " {{description}} (maksimum uzunluk {{max}} )",
+    "optionexplain": " {{description}} ( {{max}} kadar seçilebilir)"
+  },
+  "campaignlist": {
+    "connect": " Kampanyalara erişmek için hesabınızı bağlayın"
+  },
+  "campaignbase": {
+    "submit": "Sunmak"
+  }
+}

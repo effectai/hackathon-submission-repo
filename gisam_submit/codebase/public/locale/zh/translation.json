@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "登录",
+    "connecteffect": "登录",
+    "createcampaign": "创建活动",
+    "participate": "参与活动",
+    "checkcampaign": "检查我的运动",
+    "worker": "工人",
+    "campaigncreator": "业务",
+    "currentcamaign": "当前的运动"
+  },
+  "create": {
+    "campaigntype": "选择运动的类型",
+    "addingfield": "添加一个回答字段",
+    "validate": "提交竞选活动",
+    "preview": "预览活动",
+    "twitter": "叽叽喳喳",
+    "picture": "图片",
+    "selecttypeoffield": "添加一个答案的类型。",
+    "option": "多选题",
+    "textfield": "文本字段",
+    "numberfield": "数值",
+    "minimumvalue": "接受的最小值",
+    "maximumvalue": "接受的最高值",
+    "addingthisfield": "添加此字段",
+    "question": "字段的描述",
+    "questiondescribe": "描述这个字段（例如：给一个注释，最小0，最大10）。",
+    "numberexplain": "问题类型：数字，{{description}}（最小：{{min}}，最大{{max}}）。",
+    "textexplain": "问题类型：文本，{{description}}（最大长度{{max}}）。",
+    "optionexplain": "问题类型：选项，{{description}}（最多可以选择{{max}}）选项{{option}}",
+    "numberoption": "可能的答案数量",
+    "maximumselectable": "可选择的最大答案",
+    "maxlen": "最大长度",
+    "optionnumber": "选项{{i}}",
+    "description": "运动的描述",
+    "title": "活动的标题",
+    "reward": "一项任务的奖励(EFX)",
+    "mycampaigns": "我的活动"
+  },
+  "display": {
+    "addbatch": "添加批次",
+    "loadingbatch": "加载批次",
+    "enteryourdata": "每行输入批次1的数据",
+    "repetition": "重复次数",
+    "next": "下一个",
+    "prev": "上一个",
+    "reserve": "储备"
+  },
+  "campaignfields": {
+    "numberexplain": "{{description}}（最小：{{min}}，最大{{max}}）。",
+    "textexplain": "{{description}}（最大长度为{{max}}",
+    "optionexplain": "{{description}}（可选择最多{{max}}"
+  },
+  "campaignlist": {
+    "connect": "连接您的账户以访问运动"
+  },
+  "campaignbase": {
+    "submit": "提交"
+  }
+}

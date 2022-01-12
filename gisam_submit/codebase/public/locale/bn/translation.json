@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "প্রবেশ করুন",
+    "connecteffect": " প্রবেশ করুন",
+    "createcampaign": " প্রচারণা তৈরি করুন",
+    "participate": " প্রচারণায় অংশগ্রহণ করুন",
+    "checkcampaign": " আমার প্রচারাভিযান পরীক্ষা করুন",
+    "worker": " কর্মী",
+    "campaigncreator": " ব্যবসা",
+    "currentcamaign": " বর্তমান প্রচারণা"
+  },
+  "create": {
+    "campaigntype": " প্রচারের ধরন নির্বাচন করুন",
+    "addingfield": " একটি উত্তর ক্ষেত্র যোগ করা হচ্ছে",
+    "validate": " প্রচারণা জমা দিন",
+    "preview": " প্রিভিউ প্রচারাভিযান",
+    "twitter": " টুইটার",
+    "picture": " ছবি",
+    "selecttypeoffield": " টাইপের একটি উত্তর যোগ করা হচ্ছে:",
+    "option": " বহুনির্বাচনী প্রশ্ন",
+    "textfield": " টেক্সট ক্ষেত্রের",
+    "numberfield": " সংখ্যা",
+    "minimumvalue": " ন্যূনতম মান গৃহীত",
+    "maximumvalue": " সর্বাধিক মান গৃহীত",
+    "addingthisfield": " এই ক্ষেত্র যোগ করা হচ্ছে",
+    "question": " ক্ষেত্রের বর্ণনা",
+    "questiondescribe": " এই ক্ষেত্রটি বর্ণনা করুন (উদাহরণ: একটি নোট দিন, সর্বনিম্ন 0, সর্বোচ্চ 10)",
+    "numberexplain": " প্রশ্নের ধরন: সংখ্যা, {{description}} (সর্বনিম্ন: {{min}} , সর্বোচ্চ {{max}} )",
+    "textexplain": " প্রশ্নের ধরন: পাঠ্য, {{description}} (সর্বোচ্চ দৈর্ঘ্য {{max}} )",
+    "optionexplain": " প্রশ্নের ধরন: বিকল্প, {{description}} ( {{max}} পর্যন্ত নির্বাচনযোগ্য) বিকল্প {{option}}",
+    "numberoption": " উত্তরের সম্ভাব্য সংখ্যা",
+    "maximumselectable": " সর্বোচ্চ উত্তর নির্বাচনযোগ্য",
+    "maxlen": " সর্বোচ্চ দর্ঘ্য",
+    "optionnumber": " বিকল্প {{i}}",
+    "description": " ক্যাম্পেইনের বর্ণনা",
+    "title": " ক্যাম্পেইনের শিরোনাম",
+    "reward": " একটি কাজের জন্য পুরস্কার (EFX)",
+    "mycampaigns": " আমার প্রচারণা"
+  },
+  "display": {
+    "addbatch": " ব্যাচ যোগ করুন",
+    "loadingbatch": " ব্যাচ লোড হচ্ছে",
+    "enteryourdata": " প্রতি লাইনে 1 ব্যাচের জন্য ডেটা লিখুন",
+    "repetition": " পুনরাবৃত্তি",
+    "next": " পরবর্তী",
+    "prev": " আগে",
+    "reserve": " সংচিতি"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (সর্বনিম্ন: {{min}} , সর্বোচ্চ {{max}} )",
+    "textexplain": " {{description}} (সর্বোচ্চ দৈর্ঘ্য {{max}} )",
+    "optionexplain": " {{description}} ( {{max}} পর্যন্ত নির্বাচনযোগ্য)"
+  },
+  "campaignlist": {
+    "connect": " প্রচারাভিযান অ্যাক্সেস করতে আপনার অ্যাকাউন্ট সংযুক্ত করুন"
+  },
+  "campaignbase": {
+    "submit": "জমা"
+  }
+}
