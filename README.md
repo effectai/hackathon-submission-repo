@@ -1,6 +1,6 @@
 # Effect Network Hackathon Devpost ⚡
 
-In collaboration with Devpost, we are excited to announce the Effect Network Hackathon! 
+In collaboration with Devpost, we are excited to announce the Effect Network Hackathon!
 To celebrate the launch of our new SDK, we are rewarding up to 55K in prizes to the top developers.
 
 More information can be found here at [Devpost](https://effect-network-hackathon.devpost.com/)

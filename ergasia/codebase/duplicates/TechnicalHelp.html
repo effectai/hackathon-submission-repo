@@ -1,0 +1,95 @@
+<!DOCTYPE html encoding>
+<html lang="en">
+
+<head>
+  <title>Debug/Technical help</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+  <script src="https://unpkg.com/@effectai/effect-js/dist/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
+  <style>
+    body {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    </style>
+</head>
+
+<body class="content">
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+
+<div class="section">
+    <div class="container" has-text-centered>
+        <h1 class="title">Upload your code with the issue</h1>
+        <form onsubmit="event.preventDefault();addFile()">
+            Enter Code<textarea name="code" id="code"> </textarea> <br>
+            Enter The Issue<textarea name="issue" id="issue"> </textarea><br>
+            Enter The Technology being used<textarea name="tech" id="tech"> </textarea><br>
+           <button class="button is-info mt-4" id="submit" type="submit">Submit</button>
+         </form>
+        <hr> 
+        <h2 id="result"></h2>
+
+    </div>
+
+</div>
+
+<script>
+  let client
+  window.addEventListener('load', async function() {
+    client = new effectsdk.EffectClient('jungle')
+    const burnerAccount = effectsdk.createAccount('0x57816ea17ac46afaac852f059b48a546175a20bb914a088cbf318da35a69eb4d');
+    const burnerWallet = effectsdk.createWallet(burnerAccount)
+    connectReponse = await client.connectAccount(burnerWallet)
+    console.log('account', connectReponse)
+  })
+
+
+  async function addFile() {
+    const code = document.getElementById("code").value
+    const issue=document.getElementById("issue").value
+    const tech=document.getElementById("tech").value
+    document.getElementById('submit').disabled = true
+    const el = document.getElementById('result')
+    el.innerText = 'Uploading your task to Effect Force..'
+    const campaign = await client.force.getCampaign(276)
+    console.log("campaign", campaign)
+    const content = {'tasks': [
+    {'code':code,
+    'issue':issue,
+    'tech':tech
+    }
+  ]
+  }
+    console.log("making batch with tasks", content) 
+    const repetitions = '1'   
+    const batchResponse = await client.force.createBatch(276, content, repetitions)
+    console.log(batchResponse)
+    el.innerText = 'Waiting For Results'
+    waitForResult(batchResponse.leaves[0].substring(2))
+  }
+  
+  async function waitForResult(leafHash) {
+    const result = await client.force.getTaskResult(leafHash)
+    console.log("result", result)
+    if (!result) {
+      console.log("result not found, try again in 5s")
+      setTimeout(() => {
+        waitForResult(leafHash)
+      }, 5000)
+    } else {
+      console.log(result.data);
+      const el = document.getElementById('result')
+      const txt= JSON.parse(result.data).answer;
+      el.innerText = `Your Result is :${txt}`;
+    }
+  }
+
+  </script>
+</body>
+</html>
