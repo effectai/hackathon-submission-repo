@@ -1,0 +1,40 @@
+{
+  "id": "test",
+  "images": [
+    "https://cdn.shopify.com/s/files/1/0619/3492/8120/products/13169_897__2_a47252d4-12f5-4ef9-9c7a-12be00315ff4.jpg",
+    "https://cdn.shopify.com/s/files/1/0619/3492/8120/products/13169_784__1_e6278104-fbdf-4321-90c8-b596a104e302.jpg",
+    "https://cdn.shopify.com/s/files/1/0619/3492/8120/products/13169_338__3_5380ed83-b527-4218-8481-63529a6f6b27.jpg",
+    "https://cdn.shopify.com/s/files/1/0619/3492/8120/products/13169_827__4_ecda1a83-0603-431e-b69c-0df8f112d171.jpg",
+    "https://cdn.shopify.com/s/files/1/0619/3492/8120/products/13169_203__5_d515a4f5-1c93-4981-87f3-b808784e2b1d.jpg"
+  ],
+  "title": "Sennheiser HD 4.20S Around Ear Headphones",
+  "link": "https://catalogue-demo-store.myshopify.com/products/sennheiser-hd-4-20s-around-ear-headphones",
+  "search": "https://www.google.com/search?q=Sennheiser%20HD%204.20S%20Around%20Ear%20Headphones",
+  "collections": [
+    { "id": 389211881720, "title": "A/V Receivers" },
+    { "id": 389212537080, "title": "Accessories" },
+    { "id": 389212340472, "title": "Amplifiers" },
+    { "id": 389209424120, "title": "Audio" },
+    { "id": 389212307704, "title": "Audio Accessories" },
+    { "id": 389212504312, "title": "Bluetooth" },
+    { "id": 389209751800, "title": "Earbuds" },
+    { "id": 389209719032, "title": "Headphones" },
+    { "id": 389209456888, "title": "Hi-Fi" },
+    { "id": 389212274936, "title": "Home Cinema" },
+    { "id": 389209587960, "title": "LED TVs" },
+    { "id": 389209653496, "title": "OLED TVs" },
+    { "id": 389212471544, "title": "Portable" },
+    { "id": 389212242168, "title": "Portable Speakers" },
+    { "id": 389212569848, "title": "Professional Audio" },
+    { "id": 389209686264, "title": "Projectors" },
+    { "id": 389212143864, "title": "Sound Bars" },
+    { "id": 389212111096, "title": "Speakers" },
+    { "id": 389212078328, "title": "Subwoofers" },
+    { "id": 389211947256, "title": "Turntables" },
+    { "id": 389209555192, "title": "TV & Entertainment" },
+    { "id": 389212045560, "title": "TV Accessories" },
+    { "id": 389212012792, "title": "TVs" },
+    { "id": 389211914488, "title": "Walkmans" },
+    { "id": 389212406008, "title": "Waterproof" }
+  ]
+}
