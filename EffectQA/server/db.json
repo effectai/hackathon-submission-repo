@@ -1,0 +1,68 @@
+{
+  "campaigns": [
+    {
+      "id": 144,
+      "owner": [
+        "address",
+        "583316f870442bfe62e96c66dc735609ce330d2a"
+      ],
+      "content": {
+        "field_0": 0,
+        "field_1": "QmTevrcx5AHEXDCjbYRXtUZF4qNp6J6yS7fXn8C57auWSw"
+      },
+      "reward": {
+        "quantity": "1.0000 EFX",
+        "contract": "efxtoken1112"
+      },
+      "info": {
+        "title": "Product testing for mywebsite.com",
+        "description": "Complete the associated tasks to earn a reward.",
+        "instructions": "Complete the associated tasks to earn a reward.",
+        "template": "<div>\n<h3>${title}</h3>\n<p><a href='${url}'target=\"_blank\">${url}</a></p>\n<p>${description}</p>\n<br/>\n<hr/>\n\n<h4>Were you able to complete the task successfully?</h2>\n<input type='radio' name='radio-answer' id=\"task-success\" label=''>Yes</input><br>\n<input type='radio' name='radio-answer' id=\"task-success\" label=''>No</input><br>\n<br/>\n<h4>What feedback do you have on the experience?</h4>\n<textarea name='explain' id=\"explain\" label='Explanation' rows=\"6\" cols=\"50\"></textarea>\n<h4>[Optional] Do you have a recording or screenshot?</h4>\n<input type='text' size=\"50\" name='image' id=\"image\" label='Enter link'/>\n\n<hr/>\n<button type=\"submit\">Submit</button> \n</div>\n<script></script>\n<style></style>",
+        "image": "https://ipfs.effect.ai/ipfs/bafkreiggnttdaxleeii6cdt23i4e24pfcvzyrndf5kzfbqgf3fxjryj5s4",
+        "category": "Product testing",
+        "example_task": {
+          "id": 123,
+          "campaignName": "Product testing for my new website.",
+          "title": "Verify login",
+          "description": "Verify you are able to successfully login to the website",
+          "url": "https://www.yahoo.com"
+        },
+        "version": 1,
+        "reward": 1
+      }
+    },
+    {
+      "id": 144,
+      "owner": [
+        "address",
+        "583316f870442bfe62e96c66dc735609ce330d2a"
+      ],
+      "content": {
+        "field_0": 0,
+        "field_1": "QmTevrcx5AHEXDCjbYRXtUZF4qNp6J6yS7fXn8C57auWSw"
+      },
+      "reward": {
+        "quantity": "1.0000 EFX",
+        "contract": "efxtoken1112"
+      },
+      "info": {
+        "title": "Product testing for my new website.",
+        "description": "Complete the associated tasks to earn a reward.",
+        "instructions": "Complete the associated tasks to earn a reward.",
+        "template": "<div>\n<h3>${title}</h3>\n<p><a href='${url}'target=\"_blank\">${url}</a></p>\n<p>${description}</p>\n<br/>\n<hr/>\n\n<h4>Were you able to complete the task successfully?</h2>\n<input type='radio' name='radio-answer' id=\"task-success\" label=''>Yes</input><br>\n<input type='radio' name='radio-answer' id=\"task-success\" label=''>No</input><br>\n<br/>\n<h4>What feedback do you have on the experience?</h4>\n<textarea name='explain' id=\"explain\" label='Explanation' rows=\"6\" cols=\"50\"></textarea>\n<h4>[Optional] Do you have a recording or screenshot?</h4>\n<input type='text' size=\"50\" name='image' id=\"image\" label='Enter link'/>\n\n<hr/>\n<button type=\"submit\">Submit</button> \n</div>\n<script></script>\n<style></style>",
+        "image": "https://ipfs.effect.ai/ipfs/bafkreiggnttdaxleeii6cdt23i4e24pfcvzyrndf5kzfbqgf3fxjryj5s4",
+        "category": "Product feedback",
+        "example_task": {
+          "id": 123,
+          "campaignName": "Product testing for my new website.",
+          "title": "Verify login",
+          "description": "Verify you are able to successfully login to the website",
+          "url": "https://www.yahoo.com"
+        },
+        "version": 1,
+        "reward": 1
+      }
+    }
+  ]
+}
