@@ -1,0 +1,15 @@
+jupyter notebook --ip='*' --NotebookApp.token='' --NotebookApp.password=''
+
+jupyter notebook --NotebookApp.password.allow_remote_access = True
+
+
+OVERRIDES IN CONFIG FILE
+
+c.NotebookApp.allow_origin = "*"
+c.NotebookApp.allow_remote_access = True
+c.NotebookApp.tornado_settings = {
+    "headers": {"Content-Security-Policy": "frame-ancestors * 'self' "}
+}
+
+USE THIS
+jupyter notebook --ip='*' --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.allow_origin='*' --NotebookApp.allow_remote_access='True'
