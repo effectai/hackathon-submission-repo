@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "உள்நுழைய",
+    "connecteffect": " உள்நுழைய",
+    "createcampaign": " பிரச்சாரத்தை உருவாக்கவும்",
+    "participate": " பிரச்சாரத்தில் பங்கேற்கவும்",
+    "checkcampaign": " எனது பிரச்சாரத்தை சரிபார்க்கவும்",
+    "worker": " தொழிலாளி",
+    "campaigncreator": " வணிக",
+    "currentcamaign": " தற்போதைய பிரச்சாரங்கள்"
+  },
+  "create": {
+    "campaigntype": " பிரச்சாரத்தின் வகையைத் தேர்ந்தெடுக்கவும்",
+    "addingfield": " பதில் புலத்தைச் சேர்த்தல்",
+    "validate": " பிரச்சாரத்தை சமர்ப்பிக்கவும்",
+    "preview": " முன்னோட்ட பிரச்சாரம்",
+    "twitter": " ட்விட்டர்",
+    "picture": " படம்",
+    "selecttypeoffield": " வகையின் பதிலைச் சேர்த்தல்:",
+    "option": " பல தேர்வு கேள்வி",
+    "textfield": " உரை புலம்",
+    "numberfield": " எண்",
+    "minimumvalue": " குறைந்தபட்ச மதிப்பு ஏற்றுக்கொள்ளப்பட்டது",
+    "maximumvalue": " அதிகபட்ச மதிப்பு ஏற்றுக்கொள்ளப்பட்டது",
+    "addingthisfield": " இந்த புலத்தைச் சேர்த்தல்",
+    "question": " புலத்தின் விளக்கம்",
+    "questiondescribe": " இந்த புலத்தை விவரிக்கவும் (எடுத்துக்காட்டு: ஒரு குறிப்பைக் கொடுங்கள், குறைந்தபட்சம் 0, அதிகபட்சம் 10)",
+    "numberexplain": " கேள்வி வகை: எண், {{description}} (குறைந்தபட்சம்: {{min}} , அதிகபட்சம் {{max}} )",
+    "textexplain": " கேள்வி வகை: உரை, {{description}} (அதிகபட்ச நீளம் {{max}} )",
+    "optionexplain": " கேள்வி வகை: விருப்பம், {{description}} ( {{max}} வரை தேர்ந்தெடுக்கக்கூடியது) விருப்பம் {{option}}",
+    "numberoption": " சாத்தியமான பதில் எண்ணிக்கை",
+    "maximumselectable": " தேர்ந்தெடுக்கக்கூடிய அதிகபட்ச பதில்",
+    "maxlen": " அதிகபட்ச நீளம்",
+    "optionnumber": " விருப்ப {{i}}",
+    "description": " பிரச்சாரத்தின் விளக்கம்",
+    "title": " பிரச்சாரத்தின் தலைப்பு",
+    "reward": " ஒரு பணிக்கான வெகுமதி (EFX)",
+    "mycampaigns": " எனது பிரச்சாரங்கள்"
+  },
+  "display": {
+    "addbatch": " தொகுப்பைச் சேர்க்கவும்",
+    "loadingbatch": " தொகுப்பை ஏற்றுகிறது",
+    "enteryourdata": " ஒரு வரிக்கு 1 தொகுதிக்கான தரவை உள்ளிடவும்",
+    "repetition": " மீண்டும் மீண்டும்",
+    "next": " அடுத்தது",
+    "prev": " முந்தைய",
+    "reserve": " இருப்பு"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (குறைந்தபட்சம்: {{min}} , அதிகபட்சம் {{max}} )",
+    "textexplain": " {{description}} (அதிகபட்ச நீளம் {{max}} )",
+    "optionexplain": " {{description}} ( {{max}} வரை தேர்ந்தெடுக்கலாம்)"
+  },
+  "campaignlist": {
+    "connect": " பிரச்சாரங்களை அணுக உங்கள் கணக்கை இணைக்கவும்"
+  },
+  "campaignbase": {
+    "submit": "சமர்ப்பிக்க"
+  }
+}

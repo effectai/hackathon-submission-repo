@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "đăng nhập",
+    "connecteffect": " Đăng nhập",
+    "createcampaign": " Tạo chiến dịch",
+    "participate": " Tham gia vào chiến dịch",
+    "checkcampaign": " Kiểm tra chiến dịch của tôi",
+    "worker": " người làm việc",
+    "campaigncreator": " việc kinh doanh",
+    "currentcamaign": " Các chiến dịch hiện tại"
+  },
+  "create": {
+    "campaigntype": " Chọn loại chiến dịch",
+    "addingfield": " Thêm trường câu trả lời",
+    "validate": " Gửi chiến dịch",
+    "preview": " Xem trước chiến dịch",
+    "twitter": " twitter",
+    "picture": " bức ảnh",
+    "selecttypeoffield": " Thêm câu trả lời thuộc loại:",
+    "option": " Câu hỏi trắc nghiệm",
+    "textfield": " Trương Văn bản",
+    "numberfield": " Số",
+    "minimumvalue": " Giá trị tối thiểu được chấp nhận",
+    "maximumvalue": " Giá trị tối đa được chấp nhận",
+    "addingthisfield": " Thêm trường này",
+    "question": " Mô tả của lĩnh vực",
+    "questiondescribe": " Mô tả trường này (ví dụ: Đưa ra ghi chú, tối thiểu 0, tối đa 10)",
+    "numberexplain": " Loại câu hỏi: số, {{description}} (tối thiểu: {{min}} , tối đa {{max}} )",
+    "textexplain": " Loại câu hỏi: văn bản, {{description}} (độ dài tối đa {{max}} )",
+    "optionexplain": " Loại câu hỏi: tùy chọn, {{description}} (có thể chọn tối đa {{max}} ) tùy chọn {{option}}",
+    "numberoption": " Số câu trả lời có thể",
+    "maximumselectable": " Câu trả lời tối đa có thể chọn",
+    "maxlen": " Chiều dài tối đa",
+    "optionnumber": " Tùy chọn {{i}}",
+    "description": " Mô tả chiến dịch",
+    "title": " Tiêu đề của chiến dịch",
+    "reward": " Phần thưởng cho một nhiệm vụ (EFX)",
+    "mycampaigns": " Các chiến dịch của tôi"
+  },
+  "display": {
+    "addbatch": " Thêm hàng loạt",
+    "loadingbatch": " Đang tải hàng loạt",
+    "enteryourdata": " Nhập dữ liệu cho lô 1 trên mỗi dòng",
+    "repetition": " Lặp lại",
+    "next": " tiếp theo",
+    "prev": " Trước",
+    "reserve": " dự trữ"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (tối thiểu: {{min}} , tối đa {{max}} )",
+    "textexplain": " {{description}} (độ dài tối đa {{max}} )",
+    "optionexplain": " {{description}} (có thể chọn lên đến {{max}} )"
+  },
+  "campaignlist": {
+    "connect": " Kết nối tài khoản của bạn để truy cập các chiến dịch"
+  },
+  "campaignbase": {
+    "submit": "Gửi đi"
+  }
+}

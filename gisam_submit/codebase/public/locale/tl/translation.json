@@ -1,0 +1,60 @@
+{
+  "login": {
+    "login": "mag log in",
+    "connecteffect": " Mag log in",
+    "createcampaign": " Lumikha ng kampanya",
+    "participate": " Makilahok sa kampanya",
+    "checkcampaign": " Suriin ang aking kampanya",
+    "worker": " manggagawa",
+    "campaigncreator": " negosyo",
+    "currentcamaign": " Mga kasalukuyang kampanya"
+  },
+  "create": {
+    "campaigntype": " Piliin ang uri ng campaign",
+    "addingfield": " Pagdaragdag ng field ng sagot",
+    "validate": " Isumite ang kampanya",
+    "preview": " I-preview ang campaign",
+    "twitter": " kaba",
+    "picture": " larawan",
+    "selecttypeoffield": " Pagdaragdag ng isang sagot ng uri:",
+    "option": " Multiple choice na tanong",
+    "textfield": " Patlang ng teksto",
+    "numberfield": " Numero",
+    "minimumvalue": " Tinanggap ang minimum na halaga",
+    "maximumvalue": " Tinanggap ang maximum na halaga",
+    "addingthisfield": " Idinaragdag ang field na ito",
+    "question": " Paglalarawan ng field",
+    "questiondescribe": " Ilarawan ang field na ito (halimbawa: Magbigay ng tala, minimum 0, maximum 10)",
+    "numberexplain": " Uri ng tanong : numero, {{description}} (minimum : {{min}} , maximum {{max}} )",
+    "textexplain": " Uri ng tanong : text, {{description}} (maximum na haba {{max}} )",
+    "optionexplain": " Uri ng tanong : opsyon, {{description}} (mapipili hanggang {{max}} ) opsyon {{option}}",
+    "numberoption": " Posibleng bilang ng sagot",
+    "maximumselectable": " Pinakamaraming sagot ang mapipili",
+    "maxlen": " Pinakamataas na haba",
+    "optionnumber": " Ang pagpipilian ay nasa lahat ng {{i}}",
+    "description": " Paglalarawan ng kampanya",
+    "title": " Pamagat ng kampanya",
+    "reward": " Gantimpala para sa isang gawain (EFX)",
+    "mycampaigns": " Aking mga kampanya"
+  },
+  "display": {
+    "addbatch": " Magdagdag ng batch",
+    "loadingbatch": " Naglo-load ng batch",
+    "enteryourdata": " Maglagay ng data para sa batch 1 bawat linya",
+    "repetition": " Mga pag-uulit",
+    "next": " susunod",
+    "prev": " dati",
+    "reserve": " reserba"
+  },
+  "campaignfields": {
+    "numberexplain": " {{description}} (minimum : {{min}} , maximum {{max}} )",
+    "textexplain": " {{description}} (maximum na haba {{max}} )",
+    "optionexplain": " {{description}} (maaaring piliin hanggang {{max}} )"
+  },
+  "campaignlist": {
+    "connect": " Ikonekta ang iyong account para ma-access ang mga campaign"
+  },
+  "campaignbase": {
+    "submit": "ipasa"
+  }
+}
