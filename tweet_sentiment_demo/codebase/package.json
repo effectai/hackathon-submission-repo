@@ -1,0 +1,18 @@
+{
+  "name": "browser",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server -c -1"
+  },
+  "keywords": [],
+  "author": "Effect Network",
+  "license": "ISC",
+  "dependencies": {
+    "@effectai/effect-js": "latest"
+  },
+  "devDependencies": {
+    "http-server": "^14.0.0"
+  }
+}
