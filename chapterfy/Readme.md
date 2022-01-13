@@ -6,7 +6,7 @@
 ### Team Dizzy
 
 ##### Region location
-I am from Sri Lanka.
+Sri Lanka.
 
 ##### Team Members
 - CryptoDizzy, Full Stack Developer
