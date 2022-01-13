@@ -29,7 +29,7 @@ Chapterfy allows content creators to
 
 Watch video demo: https://www.youtube.com/watch?v=Rmw6JJqs2z8
 
-Chapterfy is built using Effect Network JavaScript SDK. Frontend of the web app is built with React and NodeJS is used to build the backend. MongoDB is used as the database.
+Chapterfy is built using [Effect Network JavaScript SDK](https://github.com/effectai/effect-js). Frontend of the web app is built with React and NodeJS is used to build the backend. MongoDB is used as the database.
 
 Future improvements
 Frontend of the web app need to be improved to provide better user experience.
