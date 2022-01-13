@@ -35,13 +35,17 @@ Future improvements
 Frontend of the web app need to be improved to provide better user experience.
 Private keys of wallets need to be handle in a safer way to improve security.
 
-This web application is developed by me myself _CryptoDizzy_.
-I am a tech enthusiast who is exited to build applications in web 3.0 space.
-
 #### Next Steps
 Frontend of the web app need to be improved to provide better user experience.
 Private keys of wallets need to be handle in a safer way to improve security.
 Add more services such as video translations and subtitles.
+
+#### About me
+Hey! I am _CryptoDizzy_.
+I am a tech enthusiast who is exited to build applications in web 3.0 space.   
+Github: https://github.com/CryptoDizzy  
+Twitter: https://twitter.com/cryptodizzy
+
 
 #### License
 MIT License
