@@ -1,32 +1,47 @@
 
-# ⚡ Hackathon Project Template ⚡
-_This is a sample submission repository.
-Please [__fork this repo__](https://help.github.com/articles/fork-a-repo/) and use this as a starting point for your hackathon project._
+# ⚡ Effect Network Hackathon ⚡
 
-## Project Name
-### Team name
+
+## Chapterfy
+### Team Dizzy
 
 ##### Region location
+I am from Sri Lanka.
 
 ##### Team Members
-- Teammate 1, role
-- Teammate 2, role
-- Teammate 3, role
+- CryptoDizzy, Full Stack Developer
+
 
 #### Project Description
-Provide a clear statement of the challenges/issues/problems/gaps your project engages as well as a brief, high-level description of how your project engages the areas you've identified. What is the value of your approach? Who are the intended users?
+### Chapterfy
+Chapterfy adds video chapter details to videos by crowdsourcing.
 
-#### Summary
-Describe the basic functionality of your project. What are the features you were able to implement? What features would you like to implement?
+Video chapter details are important for viewers to get a idea of the video content without watching it completely. Specially in tutorial videos chapter details are very useful for viewers. But adding chapters is a time consuming task. Chapterfy gives a solution to this by crowdsourcing the chapter details. Chapterfy allow content creators to create a crowdsource campaign easily by using Effect Network.
 
-#### URLs
-List any URLs relevant to demonstrating your prototype
+![chapterfy](https://i.ibb.co/mqtz8s4/chapterfy.png)
 
-#### Presentation
-List any links to your presentation or any related visuals you want to share.
+Chapterfy allows content creators to
+
+- Create a crowdsource campaign using Effect Network
+- Add batches to a campaign
+- Get results of a campaign
+- Track details about active campaigns
+
+Watch video demo: https://www.youtube.com/watch?v=Rmw6JJqs2z8
+
+Chapterfy is built using Effect Network JavaScript SDK. Frontend of the web app is built with React and NodeJS is used to build the backend. MongoDB is used as the database.
+
+Future improvements
+Frontend of the web app need to be improved to provide better user experience.
+Private keys of wallets need to be handle in a safer way to improve security.
+
+This web application is developed by me myself _CryptoDizzy_.
+I am a tech enthusiast who is exited to build applications in web 3.0 space.
 
 #### Next Steps
-What do you need to do next to turn this prototype into a working solution?
+Frontend of the web app need to be improved to provide better user experience.
+Private keys of wallets need to be handle in a safer way to improve security.
+Add more services such as video translations and subtitles.
 
 #### License
-This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
+MIT License
